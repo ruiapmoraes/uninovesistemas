@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADO\CargoADO.cs" />
+    <Compile Include="ADO\LoginADO.cs" />
+    <Compile Include="Helpers\ADOBase.cs" />
+    <Compile Include="Helpers\Validacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -69,10 +73,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ADO\" />
     <Folder Include="Classes\" />
     <Folder Include="Forms\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Imagens\" />
     <Folder Include="Negocio\" />
     <Folder Include="Queries\" />
