@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AcademiaUninove.Sistema.ADO
 {
-    class LoginADO
+    public class LoginADO
     {
     }
 }

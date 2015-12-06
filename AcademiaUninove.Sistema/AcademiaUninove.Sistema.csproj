@@ -46,10 +46,30 @@
   <ItemGroup>
     <Compile Include="ADO\CargoADO.cs" />
     <Compile Include="ADO\LoginADO.cs" />
+    <Compile Include="Classes\Aluno.cs" />
+    <Compile Include="Classes\Aula.cs" />
+    <Compile Include="Classes\Cargo.cs" />
+    <Compile Include="Classes\FichaExercicios.cs" />
+    <Compile Include="Classes\Frequencia.cs" />
+    <Compile Include="Classes\FuncAula.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Classes\HoraAula.cs" />
+    <Compile Include="Classes\Horario.cs" />
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\Medidas.cs" />
+    <Compile Include="Forms\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\ADOBase.cs" />
     <Compile Include="Helpers\Validacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,8 +93,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Forms\" />
+    <Folder Include="Forms\Cadastro\" />
+    <Folder Include="Forms\Exercicios\" />
+    <Folder Include="Forms\Relatorios\" />
     <Folder Include="Imagens\" />
     <Folder Include="Negocio\" />
     <Folder Include="Queries\" />
