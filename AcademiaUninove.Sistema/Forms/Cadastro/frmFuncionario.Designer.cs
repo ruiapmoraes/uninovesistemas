@@ -236,7 +236,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "frmFuncionario";
-            this.Text = "Cadastro de Funcionários";
+            this.Text = "Cadastro de Funcionário";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
