@@ -129,6 +129,66 @@
     <Compile Include="Forms\Cadastro\frmTeste.Designer.cs">
       <DependentUpon>frmTeste.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Exercicios\frmFichaExercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmFichaExercicios.Designer.cs">
+      <DependentUpon>frmFichaExercicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmFichaExerciciosPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmFichaExerciciosPrinc.Designer.cs">
+      <DependentUpon>frmFichaExerciciosPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmFrequencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmFrequencia.Designer.cs">
+      <DependentUpon>frmFrequencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmFrequenciaPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmFrequenciaPrinc.Designer.cs">
+      <DependentUpon>frmFrequenciaPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHoraAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHoraAula.Designer.cs">
+      <DependentUpon>frmHoraAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHoraAulaPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHoraAulaPrinc.Designer.cs">
+      <DependentUpon>frmHoraAulaPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHorario.Designer.cs">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHorarioPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmHorarioPrinc.Designer.cs">
+      <DependentUpon>frmHorarioPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmMedidas.Designer.cs">
+      <DependentUpon>frmMedidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmMedidasPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmMedidasPrinc.Designer.cs">
+      <DependentUpon>frmMedidasPrinc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Exercicios\frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +266,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastro\frmSobre.resx">
       <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmFichaExercicios.resx">
+      <DependentUpon>frmFichaExercicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmFichaExerciciosPrinc.resx">
+      <DependentUpon>frmFichaExerciciosPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmFrequencia.resx">
+      <DependentUpon>frmFrequencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmFrequenciaPrinc.resx">
+      <DependentUpon>frmFrequenciaPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmHoraAula.resx">
+      <DependentUpon>frmHoraAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmHoraAulaPrinc.resx">
+      <DependentUpon>frmHoraAulaPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmHorario.resx">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmHorarioPrinc.resx">
+      <DependentUpon>frmHorarioPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmMedidas.resx">
+      <DependentUpon>frmMedidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercicios\frmMedidasPrinc.resx">
+      <DependentUpon>frmMedidasPrinc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
