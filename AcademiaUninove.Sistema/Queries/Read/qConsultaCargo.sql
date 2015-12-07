@@ -1,0 +1,4 @@
+﻿-- Consulta Cargo
+SELECT CD_CARGO, NOME_CARGO
+FROM CARGO
+

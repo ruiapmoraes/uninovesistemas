@@ -3,10 +3,68 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using AcademiaUninove.Sistema.Helpers;
 
 namespace AcademiaUninove.Sistema.ADO
 {
-    class CargoADO
+    public class CargoADO : ADOBase
     {
+        string conn = string.Empty;
+        ADOBase objConexao = new ADOBase();
+
+        private bool InsereCargo(int codigo, string cargo)
+        {
+            string query = string.Format(AcademiaUninove.Sistema.Queries.Insert.QueriesInsert.qInsertCargo, codigo, cargo);
+            //ADOBase objCon = new ADOBase();
+            bool bRet = false;
+            RealizaComandoSQL(query, "");
+            return bRet;
+        }
+
+        public bool ConsultaCargoOld()
+        {
+            bool bRet = false;
+            DataTable dtCargo = null;
+            string query = AcademiaUninove.Sistema.Queries.Read.QueriesConsulta.qConsultaCargo;
+
+            try
+            {
+                conn = ADOBase.ObterConexao();
+                dtCargo = RealizaPesquisaSQL(query, conn);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            //TODO ajustar o retorno do método
+            return bRet;
+        }
+
+        public DataTable ConsultaCargo()
+        {
+            bool bRet = false;
+            DataTable dtCargo = null;
+            string query = AcademiaUninove.Sistema.Queries.Read.QueriesConsulta.qConsultaCargo;
+
+            try
+            {
+                conn = ADOBase.ObterConexao();
+                dtCargo = RealizaPesquisaSQL(query, conn);
+
+            }
+            catch (Exception ex)
+            {
+                dtCargo = null;
+                throw ex;
+            }
+
+            //TODO ajustar o retorno do método
+            return dtCargo;
+        }
     }
 }

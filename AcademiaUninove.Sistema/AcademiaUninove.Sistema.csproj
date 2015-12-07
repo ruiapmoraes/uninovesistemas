@@ -57,137 +57,11 @@
     <Compile Include="Classes\Horario.cs" />
     <Compile Include="Classes\Login.cs" />
     <Compile Include="Classes\Medidas.cs" />
-    <Compile Include="Forms\Cadastro\frmAluno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmAluno.Designer.cs">
-      <DependentUpon>frmAluno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmAlunoPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmAlunoPrinc.Designer.cs">
-      <DependentUpon>frmAlunoPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmAula.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmAula.Designer.cs">
-      <DependentUpon>frmAula.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmAulaPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmAulaPrinc.Designer.cs">
-      <DependentUpon>frmAulaPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmCargo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmCargo.Designer.cs">
-      <DependentUpon>frmCargo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmCargoPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmCargoPrincipal.Designer.cs">
-      <DependentUpon>frmCargoPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncAula.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncAula.Designer.cs">
-      <DependentUpon>frmFuncAula.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncAulaPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncAulaPrinc.Designer.cs">
-      <DependentUpon>frmFuncAulaPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncionario.Designer.cs">
-      <DependentUpon>frmFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncionarioPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmFuncionarioPrinc.Designer.cs">
-      <DependentUpon>frmFuncionarioPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmSobre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\frmSobre.Designer.cs">
-      <DependentUpon>frmSobre.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Cadastro\frmTeste.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Cadastro\frmTeste.Designer.cs">
       <DependentUpon>frmTeste.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFichaExercicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFichaExercicios.Designer.cs">
-      <DependentUpon>frmFichaExercicios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFichaExerciciosPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFichaExerciciosPrinc.Designer.cs">
-      <DependentUpon>frmFichaExerciciosPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFrequencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFrequencia.Designer.cs">
-      <DependentUpon>frmFrequencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFrequenciaPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmFrequenciaPrinc.Designer.cs">
-      <DependentUpon>frmFrequenciaPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHoraAula.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHoraAula.Designer.cs">
-      <DependentUpon>frmHoraAula.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHoraAulaPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHoraAulaPrinc.Designer.cs">
-      <DependentUpon>frmHoraAulaPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHorario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHorario.Designer.cs">
-      <DependentUpon>frmHorario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHorarioPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmHorarioPrinc.Designer.cs">
-      <DependentUpon>frmHorarioPrinc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmMedidas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmMedidas.Designer.cs">
-      <DependentUpon>frmMedidas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmMedidasPrinc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Exercicios\frmMedidasPrinc.Designer.cs">
-      <DependentUpon>frmMedidasPrinc.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Exercicios\frmTest.cs">
       <SubType>Form</SubType>
@@ -217,66 +91,26 @@
     <Compile Include="Negocio\testeBO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Cadastro\frmAlunoPrinc.resx">
-      <DependentUpon>frmAlunoPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmAula.resx">
-      <DependentUpon>frmAula.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmAulaPrinc.resx">
-      <DependentUpon>frmAulaPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmCargo.resx">
-      <DependentUpon>frmCargo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmCargoPrincipal.resx">
-      <DependentUpon>frmCargoPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmFuncAula.resx">
-      <DependentUpon>frmFuncAula.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmFuncAulaPrinc.resx">
-      <DependentUpon>frmFuncAulaPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmFuncionario.resx">
-      <DependentUpon>frmFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmFuncionarioPrinc.resx">
-      <DependentUpon>frmFuncionarioPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\frmSobre.resx">
-      <DependentUpon>frmSobre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmFichaExercicios.resx">
-      <DependentUpon>frmFichaExercicios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmFichaExerciciosPrinc.resx">
-      <DependentUpon>frmFichaExerciciosPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmFrequencia.resx">
-      <DependentUpon>frmFrequencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmFrequenciaPrinc.resx">
-      <DependentUpon>frmFrequenciaPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmHoraAula.resx">
-      <DependentUpon>frmHoraAula.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmHoraAulaPrinc.resx">
-      <DependentUpon>frmHoraAulaPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmHorario.resx">
-      <DependentUpon>frmHorario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmHorarioPrinc.resx">
-      <DependentUpon>frmHorarioPrinc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmMedidas.resx">
-      <DependentUpon>frmMedidas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Exercicios\frmMedidasPrinc.resx">
-      <DependentUpon>frmMedidasPrinc.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Queries\Delete\QueriesDelete.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueriesDelete.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\Insert\QueriesInsert.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueriesInsert.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\Read\QueriesConsulta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueriesConsulta.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\Update\QueriesUpdate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueriesUpdate.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +123,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Queries\Delete\QueriesDelete.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueriesDelete.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Queries\Insert\QueriesInsert.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueriesInsert.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Queries\Read\QueriesConsulta.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueriesConsulta.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Queries\Update\QueriesUpdate.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueriesUpdate.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -305,9 +155,15 @@
   <ItemGroup>
     <Folder Include="Forms\Relatorios\" />
     <Folder Include="Imagens\" />
-    <Folder Include="Queries\" />
+    <Folder Include="Queries\Relatorio\" />
+    <Folder Include="Read\" />
     <Folder Include="Relatorios\" />
     <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Queries\Insert\qInsertCargo.sql" />
+    <Content Include="Queries\Read\qConsultaCargo.sql" />
+    <Content Include="Queries\Read\qLogin.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
