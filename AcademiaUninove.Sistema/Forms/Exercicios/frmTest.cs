@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademiaUninove.Sistema.Forms.Cadastro
+namespace AcademiaUninove.Sistema.Forms.Exercicios
 {
-    public partial class frmFuncAula : Form
+    public partial class frmTest : Form
     {
-        public frmFuncAula()
+        public frmTest()
         {
             InitializeComponent();
         }

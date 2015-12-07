@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //using UninoveAcademiaSistemas.ADO;
-using UninoveAcademiaSistemas.Negocio;
+using AcademiaUninove.Negocio;
 
-namespace UninoveAcademiaSistemas.Formularios.Cadastro
+namespace AcademiaUninove.Sistema.Forms.Cadastro
 {
     public partial class frmCargoPrincipal : Form
     {

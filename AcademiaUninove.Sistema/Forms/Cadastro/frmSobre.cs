@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UninoveAcademiaSistemas.Formularios.Cadastro
+namespace AcademiaUninove.Sistema.Forms.Cadastro
 {
     partial class frmSobre : Form
     {

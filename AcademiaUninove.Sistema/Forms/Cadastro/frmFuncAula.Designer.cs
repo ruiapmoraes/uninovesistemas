@@ -1,4 +1,4 @@
-﻿namespace UninoveAcademiaSistemas
+﻿namespace AcademiaUninove
 {
     partial class frmFuncAula
     {

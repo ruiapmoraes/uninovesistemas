@@ -1,4 +1,4 @@
-﻿namespace UninoveAcademiaSistemas.Formularios.Cadastro
+﻿namespace AcademiaUninove.Formularios.Cadastro
 {
     partial class frmAula
     {

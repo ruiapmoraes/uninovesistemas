@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UninoveAcademiaSistemas.Util;
+using AcademiaUninove.Util;
 
 
-namespace UninoveAcademiaSistemas.Formularios.Cadastro
+namespace AcademiaUninove.Sistema.Forms.Cadastro
 {
     public partial class frmCargo : Form
     {

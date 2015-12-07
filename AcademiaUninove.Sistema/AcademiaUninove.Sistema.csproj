@@ -123,6 +123,12 @@
     <Compile Include="Forms\Cadastro\frmSobre.Designer.cs">
       <DependentUpon>frmSobre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Cadastro\frmTeste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmTeste.Designer.cs">
+      <DependentUpon>frmTeste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Exercicios\frmFichaExercicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
     </Compile>
     <Compile Include="Forms\Exercicios\frmMedidasPrinc.Designer.cs">
       <DependentUpon>frmMedidasPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercicios\frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmPrincipal.cs">
       <SubType>Form</SubType>

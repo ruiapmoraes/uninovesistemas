@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UninoveAcademiaSistemas.Formularios.Exercicios
+namespace AcademiaUninove.Sistema.Forms.Exercicios
 {
     public partial class frmFrequencia : Form
     {

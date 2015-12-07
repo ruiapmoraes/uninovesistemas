@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UninoveAcademiaSistemas.Formularios.Cadastro
+namespace AcademiaUninove.Sistemas.Forms.Cadastro
 {
     public partial class frmAluno : Form
     {

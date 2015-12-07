@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using UninoveAcademiaSistemas.ADO;
+using AcademiaUninove.ADO;
 
 namespace AcademiaUninove.Sistema.Negocio
 {

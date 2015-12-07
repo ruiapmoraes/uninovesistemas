@@ -1,4 +1,4 @@
-﻿namespace UninoveAcademiaSistemas.Formularios.Exercicios
+﻿namespace AcademiaUninove.Formularios.Exercicios
 {
     partial class frmFichaExerciciosPrinc
     {

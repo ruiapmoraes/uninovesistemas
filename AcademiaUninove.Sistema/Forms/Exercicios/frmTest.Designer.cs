@@ -1,6 +1,6 @@
-﻿namespace AcademiaUninove.Formularios.Cadastro
+﻿namespace AcademiaUninove.Sistema.Forms.Exercicios
 {
-    partial class frmAluno
+    partial class frmTest
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmAluno";
+            this.Text = "frmTest";
         }
 
         #endregion
