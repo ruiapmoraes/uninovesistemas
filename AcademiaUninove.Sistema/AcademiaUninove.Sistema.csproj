@@ -57,6 +57,72 @@
     <Compile Include="Classes\Horario.cs" />
     <Compile Include="Classes\Login.cs" />
     <Compile Include="Classes\Medidas.cs" />
+    <Compile Include="Forms\Cadastro\frmAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmAluno.Designer.cs">
+      <DependentUpon>frmAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmAlunoPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmAlunoPrinc.Designer.cs">
+      <DependentUpon>frmAlunoPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmAula.Designer.cs">
+      <DependentUpon>frmAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmAulaPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmAulaPrinc.Designer.cs">
+      <DependentUpon>frmAulaPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmCargo.Designer.cs">
+      <DependentUpon>frmCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmCargoPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmCargoPrinc.Designer.cs">
+      <DependentUpon>frmCargoPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncAula.Designer.cs">
+      <DependentUpon>frmFuncAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncAulaPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncAulaPrinc.Designer.cs">
+      <DependentUpon>frmFuncAulaPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncionarioPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmFuncionarioPrinc.Designer.cs">
+      <DependentUpon>frmFuncionarioPrinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cadastro\frmTeste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +177,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QueriesUpdate.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Cadastro\frmAlunoPrinc.resx">
+      <DependentUpon>frmAlunoPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmAula.resx">
+      <DependentUpon>frmAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmAulaPrinc.resx">
+      <DependentUpon>frmAulaPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmCargo.resx">
+      <DependentUpon>frmCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmCargoPrinc.resx">
+      <DependentUpon>frmCargoPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmFuncAula.resx">
+      <DependentUpon>frmFuncAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmFuncAulaPrinc.resx">
+      <DependentUpon>frmFuncAulaPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmFuncionarioPrinc.resx">
+      <DependentUpon>frmFuncionarioPrinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
