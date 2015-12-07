@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace AcademiaUninove.Sistema.Helpers
 {
@@ -77,20 +78,22 @@ namespace AcademiaUninove.Sistema.Helpers
 
         public static string ObterConexao()
         {
-            //return ConfigurationManager.ConnectionStrings["UninoveAcademiaDB"].ConnectionString;
-            //return ConfigurationManager.ConnectionStrings["AcademiaUninoveConnectionString"].ConnectionString;
+           
             try
             {
+                #region Tipos de conexões com o banco
+
                 //string strConn = @"Server=ARSENAL-GEAR4\SQLEXPRESS2;Database=AcademiaUninove;Trusted_Connection=True";
-                string strConn = @"Data Source=.\SQLEXPRESS;Initial Catalog=AcademiaUninove;Integrated Security=SSPI";
+                //string strConn = @"Data Source=.\SQLEXPRESS;Initial Catalog=AcademiaUninove;Integrated Security=SSPI";
                 //string strConn = @"Provider=sqloledb;Data Source=LOCALHOST\SQLEXPRESS2;Initial Catalog=AcademiaUninove;Integrated Security=SSPI;";
 
                 //return ConfigurationManager.ConnectionStrings["UninoveAcademiaConn"].ConnectionString;
 
                 //return ConfigurationManager.ConnectionStrings["UninoveAcademiaConn"].ConnectionString;
-                return strConn;
+                //return strConn; 
+                #endregion
 
-                //return ConfigurationSettings.AppSettings["UninoveAcademiaConn"];
+                return ConfigurationSettings.AppSettings["UninoveAcademiaConn"];
             }
             catch (Exception ex)
             {

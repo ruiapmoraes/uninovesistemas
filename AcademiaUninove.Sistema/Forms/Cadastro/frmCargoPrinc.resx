@@ -190,10 +190,4 @@
         fi2/Sh4P2GHZpOjzE61yZ+cvjhkvuT6xiwAAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="CdCargo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NomeCargo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

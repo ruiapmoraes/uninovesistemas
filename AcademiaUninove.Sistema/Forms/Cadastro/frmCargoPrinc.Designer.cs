@@ -36,8 +36,6 @@
             this.tsbFechar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCargo = new System.Windows.Forms.DataGridView();
-            this.CdCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).BeginInit();
@@ -104,28 +102,13 @@
             // 
             // dgvCargo
             // 
+            this.dgvCargo.AllowUserToAddRows = false;
             this.dgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CdCargo,
-            this.NomeCargo});
             this.dgvCargo.Location = new System.Drawing.Point(7, 20);
             this.dgvCargo.Name = "dgvCargo";
             this.dgvCargo.ReadOnly = true;
             this.dgvCargo.Size = new System.Drawing.Size(446, 202);
             this.dgvCargo.TabIndex = 0;
-            // 
-            // CdCargo
-            // 
-            this.CdCargo.HeaderText = "Código";
-            this.CdCargo.Name = "CdCargo";
-            this.CdCargo.ReadOnly = true;
-            // 
-            // NomeCargo
-            // 
-            this.NomeCargo.HeaderText = "Cargo";
-            this.NomeCargo.Name = "NomeCargo";
-            this.NomeCargo.ReadOnly = true;
-            this.NomeCargo.Width = 300;
             // 
             // frmCargoPrinc
             // 
@@ -136,6 +119,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCargoPrinc";
             this.Text = "frmCargoPrinc";
+            this.Load += new System.EventHandler(this.frmCargoPrinc_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -154,7 +138,5 @@
         private System.Windows.Forms.ToolStripButton tsbFechar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CdCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeCargo;
     }
 }
