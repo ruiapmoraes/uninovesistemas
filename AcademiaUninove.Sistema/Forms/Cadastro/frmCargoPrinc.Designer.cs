@@ -62,6 +62,7 @@
             this.tsbNovo.Name = "tsbNovo";
             this.tsbNovo.Size = new System.Drawing.Size(23, 22);
             this.tsbNovo.Text = "Novo";
+            this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
             // 
             // tsbEditar
             // 
@@ -118,7 +119,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCargoPrinc";
-            this.Text = "frmCargoPrinc";
+            this.Text = "Registro de Cargos";
             this.Load += new System.EventHandler(this.frmCargoPrinc_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

@@ -37,5 +37,11 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             //TODO: Obter Cargo geral
             return dtCargoLocal;
         }
+
+          private void tsbNovo_Click(object sender, EventArgs e)
+          {
+              frmCargo telaCargo = new frmCargo();
+              telaCargo.ShowDialog();
+          }
     }
 }

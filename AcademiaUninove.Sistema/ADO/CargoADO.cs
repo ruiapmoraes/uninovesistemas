@@ -14,12 +14,13 @@ namespace AcademiaUninove.Sistema.ADO
         string conn = string.Empty;
         ADOBase objConexao = new ADOBase();
 
-        private bool InsereCargo(int codigo, string cargo)
+        public bool InsereCargo(int codigo, string cargo)
         {
             string query = string.Format(AcademiaUninove.Sistema.Queries.Insert.QueriesInsert.qInsertCargo, codigo, cargo);
-            //ADOBase objCon = new ADOBase();
+            conn = ADOBase.ObterConexao();
+            
             bool bRet = false;
-            RealizaComandoSQL(query, "");
+            RealizaComandoSQL(query, conn);
             return bRet;
         }
 

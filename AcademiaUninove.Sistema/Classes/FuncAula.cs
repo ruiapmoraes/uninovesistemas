@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcademiaUninove.Sistemas.Classes
+namespace AcademiaUninove.Sistema.Classes
 {
     public class FuncAula
     {

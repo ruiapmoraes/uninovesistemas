@@ -10,6 +10,8 @@ namespace AcademiaUninove.Sistema.Negocio
 {
     public class CargoBO
     {
+        CargoADO objCargoADO = new CargoADO();
+
         public bool InserirCargo()
         {
             bool bRet = false;
@@ -26,6 +28,13 @@ namespace AcademiaUninove.Sistema.Negocio
             dtCargo = objCargoADO.ConsultaCargo();
 
             return dtCargo;
+        }
+
+        public bool InserirCargo(int codigo, string cargo)
+        {
+            bool bRet = false;
+            bRet= objCargoADO.InsereCargo(codigo, cargo);
+            return bRet;
         }
     }
 }
