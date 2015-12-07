@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionarioPrinc));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
+            this.txtTelCel = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelRes = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.txtCodigoMask = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,71 +52,71 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvFuncionario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 153);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncionario.Location = new System.Drawing.Point(18, 229);
+            this.dgvFuncionario.Name = "dgvFuncionario";
+            this.dgvFuncionario.Size = new System.Drawing.Size(614, 153);
+            this.dgvFuncionario.TabIndex = 7;
             // 
-            // maskedTextBox3
+            // txtTelCel
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(458, 146);
-            this.maskedTextBox3.Mask = "(99) 00000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox3.TabIndex = 15;
+            this.txtTelCel.Location = new System.Drawing.Point(458, 146);
+            this.txtTelCel.Mask = "(99) 00000-0000";
+            this.txtTelCel.Name = "txtTelCel";
+            this.txtTelCel.Size = new System.Drawing.Size(100, 20);
+            this.txtTelCel.TabIndex = 15;
             // 
-            // maskedTextBox2
+            // txtTelRes
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(298, 146);
-            this.maskedTextBox2.Mask = "(99) 0000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 14;
+            this.txtTelRes.Location = new System.Drawing.Point(298, 146);
+            this.txtTelRes.Mask = "(99) 0000-0000";
+            this.txtTelRes.Name = "txtTelRes";
+            this.txtTelRes.Size = new System.Drawing.Size(100, 20);
+            this.txtTelRes.TabIndex = 14;
             // 
-            // maskedTextBox1
+            // txtCEP
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(75, 146);
-            this.maskedTextBox1.Mask = "00000-999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(66, 20);
-            this.maskedTextBox1.TabIndex = 13;
+            this.txtCEP.Location = new System.Drawing.Point(75, 146);
+            this.txtCEP.Mask = "00000-999";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(66, 20);
+            this.txtCEP.TabIndex = 13;
             // 
-            // textBox3
+            // txtCidade
             // 
-            this.textBox3.Location = new System.Drawing.Point(75, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtCidade.Location = new System.Drawing.Point(75, 117);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(216, 20);
+            this.txtCidade.TabIndex = 12;
             // 
-            // textBox2
+            // txtEndereco
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(492, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtEndereco.Location = new System.Drawing.Point(75, 86);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(492, 20);
+            this.txtEndereco.TabIndex = 11;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtNome.Location = new System.Drawing.Point(75, 57);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(297, 20);
+            this.txtNome.TabIndex = 10;
             // 
-            // comboBox1
+            // cmbCargo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(239, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cmbCargo.FormattingEnabled = true;
+            this.cmbCargo.Location = new System.Drawing.Point(239, 23);
+            this.cmbCargo.Name = "cmbCargo";
+            this.cmbCargo.Size = new System.Drawing.Size(133, 21);
+            this.cmbCargo.TabIndex = 9;
             // 
             // txtCodigoMask
             // 
@@ -153,6 +153,7 @@
             this.tsbDeletar.Name = "tsbDeletar";
             this.tsbDeletar.Size = new System.Drawing.Size(23, 22);
             this.tsbDeletar.Text = "Deletar";
+            this.tsbDeletar.Click += new System.EventHandler(this.tsbDeletar_Click);
             // 
             // tsbEditar
             // 
@@ -162,6 +163,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbNovo
             // 
@@ -171,6 +173,7 @@
             this.tsbNovo.Name = "tsbNovo";
             this.tsbNovo.Size = new System.Drawing.Size(23, 22);
             this.tsbNovo.Text = "Novo";
+            this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
             // 
             // toolStrip1
             // 
@@ -193,6 +196,7 @@
             this.tsbFechar.Name = "tsbFechar";
             this.tsbFechar.Size = new System.Drawing.Size(23, 22);
             this.tsbFechar.Text = "Fechar";
+            this.tsbFechar.Click += new System.EventHandler(this.tsbFechar_Click);
             // 
             // label6
             // 
@@ -250,13 +254,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtTelCel);
+            this.groupBox1.Controls.Add(this.txtTelRes);
+            this.groupBox1.Controls.Add(this.txtCEP);
+            this.groupBox1.Controls.Add(this.txtCidade);
+            this.groupBox1.Controls.Add(this.txtEndereco);
+            this.groupBox1.Controls.Add(this.txtNome);
+            this.groupBox1.Controls.Add(this.cmbCargo);
             this.groupBox1.Controls.Add(this.txtCodigoMask);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -278,12 +282,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 400);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFuncionario);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmFuncionarioPrinc";
-            this.Text = "frmFuncionarioPrinc";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista de Funcionários";
+            this.Load += new System.EventHandler(this.frmFuncionarioPrinc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -295,14 +301,14 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgvFuncionario;
+        private System.Windows.Forms.MaskedTextBox txtTelCel;
+        private System.Windows.Forms.MaskedTextBox txtTelRes;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.MaskedTextBox txtCodigoMask;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

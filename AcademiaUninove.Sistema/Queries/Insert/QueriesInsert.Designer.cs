@@ -61,7 +61,10 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Inserção de aulas
+        ///
+        ///INSERT INTO AULA (CD_AULA,NOME_AULA)
+        ///	VALUES({0}, &apos;{1}&apos;).
         /// </summary>
         public static string qInsertAula {
             get {
@@ -78,6 +81,18 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         public static string qInsertCargo {
             get {
                 return ResourceManager.GetString("qInsertCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Inserção de aulas
+        ///
+        ///INSERT INTO AULA (CD_AULA,NOME_AULA)
+        ///	VALUES({0}, &apos;{1}&apos;).
+        /// </summary>
+        public static string qInsertFuncionario {
+            get {
+                return ResourceManager.GetString("qInsertFuncionario", resourceCulture);
             }
         }
     }

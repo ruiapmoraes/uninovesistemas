@@ -61,7 +61,10 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Comando para excluir registros da tabela aula
+        ///
+        ///DELETE FROM AULA
+        ///	WHERE CD_AULA = {0}.
         /// </summary>
         public static string qDeleteAula {
             get {
@@ -77,6 +80,18 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         public static string qDeleteCargo {
             get {
                 return ResourceManager.GetString("qDeleteCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Comando para excluir registros da tabela aula
+        ///
+        ///DELETE FROM AULA
+        ///	WHERE CD_AULA = {0}.
+        /// </summary>
+        public static string qDeleteFuncionario {
+            get {
+                return ResourceManager.GetString("qDeleteFuncionario", resourceCulture);
             }
         }
     }

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtTelCel = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelRes = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.txtCodigoMask = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,58 +50,58 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // maskedTextBox3
+            // txtTelCel
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(261, 177);
-            this.maskedTextBox3.Mask = "(99) 00000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox3.TabIndex = 31;
+            this.txtTelCel.Location = new System.Drawing.Point(261, 177);
+            this.txtTelCel.Mask = "(99) 00000-0000";
+            this.txtTelCel.Name = "txtTelCel";
+            this.txtTelCel.Size = new System.Drawing.Size(100, 20);
+            this.txtTelCel.TabIndex = 31;
             // 
-            // maskedTextBox2
+            // txtTelRes
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(101, 177);
-            this.maskedTextBox2.Mask = "(99) 0000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 30;
+            this.txtTelRes.Location = new System.Drawing.Point(101, 177);
+            this.txtTelRes.Mask = "(99) 0000-0000";
+            this.txtTelRes.Name = "txtTelRes";
+            this.txtTelRes.Size = new System.Drawing.Size(100, 20);
+            this.txtTelRes.TabIndex = 30;
             // 
-            // maskedTextBox1
+            // txtCEP
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(70, 143);
-            this.maskedTextBox1.Mask = "00000-999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(66, 20);
-            this.maskedTextBox1.TabIndex = 29;
+            this.txtCEP.Location = new System.Drawing.Point(70, 143);
+            this.txtCEP.Mask = "00000-999";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(66, 20);
+            this.txtCEP.TabIndex = 29;
             // 
-            // textBox3
+            // txtCidade
             // 
-            this.textBox3.Location = new System.Drawing.Point(70, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 20);
-            this.textBox3.TabIndex = 28;
+            this.txtCidade.Location = new System.Drawing.Point(70, 114);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(216, 20);
+            this.txtCidade.TabIndex = 28;
             // 
-            // textBox2
+            // txtEndereco
             // 
-            this.textBox2.Location = new System.Drawing.Point(70, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(297, 20);
-            this.textBox2.TabIndex = 27;
+            this.txtEndereco.Location = new System.Drawing.Point(70, 83);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(297, 20);
+            this.txtEndereco.TabIndex = 27;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 20);
-            this.textBox1.TabIndex = 26;
+            this.txtNome.Location = new System.Drawing.Point(70, 54);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(297, 20);
+            this.txtNome.TabIndex = 26;
             // 
-            // comboBox1
+            // cmbCargo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(234, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 21);
-            this.comboBox1.TabIndex = 25;
+            this.cmbCargo.FormattingEnabled = true;
+            this.cmbCargo.Location = new System.Drawing.Point(234, 20);
+            this.cmbCargo.Name = "cmbCargo";
+            this.cmbCargo.Size = new System.Drawing.Size(133, 21);
+            this.cmbCargo.TabIndex = 25;
             // 
             // txtCodigoMask
             // 
@@ -186,13 +186,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtTelCel);
+            this.groupBox1.Controls.Add(this.txtTelRes);
+            this.groupBox1.Controls.Add(this.txtCEP);
+            this.groupBox1.Controls.Add(this.txtCidade);
+            this.groupBox1.Controls.Add(this.txtEndereco);
+            this.groupBox1.Controls.Add(this.txtNome);
+            this.groupBox1.Controls.Add(this.cmbCargo);
             this.groupBox1.Controls.Add(this.txtCodigoMask);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -245,13 +245,13 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MaskedTextBox txtTelCel;
+        private System.Windows.Forms.MaskedTextBox txtTelRes;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.MaskedTextBox txtCodigoMask;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

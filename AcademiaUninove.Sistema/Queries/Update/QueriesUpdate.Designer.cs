@@ -61,7 +61,11 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Consulta de aulas para edição
+        ///
+        ///SELECT CD_AULA, NOME_AULA 
+        ///	FROM AULA
+        ///WHERE CD_AULA = {0}.
         /// </summary>
         public static string qConsultaAulaEdit {
             get {
@@ -85,7 +89,23 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Consulta de aulas para edição
+        ///
+        ///SELECT CD_AULA, NOME_AULA 
+        ///	FROM AULA
+        ///WHERE CD_AULA = {0}.
+        /// </summary>
+        public static string qConsultaFuncionarioEdit {
+            get {
+                return ResourceManager.GetString("qConsultaFuncionarioEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Comando de update aula
+        ///
+        ///UPDATE AULA SET NOME_AULA = &apos;{0}&apos;
+        ///WHERE CD_AULA = {1}.
         /// </summary>
         public static string qUpdateAula {
             get {
@@ -102,6 +122,18 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         public static string qUpdateCargo {
             get {
                 return ResourceManager.GetString("qUpdateCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Comando de update aula
+        ///
+        ///UPDATE AULA SET NOME_AULA = &apos;{0}&apos;
+        ///WHERE CD_AULA = {1}.
+        /// </summary>
+        public static string qUpdateFuncionario {
+            get {
+                return ResourceManager.GetString("qUpdateFuncionario", resourceCulture);
             }
         }
     }

@@ -124,10 +124,16 @@
   <data name="qConsultaCargoEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qConsultaCargoEdit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="qConsultaFuncionarioEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qconsultafuncionarioedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="qUpdateAula" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qUpdateAula.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="qUpdateCargo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qUpdateCargo.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="qUpdateFuncionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qupdatefuncionario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>
