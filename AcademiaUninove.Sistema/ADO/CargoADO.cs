@@ -121,5 +121,26 @@ namespace AcademiaUninove.Sistema.ADO
             }
            
         }
+
+        public bool ExcluiCargo(int codigo)
+        {
+            string query = string.Format(AcademiaUninove.Sistema.Queries.Delete.QueriesDelete.qDeleteCargo, codigo);
+            conn = ADOBase.ObterConexao();
+
+            bool bRet = false;
+
+
+            try
+            {
+                RealizaComandoSQL(query, conn);
+                return true;
+            }
+            catch (Exception)
+            {
+                bRet = false;
+                throw;
+                return bRet;
+            }
+        }
     }
 }

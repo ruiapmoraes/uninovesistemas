@@ -348,6 +348,7 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Queries\Delete\qDeleteCargo.sql" />
     <Content Include="Queries\Insert\qInsertCargo.sql" />
     <Content Include="Queries\Read\qConsultaCargo.sql" />
     <Content Include="Queries\Read\qLogin.sql" />

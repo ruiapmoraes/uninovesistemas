@@ -59,5 +59,16 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Excluindo o Registro de Cargo
+        ///DELETE FROM CARGO
+        ///WHERE CD_CARGO = {0}.
+        /// </summary>
+        public static string qDeleteCargo {
+            get {
+                return ResourceManager.GetString("qDeleteCargo", resourceCulture);
+            }
+        }
     }
 }

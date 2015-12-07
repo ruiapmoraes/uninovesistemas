@@ -22,6 +22,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
         string _tpOperacao = string.Empty;
         int _codCargo = 0;
+        string _nomeCargo = string.Empty;
 
         private void frmCargoPrinc_Load(object sender, EventArgs e)
         {
@@ -49,9 +50,11 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
+            int linha = 0;
             _tpOperacao = "editar";
-            _codCargo = int.Parse(dgvCargo.Rows[e.RowIndex].Cells[0].Value.ToString());
-
+            //_codCargo = int.Parse(dgvCargo.Rows[e.RowIndex].Cells[0].Value.ToString());
+            linha = dgvCargo.CurrentRow.Index;
+            _codCargo = int.Parse(dgvCargo.Rows[linha].Cells[0].Value.ToString());
 
             frmCargo telaCargo = new frmCargo(_tpOperacao, _codCargo);
             telaCargo.Show();
@@ -72,6 +75,28 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         private int BuscaIdCargo()
         {
             return 0;
+        }
+
+        private void tsbDeletar_Click(object sender, EventArgs e)
+        {
+            bool resultado = false;
+            int linha = 0;
+            //_codCargo = int.Parse(dgvCargo.Rows[e.RowIndex].Cells[0].Value.ToString());
+            
+            linha = dgvCargo.CurrentRow.Index;
+            _codCargo = int.Parse(dgvCargo.Rows[linha].Cells[0].Value.ToString());
+            CargoBO objCargoBO = new CargoBO();
+
+            if (MessageBox.Show("Confirma exclusão?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                resultado = objCargoBO.ExcluiCargo(_codCargo);
+                if (resultado)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    dgvCargo.DataSource = dtCargoGeral();
+                }
+            }
+
         }
     }
 }

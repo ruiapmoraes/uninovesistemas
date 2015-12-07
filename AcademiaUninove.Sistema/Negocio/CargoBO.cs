@@ -54,5 +54,12 @@ namespace AcademiaUninove.Sistema.Negocio
             bRet = objCargoADO.AtualizaCargo(codigo, cargo);
             return bRet;
         }
+
+        public bool ExcluiCargo(int codigo)
+        {
+            bool bRet = false;
+            bRet = objCargoADO.ExcluiCargo(codigo);
+            return bRet;
+        }
     }
 }

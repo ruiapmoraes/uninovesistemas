@@ -82,6 +82,7 @@
             this.tsbDeletar.Name = "tsbDeletar";
             this.tsbDeletar.Size = new System.Drawing.Size(23, 22);
             this.tsbDeletar.Text = "Deletar";
+            this.tsbDeletar.Click += new System.EventHandler(this.tsbDeletar_Click);
             // 
             // tsbFechar
             // 
