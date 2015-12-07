@@ -61,6 +61,15 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qDeleteAula {
+            get {
+                return ResourceManager.GetString("qDeleteAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Excluindo o Registro de Cargo
         ///DELETE FROM CARGO
         ///WHERE CD_CARGO = {0}.

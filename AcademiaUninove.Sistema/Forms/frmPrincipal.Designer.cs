@@ -144,6 +144,7 @@
             this.aulaToolStripMenuItem.Name = "aulaToolStripMenuItem";
             this.aulaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aulaToolStripMenuItem.Text = "Aula";
+            this.aulaToolStripMenuItem.Click += new System.EventHandler(this.aulaToolStripMenuItem_Click);
             // 
             // alunoToolStripMenuItem
             // 

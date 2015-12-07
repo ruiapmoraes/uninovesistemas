@@ -205,6 +205,7 @@
     <Compile Include="Helpers\ADOBase.cs" />
     <Compile Include="Helpers\Validacao.cs" />
     <Compile Include="Negocio\AlunoBO.cs" />
+    <Compile Include="ADO\AulaADO.cs" />
     <Compile Include="Negocio\AulaBO.cs" />
     <Compile Include="Negocio\CargoBO.cs" />
     <Compile Include="Negocio\FichaExerciciosBO.cs" />
@@ -347,11 +348,16 @@
     <Folder Include="Relatorios\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Queries\Delete\qDeleteAula.sql" />
     <Content Include="Queries\Delete\qDeleteCargo.sql" />
+    <Content Include="Queries\Insert\qInsertAula.sql" />
     <Content Include="Queries\Insert\qInsertCargo.sql" />
+    <Content Include="Queries\Read\qConsultaAula.sql" />
     <Content Include="Queries\Read\qConsultaCargo.sql" />
     <Content Include="Queries\Read\qLogin.sql" />
+    <Content Include="Queries\Update\qConsultaAulaEdit.sql" />
     <Content Include="Queries\Update\qConsultaCargoEdit.sql" />
+    <Content Include="Queries\Update\qUpdateAula.sql" />
     <Content Include="Queries\Update\qUpdateCargo.sql" />
     <Content Include="Scripts\Criacao_Banco_Academia.sql" />
   </ItemGroup>

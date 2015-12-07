@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.gbAula = new System.Windows.Forms.GroupBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtAula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.gbAula.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbAula
             // 
-            this.gbAula.Controls.Add(this.txtCargo);
             this.gbAula.Controls.Add(this.txtCodigo);
+            this.gbAula.Controls.Add(this.txtAula);
             this.gbAula.Controls.Add(this.label2);
             this.gbAula.Controls.Add(this.label1);
             this.gbAula.Location = new System.Drawing.Point(12, 12);
@@ -51,19 +51,12 @@
             this.gbAula.TabStop = false;
             this.gbAula.Text = "Aula";
             // 
-            // txtCargo
+            // txtAula
             // 
-            this.txtCargo.Location = new System.Drawing.Point(110, 78);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(140, 20);
-            this.txtCargo.TabIndex = 3;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(110, 41);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(140, 20);
-            this.txtCodigo.TabIndex = 2;
+            this.txtAula.Location = new System.Drawing.Point(110, 78);
+            this.txtAula.Name = "txtAula";
+            this.txtAula.Size = new System.Drawing.Size(140, 20);
+            this.txtAula.TabIndex = 3;
             // 
             // label2
             // 
@@ -91,6 +84,7 @@
             this.btnSalvar.TabIndex = 10;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -100,6 +94,16 @@
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(110, 41);
+            this.txtCodigo.Mask = "00000";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(140, 20);
+            this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.ValidatingType = typeof(int);
             // 
             // frmAula
             // 
@@ -110,7 +114,9 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "frmAula";
-            this.Text = "frmAula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Aula";
+            this.Load += new System.EventHandler(this.frmAula_Load);
             this.gbAula.ResumeLayout(false);
             this.gbAula.PerformLayout();
             this.ResumeLayout(false);
@@ -120,11 +126,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbAula;
-        private System.Windows.Forms.TextBox txtCargo;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtAula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MaskedTextBox txtCodigo;
     }
 }

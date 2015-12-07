@@ -29,5 +29,12 @@ namespace AcademiaUninove.Sistema.Forms
             telaCargo.MdiParent = this;
             telaCargo.Show();
         }
+
+        private void aulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAulaPrinc telaAula = new frmAulaPrinc();
+            telaAula.MdiParent = this;
+            telaAula.Show();
+        }
     }
 }

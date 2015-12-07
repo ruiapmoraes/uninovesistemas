@@ -61,6 +61,15 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qConsultaAulaEdit {
+            get {
+                return ResourceManager.GetString("qConsultaAulaEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Consulta Cargo para Edição
         ///SELECT CD_CARGO as &apos;Código&apos;, NOME_CARGO as &apos;Cargo&apos;
         ///FROM CARGO
@@ -77,6 +86,18 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         
         /// <summary>
         ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qUpdateAula {
+            get {
+                return ResourceManager.GetString("qUpdateAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Atualizando cargo
+        ///
+        ///UPDATE CARGO SET NOME_CARGO = &apos;{0}&apos;
+        ///WHERE CD_CARGO = {1}.
         /// </summary>
         public static string qUpdateCargo {
             get {

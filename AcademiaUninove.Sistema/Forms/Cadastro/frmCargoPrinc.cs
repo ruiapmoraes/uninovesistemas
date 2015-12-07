@@ -81,7 +81,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         {
             bool resultado = false;
             int linha = 0;
-            //_codCargo = int.Parse(dgvCargo.Rows[e.RowIndex].Cells[0].Value.ToString());
+          
             
             linha = dgvCargo.CurrentRow.Index;
             _codCargo = int.Parse(dgvCargo.Rows[linha].Cells[0].Value.ToString());

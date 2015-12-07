@@ -61,8 +61,17 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qConsultaAula {
+            get {
+                return ResourceManager.GetString("qConsultaAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Consulta Cargo
-        ///SELECT CD_CARGO, NOME_CARGO
+        ///SELECT CD_CARGO as &apos;Código&apos;, NOME_CARGO as &apos;Cargo&apos;
         ///FROM CARGO
         ///
         ///.

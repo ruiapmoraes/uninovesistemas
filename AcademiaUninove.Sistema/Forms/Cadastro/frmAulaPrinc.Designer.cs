@@ -35,12 +35,10 @@
             this.tsbDeletar = new System.Windows.Forms.ToolStripButton();
             this.tsbFechar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvCargo = new System.Windows.Forms.DataGridView();
-            this.CdAula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeAula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAula = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAula)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -64,6 +62,7 @@
             this.tsbNovo.Name = "tsbNovo";
             this.tsbNovo.Size = new System.Drawing.Size(23, 22);
             this.tsbNovo.Text = "Novo";
+            this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
             // 
             // tsbEditar
             // 
@@ -82,6 +81,7 @@
             this.tsbDeletar.Name = "tsbDeletar";
             this.tsbDeletar.Size = new System.Drawing.Size(23, 22);
             this.tsbDeletar.Text = "Deletar";
+            this.tsbDeletar.Click += new System.EventHandler(this.tsbDeletar_Click);
             // 
             // tsbFechar
             // 
@@ -91,10 +91,11 @@
             this.tsbFechar.Name = "tsbFechar";
             this.tsbFechar.Size = new System.Drawing.Size(23, 22);
             this.tsbFechar.Text = "Fechar";
+            this.tsbFechar.Click += new System.EventHandler(this.tsbFechar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvCargo);
+            this.groupBox1.Controls.Add(this.dgvAula);
             this.groupBox1.Location = new System.Drawing.Point(0, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(459, 228);
@@ -102,30 +103,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de Aulas";
             // 
-            // dgvCargo
+            // dgvAula
             // 
-            this.dgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CdAula,
-            this.NomeAula});
-            this.dgvCargo.Location = new System.Drawing.Point(7, 20);
-            this.dgvCargo.Name = "dgvCargo";
-            this.dgvCargo.ReadOnly = true;
-            this.dgvCargo.Size = new System.Drawing.Size(446, 202);
-            this.dgvCargo.TabIndex = 0;
-            // 
-            // CdAula
-            // 
-            this.CdAula.HeaderText = "Código";
-            this.CdAula.Name = "CdAula";
-            this.CdAula.ReadOnly = true;
-            // 
-            // NomeAula
-            // 
-            this.NomeAula.HeaderText = "Aula";
-            this.NomeAula.Name = "NomeAula";
-            this.NomeAula.ReadOnly = true;
-            this.NomeAula.Width = 300;
+            this.dgvAula.AllowUserToAddRows = false;
+            this.dgvAula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAula.Location = new System.Drawing.Point(7, 20);
+            this.dgvAula.Name = "dgvAula";
+            this.dgvAula.ReadOnly = true;
+            this.dgvAula.Size = new System.Drawing.Size(446, 202);
+            this.dgvAula.TabIndex = 0;
+            this.dgvAula.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAula_CellDoubleClick);
             // 
             // frmAulaPrinc
             // 
@@ -135,11 +122,13 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAulaPrinc";
-            this.Text = "frmAulaPrinc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Aulas";
+            this.Load += new System.EventHandler(this.frmAulaPrinc_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAula)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,8 +142,6 @@
         private System.Windows.Forms.ToolStripButton tsbDeletar;
         private System.Windows.Forms.ToolStripButton tsbFechar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CdAula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeAula;
+        private System.Windows.Forms.DataGridView dgvAula;
     }
 }

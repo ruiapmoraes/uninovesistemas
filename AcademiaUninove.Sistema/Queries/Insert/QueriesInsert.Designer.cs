@@ -61,6 +61,15 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qInsertAula {
+            get {
+                return ResourceManager.GetString("qInsertAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Inserir Cargo
         ///INSERT INTO CARGO
         ///(CD_CARGO, NOME_CARGO)
