@@ -72,6 +72,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbDeletar
             // 
@@ -110,6 +111,7 @@
             this.dgvCargo.ReadOnly = true;
             this.dgvCargo.Size = new System.Drawing.Size(446, 202);
             this.dgvCargo.TabIndex = 0;
+            this.dgvCargo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCargo_CellDoubleClick);
             // 
             // frmCargoPrinc
             // 

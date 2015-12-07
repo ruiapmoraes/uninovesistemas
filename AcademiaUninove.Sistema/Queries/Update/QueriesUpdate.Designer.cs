@@ -22,7 +22,7 @@ namespace AcademiaUninove.Sistema.Queries.Update {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class QueriesUpdate {
+    public class QueriesUpdate {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AcademiaUninove.Sistema.Queries.Update.QueriesUpdate", typeof(QueriesUpdate).Assembly);
@@ -51,12 +51,36 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta Cargo para Edição
+        ///SELECT CD_CARGO as &apos;Código&apos;, NOME_CARGO as &apos;Cargo&apos;
+        ///FROM CARGO
+        ///
+        ///where CD_CARGO = {0}
+        ///
+        ///.
+        /// </summary>
+        public static string qConsultaCargoEdit {
+            get {
+                return ResourceManager.GetString("qConsultaCargoEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qUpdateCargo {
+            get {
+                return ResourceManager.GetString("qUpdateCargo", resourceCulture);
             }
         }
     }

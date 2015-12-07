@@ -323,7 +323,7 @@
       <LastGenOutput>QueriesConsulta.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Queries\Update\QueriesUpdate.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>QueriesUpdate.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -351,6 +351,8 @@
     <Content Include="Queries\Insert\qInsertCargo.sql" />
     <Content Include="Queries\Read\qConsultaCargo.sql" />
     <Content Include="Queries\Read\qLogin.sql" />
+    <Content Include="Queries\Update\qConsultaCargoEdit.sql" />
+    <Content Include="Queries\Update\qUpdateCargo.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

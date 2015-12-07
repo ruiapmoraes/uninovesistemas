@@ -20,8 +20,18 @@ namespace AcademiaUninove.Sistema.ADO
             conn = ADOBase.ObterConexao();
             
             bool bRet = false;
-            RealizaComandoSQL(query, conn);
+           
             return bRet;
+            try
+            {
+                RealizaComandoSQL(query, conn);
+                return true;
+            }
+            catch (Exception)
+            {
+                bRet = false;
+                throw;
+            }
         }
 
         public bool ConsultaCargoOld()
@@ -66,6 +76,50 @@ namespace AcademiaUninove.Sistema.ADO
 
             //TODO ajustar o retorno do método
             return dtCargo;
+        }
+
+        public DataTable ConsultaCargo(int _codCargo)
+        {
+            bool bRet = false;
+            DataTable dtCargo = null;
+            string query = string.Format(AcademiaUninove.Sistema.Queries.Update.QueriesUpdate.qConsultaCargoEdit,_codCargo);
+
+            try
+            {
+                conn = ADOBase.ObterConexao();
+                dtCargo = RealizaPesquisaSQL(query, conn);
+
+            }
+            catch (Exception ex)
+            {
+                dtCargo = null;
+                throw ex;
+            }
+
+            //TODO ajustar o retorno do método
+            return dtCargo;
+        }
+
+        public bool AtualizaCargo(int codigo, string cargo)
+        {
+            string query = string.Format(AcademiaUninove.Sistema.Queries.Update.QueriesUpdate.qUpdateCargo, cargo, codigo);
+            conn = ADOBase.ObterConexao();
+
+            bool bRet = false;
+
+           
+            try
+            {
+                RealizaComandoSQL(query, conn);
+                return true;
+            }
+            catch (Exception)
+            {
+                bRet = false;
+                throw;
+                return bRet;
+            }
+           
         }
     }
 }

@@ -30,18 +30,18 @@
         {
             this.gbCargo = new System.Windows.Forms.GroupBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.gbCargo.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbCargo
             // 
-            this.gbCargo.Controls.Add(this.txtCargo);
             this.gbCargo.Controls.Add(this.txtCodigo);
+            this.gbCargo.Controls.Add(this.txtCargo);
             this.gbCargo.Controls.Add(this.label2);
             this.gbCargo.Controls.Add(this.label1);
             this.gbCargo.Location = new System.Drawing.Point(12, 12);
@@ -57,13 +57,6 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(140, 20);
             this.txtCargo.TabIndex = 3;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(110, 41);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(140, 20);
-            this.txtCodigo.TabIndex = 2;
             // 
             // label2
             // 
@@ -103,6 +96,15 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(110, 44);
+            this.txtCodigo.Mask = "00000";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(140, 20);
+            this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.ValidatingType = typeof(int);
+            // 
             // frmCargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +115,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Name = "frmCargo";
             this.Text = "Cadastro de Cargos";
+            this.Load += new System.EventHandler(this.frmCargo_Load);
             this.gbCargo.ResumeLayout(false);
             this.gbCargo.PerformLayout();
             this.ResumeLayout(false);
@@ -123,10 +126,10 @@
 
         private System.Windows.Forms.GroupBox gbCargo;
         private System.Windows.Forms.TextBox txtCargo;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MaskedTextBox txtCodigo;
     }
 }

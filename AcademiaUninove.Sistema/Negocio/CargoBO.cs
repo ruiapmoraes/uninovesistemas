@@ -33,7 +33,25 @@ namespace AcademiaUninove.Sistema.Negocio
         public bool InserirCargo(int codigo, string cargo)
         {
             bool bRet = false;
-            bRet= objCargoADO.InsereCargo(codigo, cargo);
+            bRet = objCargoADO.InsereCargo(codigo, cargo);
+            return bRet;
+        }
+
+        public DataTable ObterCargo(int _codCargo)
+        {
+            CargoADO objCargoADO = new CargoADO();
+
+            DataTable dtCargo = null; ;
+
+            dtCargo = objCargoADO.ConsultaCargo(_codCargo);
+
+            return dtCargo;
+        }
+
+        public bool AtualizaCargo(int codigo, string cargo)
+        {
+            bool bRet = false;
+            bRet = objCargoADO.AtualizaCargo(codigo, cargo);
             return bRet;
         }
     }

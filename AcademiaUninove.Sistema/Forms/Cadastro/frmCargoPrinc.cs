@@ -20,6 +20,9 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             InitializeComponent();
         }
 
+        string _tpOperacao = string.Empty;
+        int _codCargo = 0;
+
         private void frmCargoPrinc_Load(object sender, EventArgs e)
         {
             DataTable dtLocal = null;
@@ -28,7 +31,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             dgvCargo.DataSource = dtCargoGeral();
         }
 
-          private DataTable dtCargoGeral()
+        private DataTable dtCargoGeral()
         {
             DataTable dtCargoLocal = new DataTable();
             CargoBO objCargo = new CargoBO();
@@ -38,10 +41,37 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             return dtCargoLocal;
         }
 
-          private void tsbNovo_Click(object sender, EventArgs e)
-          {
-              frmCargo telaCargo = new frmCargo();
-              telaCargo.ShowDialog();
-          }
+        private void tsbNovo_Click(object sender, EventArgs e)
+        {
+            frmCargo telaCargo = new frmCargo();
+            telaCargo.ShowDialog();
+        }
+
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            _tpOperacao = "editar";
+            _codCargo = int.Parse(dgvCargo.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+
+            frmCargo telaCargo = new frmCargo(_tpOperacao, _codCargo);
+            telaCargo.Show();
+        }
+
+        private void dgvCargo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _tpOperacao = "editar";
+            _codCargo = int.Parse(dgvCargo.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+
+            frmCargo telaCargo = new frmCargo(_tpOperacao, _codCargo);
+            telaCargo.Show();
+            //TODO:
+            //dgvCargo.Rows[e.RowIndex].Cells[0].Value
+        }
+
+        private int BuscaIdCargo()
+        {
+            return 0;
+        }
     }
 }
