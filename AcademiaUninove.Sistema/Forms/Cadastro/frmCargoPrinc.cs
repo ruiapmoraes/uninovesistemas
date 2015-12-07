@@ -57,7 +57,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             _codCargo = int.Parse(dgvCargo.Rows[linha].Cells[0].Value.ToString());
 
             frmCargo telaCargo = new frmCargo(_tpOperacao, _codCargo);
-            telaCargo.Show();
+            telaCargo.ShowDialog();
         }
 
         private void dgvCargo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

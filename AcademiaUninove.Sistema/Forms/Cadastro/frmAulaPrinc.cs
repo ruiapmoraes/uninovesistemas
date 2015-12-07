@@ -53,7 +53,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
 
             frmAula telaAula = new frmAula(_tpOperacao, _codAula);
-            telaAula.Show();
+            telaAula.ShowDialog();
         }
 
         private void tsbDeletar_Click(object sender, EventArgs e)
@@ -80,6 +80,17 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         private void tsbFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            int linha = 0;
+            _tpOperacao = "editar";            
+            linha = dgvAula.CurrentRow.Index;
+            _codCargo = int.Parse(dgvAula.Rows[linha].Cells[0].Value.ToString());
+
+            frmAula telaAula = new frmAula(_tpOperacao, _codAula);
+            telaAula.ShowDialog();
         }
     }
 }

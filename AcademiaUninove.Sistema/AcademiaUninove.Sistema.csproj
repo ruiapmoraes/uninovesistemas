@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADO\CargoADO.cs" />
+    <Compile Include="ADO\FuncionarioADO.cs" />
     <Compile Include="ADO\LoginADO.cs" />
     <Compile Include="Classes\Aluno.cs" />
     <Compile Include="Classes\Aula.cs" />
