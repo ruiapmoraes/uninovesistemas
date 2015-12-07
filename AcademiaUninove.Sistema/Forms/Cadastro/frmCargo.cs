@@ -113,8 +113,9 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         }
 
         private void frmCargo_Load(object sender, EventArgs e)
-        {
+        {            
             VerificarOperacao(_tpOperacao);
+            this.txtCodigo.Focus();
         }
 
         private void VerificarOperacao(string operacao)

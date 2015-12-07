@@ -345,7 +345,6 @@
     <Folder Include="Queries\Relatorio\" />
     <Folder Include="Read\" />
     <Folder Include="Relatorios\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Queries\Delete\qDeleteCargo.sql" />
@@ -354,6 +353,7 @@
     <Content Include="Queries\Read\qLogin.sql" />
     <Content Include="Queries\Update\qConsultaCargoEdit.sql" />
     <Content Include="Queries\Update\qUpdateCargo.sql" />
+    <Content Include="Scripts\Criacao_Banco_Academia.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

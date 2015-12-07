@@ -98,5 +98,10 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             }
 
         }
+
+        private void tsbFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

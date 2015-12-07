@@ -21,7 +21,7 @@ namespace AcademiaUninove.Sistema.ADO
             
             bool bRet = false;
            
-            return bRet;
+            
             try
             {
                 RealizaComandoSQL(query, conn);
@@ -29,7 +29,7 @@ namespace AcademiaUninove.Sistema.ADO
             }
             catch (Exception)
             {
-                bRet = false;
+                return bRet;
                 throw;
             }
         }

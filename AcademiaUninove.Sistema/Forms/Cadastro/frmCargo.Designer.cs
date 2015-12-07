@@ -114,6 +114,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "frmCargo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Cargos";
             this.Load += new System.EventHandler(this.frmCargo_Load);
             this.gbCargo.ResumeLayout(false);
