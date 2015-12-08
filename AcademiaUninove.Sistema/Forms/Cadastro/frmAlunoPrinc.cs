@@ -22,5 +22,20 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             frmAluno telaAluno = new frmAluno();
             telaAluno.ShowDialog();
         }
+
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbDeletar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

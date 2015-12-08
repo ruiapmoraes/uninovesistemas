@@ -241,6 +241,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QueriesUpdate.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Cadastro\frmAluno.resx">
+      <DependentUpon>frmAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastro\frmAlunoPrinc.resx">
       <DependentUpon>frmAlunoPrinc.cs</DependentUpon>
     </EmbeddedResource>
