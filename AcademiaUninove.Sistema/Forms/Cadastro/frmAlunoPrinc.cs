@@ -16,5 +16,11 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         {
             InitializeComponent();
         }
+
+        private void tsbNovo_Click(object sender, EventArgs e)
+        {
+            frmAluno telaAluno = new frmAluno();
+            telaAluno.ShowDialog();
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace AcademiaUninove.Sistema.ADO
         {
             bool bRet = false;
             DataTable dtAula = null;
-            string query = string.Format( AcademiaUninove.Sistema.Queries.Read.QueriesConsulta.qConsultaAula, codigo);
+            string query = string.Format( AcademiaUninove.Sistema.Queries.Update.QueriesUpdate.qConsultaAulaEdit, codigo);
 
             try
             {

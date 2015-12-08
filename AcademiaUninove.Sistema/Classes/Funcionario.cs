@@ -13,6 +13,7 @@ namespace AcademiaUninove.Sistema.Classes
         public string NomeFuncionario { get; set; }
         public string EndFuncionario { get; set; }
         public string CidadeFunc { get; set; }
+        public string CEPFunc { get; set; }
         public string TelResFunc { get; set; }
         public string TelCelFunc { get; set; }
 

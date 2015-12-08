@@ -70,6 +70,8 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         {
             //TODO: Além de popular o gridview, é precido popular os campos
             dgvFuncionario.DataSource = DtFuncGeral();
+            //CarregaComboCargo();
+            dgvFuncionario.Columns[1].Visible = false;
         }
 
         public DataTable DtFuncGeral()
@@ -94,6 +96,29 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
             frmFuncionario telaFuncionario = new frmFuncionario(_tpOperacao, _codFunc);
             telaFuncionario.ShowDialog();
+        }
+
+        private void CarregaComboCargo()
+        {
+            DataTable dtCargoCombo = null;
+            DataView dvCargoCombro = null;
+            int intContador = 0;
+            CargoBO objCargoBO = new CargoBO();
+            dtCargoCombo = objCargoBO.ObterCargo();
+            dtCargoCombo.DefaultView.Sort = "Cargo asc";
+
+
+            if (dtCargoCombo.Rows.Count < 0 && dtCargoCombo == null)
+            {
+                intContador = 0;
+                cmbCargo.Items.Clear();
+            }
+            else
+            {
+                cmbCargo.ValueMember = "Código";
+                cmbCargo.DisplayMember = "Cargo";
+                cmbCargo.DataSource = dtCargoCombo;
+            }
         }
     }
 }

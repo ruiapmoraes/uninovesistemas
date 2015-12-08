@@ -59,6 +59,7 @@
             // 
             // dgvFuncionario
             // 
+            this.dgvFuncionario.AllowUserToAddRows = false;
             this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFuncionario.Location = new System.Drawing.Point(18, 229);
             this.dgvFuncionario.Name = "dgvFuncionario";
@@ -71,6 +72,7 @@
             this.txtTelCel.Location = new System.Drawing.Point(458, 146);
             this.txtTelCel.Mask = "(99) 00000-0000";
             this.txtTelCel.Name = "txtTelCel";
+            this.txtTelCel.ReadOnly = true;
             this.txtTelCel.Size = new System.Drawing.Size(100, 20);
             this.txtTelCel.TabIndex = 15;
             // 
@@ -79,6 +81,7 @@
             this.txtTelRes.Location = new System.Drawing.Point(298, 146);
             this.txtTelRes.Mask = "(99) 0000-0000";
             this.txtTelRes.Name = "txtTelRes";
+            this.txtTelRes.ReadOnly = true;
             this.txtTelRes.Size = new System.Drawing.Size(100, 20);
             this.txtTelRes.TabIndex = 14;
             // 
@@ -87,6 +90,7 @@
             this.txtCEP.Location = new System.Drawing.Point(75, 146);
             this.txtCEP.Mask = "00000-999";
             this.txtCEP.Name = "txtCEP";
+            this.txtCEP.ReadOnly = true;
             this.txtCEP.Size = new System.Drawing.Size(66, 20);
             this.txtCEP.TabIndex = 13;
             // 
@@ -94,6 +98,7 @@
             // 
             this.txtCidade.Location = new System.Drawing.Point(75, 117);
             this.txtCidade.Name = "txtCidade";
+            this.txtCidade.ReadOnly = true;
             this.txtCidade.Size = new System.Drawing.Size(216, 20);
             this.txtCidade.TabIndex = 12;
             // 
@@ -101,6 +106,7 @@
             // 
             this.txtEndereco.Location = new System.Drawing.Point(75, 86);
             this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.ReadOnly = true;
             this.txtEndereco.Size = new System.Drawing.Size(492, 20);
             this.txtEndereco.TabIndex = 11;
             // 
@@ -108,11 +114,13 @@
             // 
             this.txtNome.Location = new System.Drawing.Point(75, 57);
             this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(297, 20);
             this.txtNome.TabIndex = 10;
             // 
             // cmbCargo
             // 
+            this.cmbCargo.Enabled = false;
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Location = new System.Drawing.Point(239, 23);
             this.cmbCargo.Name = "cmbCargo";
@@ -124,6 +132,7 @@
             this.txtCodigoMask.Location = new System.Drawing.Point(75, 25);
             this.txtCodigoMask.Mask = "00000";
             this.txtCodigoMask.Name = "txtCodigoMask";
+            this.txtCodigoMask.ReadOnly = true;
             this.txtCodigoMask.Size = new System.Drawing.Size(45, 20);
             this.txtCodigoMask.TabIndex = 8;
             this.txtCodigoMask.ValidatingType = typeof(int);

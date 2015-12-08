@@ -35,7 +35,7 @@
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
-            this.txtCodigoMask = new System.Windows.Forms.MaskedTextBox();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -103,14 +103,14 @@
             this.cmbCargo.Size = new System.Drawing.Size(133, 21);
             this.cmbCargo.TabIndex = 25;
             // 
-            // txtCodigoMask
+            // txtCodigo
             // 
-            this.txtCodigoMask.Location = new System.Drawing.Point(70, 22);
-            this.txtCodigoMask.Mask = "00000";
-            this.txtCodigoMask.Name = "txtCodigoMask";
-            this.txtCodigoMask.Size = new System.Drawing.Size(45, 20);
-            this.txtCodigoMask.TabIndex = 24;
-            this.txtCodigoMask.ValidatingType = typeof(int);
+            this.txtCodigo.Location = new System.Drawing.Point(70, 22);
+            this.txtCodigo.Mask = "00000";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(45, 20);
+            this.txtCodigo.TabIndex = 24;
+            this.txtCodigo.ValidatingType = typeof(int);
             // 
             // label8
             // 
@@ -193,7 +193,7 @@
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.cmbCargo);
-            this.groupBox1.Controls.Add(this.txtCodigoMask);
+            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -217,6 +217,7 @@
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -226,6 +227,7 @@
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmFuncionario
             // 
@@ -236,7 +238,9 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "frmFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Funcionário";
+            this.Load += new System.EventHandler(this.frmFuncionario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -252,7 +256,7 @@
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.ComboBox cmbCargo;
-        private System.Windows.Forms.MaskedTextBox txtCodigoMask;
+        private System.Windows.Forms.MaskedTextBox txtCodigo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
