@@ -89,11 +89,46 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta de aulas para edição
+        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
         ///
-        ///SELECT CD_AULA, NOME_AULA 
-        ///	FROM AULA
-        ///WHERE CD_AULA = {0}.
+        ///
+        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
+        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
+        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
+        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
+        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
+        ///  FROM FUNC_AULA FA
+        ///  LEFT OUTER JOIN FUNCIONARIO F
+        ///  ON FA.CD_FUNC =F.CD_FUNC
+        ///  LEFT OUTER JOIN AULA A
+        ///  ON FA.CD_AULA = A.CD_AULA
+        ///  WHERE 
+        ///		FA.CD_FUNC_AULA = {0}.
+        /// </summary>
+        public static string qConsultaFuncAulaEdit {
+            get {
+                return ResourceManager.GetString("qConsultaFuncAulaEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta de funcionários para edição
+        ///
+        ////****** Script for SelectTopNRows command from SSMS  ******/
+        ///SELECT F.CD_FUNC &apos;Código&apos;
+        ///      ,F.CD_CARGO &apos;Código Cargo&apos;
+        ///	  ,C.NOME_CARGO &apos;Cargo&apos;
+        ///      ,F.NOME_FUNC &apos;Nome Funcionário&apos;
+        ///      ,F.END_FUNC &apos;Endereço&apos;
+        ///      ,F.CEP_FUNC &apos;CEP&apos;
+        ///      ,F.CIDADE &apos;Cidade&apos;
+        ///      ,F.TEL_RES &apos;Tel. Residencial&apos;
+        ///      ,F.TEL_CEL &apos;Tel. Celular&apos;
+        ///  FROM FUNCIONARIO F
+        ///  LEFT OUTER JOIN CARGO C
+        ///  ON F.CD_CARGO = C.CD_CARGO
+        ///  WHERE 
+        ///		F.CD_FUNC = {0}.
         /// </summary>
         public static string qConsultaFuncionarioEdit {
             get {
@@ -126,10 +161,35 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Comando de update aula
+        ///   Looks up a localized string similar to -- Comando de update aula dos instrutores
         ///
-        ///UPDATE AULA SET NOME_AULA = &apos;{0}&apos;
-        ///WHERE CD_AULA = {1}.
+        ///UPDATE FUNC_AULA 
+        ///SET 
+        ///		CD_FUNC = {1}
+        ///		,CD_AULA = {2}	
+        ///WHERE
+        ///		CD_FUNC_AULA = {0}.
+        /// </summary>
+        public static string qUpdateFuncAula {
+            get {
+                return ResourceManager.GetString("qUpdateFuncAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Comando de update FUNCIONÁRIO
+        ///
+        ///UPDATE FUNCIONARIO 
+        ///SET 
+        ///		CD_CARGO = {1}
+        ///		,NOME_FUNC = &apos;{2}&apos;
+        ///		,END_FUNC = &apos;{3}&apos;
+        ///		,CEP_FUNC = &apos;{4}&apos;
+        ///		,CIDADE = &apos;{5}&apos;
+        ///		,TEL_RES = &apos;{6}&apos;
+        ///		,TEL_CEL = &apos;{7}&apos;
+        ///WHERE
+        ///		CD_FUNC = {0}.
         /// </summary>
         public static string qUpdateFuncionario {
             get {

@@ -85,10 +85,46 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Inserção de aulas
+        ///   Looks up a localized string similar to -- Inserção de da aula dos instrutores
         ///
-        ///INSERT INTO AULA (CD_AULA,NOME_AULA)
-        ///	VALUES({0}, &apos;{1}&apos;).
+        ///INSERT INTO FUNC_AULA(
+        ///	CD_FUNC_AULA,
+        ///	CD_FUNC,
+        ///	CD_AULA) VALUES
+        ///	(
+        ///		{0}
+        ///		,{1}
+        ///		,{2}
+        ///	).
+        /// </summary>
+        public static string qInsertFuncAula {
+            get {
+                return ResourceManager.GetString("qInsertFuncAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Inserção de FUNCIONÁRIOS
+        ///
+        ///INSERT INTO FUNCIONARIO (
+        ///	CD_FUNC,
+        ///	CD_CARGO,
+        ///	NOME_FUNC,
+        ///	END_FUNC,
+        ///	CEP_FUNC,
+        ///	CIDADE,
+        ///	TEL_RES,
+        ///	TEL_CEL) VALUES
+        ///	(
+        ///		{0}
+        ///		,{1}
+        ///		,&apos;{2}&apos;
+        ///		,&apos;{3}&apos;
+        ///		,&apos;{4}&apos;
+        ///		,&apos;{5}&apos;
+        ///		,&apos;{6}&apos;
+        ///		,&apos;{7}&apos;
+        ///	).
         /// </summary>
         public static string qInsertFuncionario {
             get {

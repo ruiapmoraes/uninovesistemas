@@ -85,9 +85,41 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta geral de aulas
+        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
         ///
-        ///SELECT CD_AULA, NOME_AULA FROM AULA.
+        ///
+        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
+        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
+        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
+        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
+        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
+        ///  FROM FUNC_AULA FA
+        ///  LEFT OUTER JOIN FUNCIONARIO F
+        ///  ON FA.CD_FUNC =F.CD_FUNC
+        ///  LEFT OUTER JOIN AULA A
+        ///  ON FA.CD_AULA = A.CD_AULA
+        /// .
+        /// </summary>
+        public static string qConsultaFuncAula {
+            get {
+                return ResourceManager.GetString("qConsultaFuncAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /****** Script for SelectTopNRows command from SSMS  ******/
+        ///SELECT F.CD_FUNC &apos;Código&apos;
+        ///      ,F.CD_CARGO &apos;Código Cargo&apos;
+        ///	  ,C.NOME_CARGO &apos;Cargo&apos;
+        ///      ,F.NOME_FUNC &apos;Nome Funcionário&apos;
+        ///      ,F.END_FUNC &apos;Endereço&apos;
+        ///      ,F.CEP_FUNC &apos;CEP&apos;
+        ///      ,F.CIDADE &apos;Cidade&apos;
+        ///      ,F.TEL_RES &apos;Tel. Residencial&apos;
+        ///      ,F.TEL_CEL &apos;Tel. Celular&apos;
+        ///  FROM FUNCIONARIO F
+        ///  LEFT OUTER JOIN CARGO C
+        ///  ON F.CD_CARGO = C.CD_CARGO.
         /// </summary>
         public static string qConsultaFuncionario {
             get {

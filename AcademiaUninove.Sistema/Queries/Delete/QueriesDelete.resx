@@ -124,6 +124,9 @@
   <data name="qDeleteCargo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qDeleteCargo.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="qDeleteFuncAula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qdeletefuncaula.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="qDeleteFuncionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qDeleteFuncionario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
