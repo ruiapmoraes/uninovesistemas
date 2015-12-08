@@ -126,12 +126,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 249);
+            this.ClientSize = new System.Drawing.Size(310, 245);
             this.Controls.Add(this.gbAula);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "frmFuncAula";
-            this.Text = "frmFuncAula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro das Aulas do Professor";
             this.gbAula.ResumeLayout(false);
             this.gbAula.PerformLayout();
             this.ResumeLayout(false);
