@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AcademiaUninove.Sistema.Forms.Cadastro;
+using System.Threading;
+using AcademiaUninove.Sistema.Forms.Exercicios;
 
 namespace AcademiaUninove.Sistema.Forms
 {
@@ -16,6 +18,8 @@ namespace AcademiaUninove.Sistema.Forms
         public frmPrincipal()
         {
             InitializeComponent();
+
+         
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,6 +39,55 @@ namespace AcademiaUninove.Sistema.Forms
             frmAulaPrinc telaAula = new frmAulaPrinc();
             telaAula.MdiParent = this;
             telaAula.Show();
+        }
+
+        private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFuncionarioPrinc telaFunc = new frmFuncionarioPrinc();
+            telaFunc.MdiParent = this;
+            telaFunc.Show();
+        }
+
+        private void alunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlunoPrinc telaAluno = new frmAlunoPrinc();
+            telaAluno.MdiParent = this;
+            telaAluno.Show();
+        }
+
+        private void medidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMedidasPrinc telaMedidas = new frmMedidasPrinc();
+            telaMedidas.MdiParent = this;
+            telaMedidas.Show();
+        }
+
+        private void horárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHorarioPrinc telaHorario = new frmHorarioPrinc();
+            telaHorario.MdiParent = this;
+            telaHorario.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAulaPrinc telaAula = new frmAulaPrinc();
+            telaAula.MdiParent = this;
+            telaAula.Show();
+        }
+
+        private void frequênciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFrequenciaPrinc telaFreq = new frmFrequenciaPrinc();
+            telaFreq.MdiParent = this;
+            telaFreq.Show();
+        }
+
+        private void fichaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFichaExerciciosPrinc telaFicha = new frmFichaExerciciosPrinc();
+            telaFicha.MdiParent = this;
+            telaFicha.Show();
         }
     }
 }

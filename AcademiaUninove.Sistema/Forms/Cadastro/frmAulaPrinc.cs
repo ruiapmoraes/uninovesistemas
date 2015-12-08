@@ -87,7 +87,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             int linha = 0;
             _tpOperacao = "editar";            
             linha = dgvAula.CurrentRow.Index;
-            _codCargo = int.Parse(dgvAula.Rows[linha].Cells[0].Value.ToString());
+            _codAula = int.Parse(dgvAula.Rows[linha].Cells[0].Value.ToString());
 
             frmAula telaAula = new frmAula(_tpOperacao, _codAula);
             telaAula.ShowDialog();
