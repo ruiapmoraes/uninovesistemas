@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="qConsultaAlunoEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qconsultaalunoedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="qConsultaAulaEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qConsultaAulaEdit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -132,6 +135,9 @@
   </data>
   <data name="qConsultaFuncionarioEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qconsultafuncionarioedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="qUpdateAluno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qupdatealuno.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="qUpdateAula" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qUpdateAula.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

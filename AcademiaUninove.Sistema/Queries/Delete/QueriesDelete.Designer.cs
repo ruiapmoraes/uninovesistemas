@@ -61,6 +61,18 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -- Comando para excluir registros da tabela FUNCIONARIO
+        ///
+        ///DELETE FROM FUNCIONARIO
+        ///	WHERE CD_FUNC = {0}.
+        /// </summary>
+        public static string qDeleteAluno {
+            get {
+                return ResourceManager.GetString("qDeleteAluno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Comando para excluir registros da tabela aula
         ///
         ///DELETE FROM AULA

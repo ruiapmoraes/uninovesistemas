@@ -61,6 +61,27 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /****** Script for SelectTopNRows command from SSMS  ******/
+        ///SELECT F.CD_FUNC &apos;Código&apos;
+        ///      ,F.CD_CARGO &apos;Código Cargo&apos;
+        ///	  ,C.NOME_CARGO &apos;Cargo&apos;
+        ///      ,F.NOME_FUNC &apos;Nome Funcionário&apos;
+        ///      ,F.END_FUNC &apos;Endereço&apos;
+        ///      ,F.CEP_FUNC &apos;CEP&apos;
+        ///      ,F.CIDADE &apos;Cidade&apos;
+        ///      ,F.TEL_RES &apos;Tel. Residencial&apos;
+        ///      ,F.TEL_CEL &apos;Tel. Celular&apos;
+        ///  FROM FUNCIONARIO F
+        ///  LEFT OUTER JOIN CARGO C
+        ///  ON F.CD_CARGO = C.CD_CARGO.
+        /// </summary>
+        public static string qConsultaAluno {
+            get {
+                return ResourceManager.GetString("qConsultaAluno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Consulta geral de aulas
         ///
         ///SELECT CD_AULA, NOME_AULA FROM AULA.

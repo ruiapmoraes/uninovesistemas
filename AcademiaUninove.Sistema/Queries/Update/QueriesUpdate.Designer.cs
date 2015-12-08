@@ -61,6 +61,31 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -- Consulta de funcionários para edição
+        ///
+        ////****** Script for SelectTopNRows command from SSMS  ******/
+        ///SELECT F.CD_FUNC &apos;Código&apos;
+        ///      ,F.CD_CARGO &apos;Código Cargo&apos;
+        ///	  ,C.NOME_CARGO &apos;Cargo&apos;
+        ///      ,F.NOME_FUNC &apos;Nome Funcionário&apos;
+        ///      ,F.END_FUNC &apos;Endereço&apos;
+        ///      ,F.CEP_FUNC &apos;CEP&apos;
+        ///      ,F.CIDADE &apos;Cidade&apos;
+        ///      ,F.TEL_RES &apos;Tel. Residencial&apos;
+        ///      ,F.TEL_CEL &apos;Tel. Celular&apos;
+        ///  FROM FUNCIONARIO F
+        ///  LEFT OUTER JOIN CARGO C
+        ///  ON F.CD_CARGO = C.CD_CARGO
+        ///  WHERE 
+        ///		F.CD_FUNC = {0}.
+        /// </summary>
+        public static string qConsultaAlunoEdit {
+            get {
+                return ResourceManager.GetString("qConsultaAlunoEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Consulta de aulas para edição
         ///
         ///SELECT CD_AULA, NOME_AULA 
@@ -156,6 +181,27 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         public static string qConsultaFuncionarioEdit {
             get {
                 return ResourceManager.GetString("qConsultaFuncionarioEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Comando de update FUNCIONÁRIO
+        ///
+        ///UPDATE FUNCIONARIO 
+        ///SET 
+        ///		CD_CARGO = {1}
+        ///		,NOME_FUNC = &apos;{2}&apos;
+        ///		,END_FUNC = &apos;{3}&apos;
+        ///		,CEP_FUNC = &apos;{4}&apos;
+        ///		,CIDADE = &apos;{5}&apos;
+        ///		,TEL_RES = &apos;{6}&apos;
+        ///		,TEL_CEL = &apos;{7}&apos;
+        ///WHERE
+        ///		CD_FUNC = {0}.
+        /// </summary>
+        public static string qUpdateAluno {
+            get {
+                return ResourceManager.GetString("qUpdateAluno", resourceCulture);
             }
         }
         
