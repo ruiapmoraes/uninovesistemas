@@ -61,5 +61,16 @@ namespace AcademiaUninove.Sistema.Negocio
             bRet = objCargoADO.ExcluiCargo(codigo);
             return bRet;
         }
+
+        public DataTable ObterCargoCombo(int codigo)
+        {
+            CargoADO objCargoADO = new CargoADO();
+
+            DataTable dtCargo = null; ;
+
+            dtCargo = objCargoADO.ConsultaCargo(codigo);
+
+            return dtCargo;
+        }
     }
 }

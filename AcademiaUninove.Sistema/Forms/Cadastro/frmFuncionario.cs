@@ -79,7 +79,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             objFuncionarioDTO.TelResFunc = telres;
             objFuncionarioDTO.TelCelFunc = telcel;
 
-            resultado = objFuncionarioBO.InseriFuncionario(objFuncionarioDTO.CodigoFunc, objFuncionarioDTO.CodigoFunc, objFuncionarioDTO.NomeFuncionario,
+            resultado = objFuncionarioBO.InseriFuncionario(objFuncionarioDTO.CodigoFunc, objFuncionarioDTO.CodigoCargo, objFuncionarioDTO.NomeFuncionario,
                             objFuncionarioDTO.EndFuncionario, objFuncionarioDTO.CidadeFunc, objFuncionarioDTO.CEPFunc, objFuncionarioDTO.TelResFunc, objFuncionarioDTO.TelCelFunc);
 
             if (resultado)

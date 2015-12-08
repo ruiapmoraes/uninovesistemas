@@ -68,9 +68,13 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
         private void frmFuncionarioPrinc_Load(object sender, EventArgs e)
         {
+            int linha = 0;
             //TODO: Além de popular o gridview, é precido popular os campos
+           
             dgvFuncionario.DataSource = DtFuncGeral();
-            //CarregaComboCargo();
+            linha = dgvFuncionario.CurrentRow.Index;
+            _codFunc = int.Parse(dgvFuncionario.Rows[linha].Cells[1].Value.ToString());
+            CarregaCamposFuncionario(_codFunc);
             dgvFuncionario.Columns[1].Visible = false;
         }
 
@@ -98,13 +102,13 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             telaFuncionario.ShowDialog();
         }
 
-        private void CarregaComboCargo()
+        private void CarregaComboCargo(int codigo)
         {
             DataTable dtCargoCombo = null;
-            DataView dvCargoCombro = null;
+          
             int intContador = 0;
             CargoBO objCargoBO = new CargoBO();
-            dtCargoCombo = objCargoBO.ObterCargo();
+            dtCargoCombo = objCargoBO.ObterCargoCombo(codigo);
             dtCargoCombo.DefaultView.Sort = "Cargo asc";
 
 
@@ -118,6 +122,43 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
                 cmbCargo.ValueMember = "Código";
                 cmbCargo.DisplayMember = "Cargo";
                 cmbCargo.DataSource = dtCargoCombo;
+            }
+        }
+
+        private void CarregaCamposFuncionario(int codigo)
+        {
+            DataTable dtCargoCombo = null;
+            DataTable dtFuncionario = null;
+            int intContador = 0;
+            int linha = 0;
+            CargoBO objCargoBO = new CargoBO();
+            FuncionarioBO objFuncionarioBO = new FuncionarioBO();
+            dtFuncionario = objFuncionarioBO.ObterFuncionario(codigo);
+
+            linha = int.Parse(dtFuncionario.Rows[0][0].ToString());
+            dtCargoCombo = objCargoBO.ObterCargoCombo(linha);
+            dtCargoCombo.DefaultView.Sort = "Cargo asc";
+
+
+            if (dtCargoCombo.Rows.Count < 0 && dtCargoCombo == null)
+            {
+                intContador = 0;
+                cmbCargo.Items.Clear();
+            }
+            else
+            {
+                cmbCargo.ValueMember = "Código";
+                cmbCargo.DisplayMember = "Cargo";
+                cmbCargo.DataSource = dtCargoCombo;
+
+                txtCodigoMask.Text = dtFuncionario.Rows[0][0].ToString();
+                txtNome.Text = dtFuncionario.Rows[0][3].ToString();
+                txtEndereco.Text = dtFuncionario.Rows[0][4].ToString();
+                txtCidade.Text = dtFuncionario.Rows[0][5].ToString();
+                txtCEP.Text = dtFuncionario.Rows[0][6].ToString();
+                txtTelRes.Text = dtFuncionario.Rows[0][7].ToString();
+                txtTelCel.Text = dtFuncionario.Rows[0][8].ToString();
+
             }
         }
     }
