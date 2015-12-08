@@ -78,15 +78,14 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(448, 103);
-            this.txtEndereco.Multiline = true;
+            this.txtEndereco.Location = new System.Drawing.Point(106, 152);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(130, 40);
+            this.txtEndereco.Size = new System.Drawing.Size(269, 20);
             this.txtEndereco.TabIndex = 27;
             // 
             // txtObjetivo
             // 
-            this.txtObjetivo.Location = new System.Drawing.Point(108, 175);
+            this.txtObjetivo.Location = new System.Drawing.Point(108, 230);
             this.txtObjetivo.Multiline = true;
             this.txtObjetivo.Name = "txtObjetivo";
             this.txtObjetivo.Size = new System.Drawing.Size(267, 39);
@@ -94,21 +93,21 @@
             // 
             // txtRestricao
             // 
-            this.txtRestricao.Location = new System.Drawing.Point(275, 145);
+            this.txtRestricao.Location = new System.Drawing.Point(275, 200);
             this.txtRestricao.Name = "txtRestricao";
             this.txtRestricao.Size = new System.Drawing.Size(100, 20);
             this.txtRestricao.TabIndex = 25;
             // 
             // txtStatusAluno
             // 
-            this.txtStatusAluno.Location = new System.Drawing.Point(108, 149);
+            this.txtStatusAluno.Location = new System.Drawing.Point(108, 204);
             this.txtStatusAluno.Name = "txtStatusAluno";
             this.txtStatusAluno.Size = new System.Drawing.Size(100, 20);
             this.txtStatusAluno.TabIndex = 24;
             // 
             // txtDataNasc
             // 
-            this.txtDataNasc.Location = new System.Drawing.Point(499, 76);
+            this.txtDataNasc.Location = new System.Drawing.Point(275, 123);
             this.txtDataNasc.Mask = "00/00/0000";
             this.txtDataNasc.Name = "txtDataNasc";
             this.txtDataNasc.Size = new System.Drawing.Size(79, 20);
@@ -117,14 +116,14 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(448, 173);
+            this.txtCidade.Location = new System.Drawing.Point(275, 178);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(130, 20);
+            this.txtCidade.Size = new System.Drawing.Size(100, 20);
             this.txtCidade.TabIndex = 22;
             // 
             // txtCEP
             // 
-            this.txtCEP.Location = new System.Drawing.Point(108, 123);
+            this.txtCEP.Location = new System.Drawing.Point(108, 178);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(100, 20);
             this.txtCEP.TabIndex = 21;
@@ -170,7 +169,7 @@
             this.groupBox2.Controls.Add(this.btnPesquisar);
             this.groupBox2.Controls.Add(this.txtCodigoAlunoPesq);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Location = new System.Drawing.Point(12, 266);
+            this.groupBox2.Location = new System.Drawing.Point(12, 310);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(658, 56);
             this.groupBox2.TabIndex = 10;
@@ -205,7 +204,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvAluno);
-            this.groupBox3.Location = new System.Drawing.Point(12, 323);
+            this.groupBox3.Location = new System.Drawing.Point(12, 373);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(658, 117);
             this.groupBox3.TabIndex = 11;
@@ -313,7 +312,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(658, 232);
+            this.groupBox1.Size = new System.Drawing.Size(658, 276);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações do Aluno";
@@ -329,7 +328,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 181);
+            this.label14.Location = new System.Drawing.Point(19, 236);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(49, 13);
             this.label14.TabIndex = 13;
@@ -338,7 +337,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(217, 153);
+            this.label13.Location = new System.Drawing.Point(217, 208);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 13);
             this.label13.TabIndex = 12;
@@ -347,7 +346,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 153);
+            this.label12.Location = new System.Drawing.Point(19, 208);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 13);
             this.label12.TabIndex = 11;
@@ -356,7 +355,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(385, 180);
+            this.label11.Location = new System.Drawing.Point(217, 184);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 10;
@@ -365,7 +364,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 129);
+            this.label10.Location = new System.Drawing.Point(18, 184);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 9;
@@ -374,7 +373,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(385, 103);
+            this.label9.Location = new System.Drawing.Point(19, 155);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 8;
@@ -401,7 +400,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(385, 76);
+            this.label6.Location = new System.Drawing.Point(152, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 13);
             this.label6.TabIndex = 5;
@@ -456,13 +455,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 454);
+            this.ClientSize = new System.Drawing.Size(686, 500);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAlunoPrinc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Alunos";
+            this.Load += new System.EventHandler(this.frmAlunoPrinc_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);

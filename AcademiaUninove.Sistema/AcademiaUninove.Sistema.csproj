@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADO\AlunoADO.cs" />
     <Compile Include="ADO\CargoADO.cs" />
     <Compile Include="ADO\FuncAulaADO.cs" />
     <Compile Include="ADO\FuncionarioADO.cs" />
@@ -349,8 +350,6 @@
     <Folder Include="Forms\Relatorios\" />
     <Folder Include="Imagens\" />
     <Folder Include="Queries\Relatorio\" />
-    <Folder Include="Read\" />
-    <Folder Include="Relatorios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Queries\Delete\qDeleteFuncAula.sql" />

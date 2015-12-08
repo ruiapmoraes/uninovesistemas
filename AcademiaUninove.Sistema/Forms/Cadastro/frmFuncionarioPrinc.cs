@@ -23,6 +23,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             InitializeComponent();
         }
 
+        #region Eventos
         private void tsbNovo_Click(object sender, EventArgs e)
         {
             frmFuncionario telaFuncionario = new frmFuncionario();
@@ -70,7 +71,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         {
             int linha = 0;
             //TODO: Além de popular o gridview, é precido popular os campos
-           
+
             dgvFuncionario.DataSource = DtFuncGeral();
             linha = dgvFuncionario.CurrentRow.Index;
             _codFunc = int.Parse(dgvFuncionario.Rows[linha].Cells[1].Value.ToString());
@@ -78,19 +79,12 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             dgvFuncionario.Columns[1].Visible = false;
         }
 
-        public DataTable DtFuncGeral()
+        private void dgvFuncionario_SelectionChanged(object sender, EventArgs e)
         {
-            DataTable dtFuncLocal = new DataTable();
-            FuncionarioBO objFuncionario = new FuncionarioBO();
-            dtFuncLocal = objFuncionario.ObterFuncionario();
-
-            return dtFuncLocal;
-        }
-
-        //TODO: Criar rotina para popular a tela a partir do combo do funcionáriop
-        private void ObterComboFuncionario()
-        {
-            ;
+            int linha = 0;
+            linha = dgvFuncionario.CurrentRow.Index;
+            _codFunc = int.Parse(dgvFuncionario.Rows[linha].Cells[0].Value.ToString());
+            CarregaCamposFuncionario(_codFunc);
         }
 
         private void dgvFuncionario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -100,12 +94,27 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
             frmFuncionario telaFuncionario = new frmFuncionario(_tpOperacao, _codFunc);
             telaFuncionario.ShowDialog();
+        } 
+        #endregion
+
+        #region Métodos
+        /// <summary>
+        /// Carrega todos os funcionários
+        /// </summary>
+        /// <returns>DataTable Funcionarios</returns>
+        public DataTable DtFuncGeral()
+        {
+            DataTable dtFuncLocal = new DataTable();
+            FuncionarioBO objFuncionario = new FuncionarioBO();
+            dtFuncLocal = objFuncionario.ObterFuncionario();
+
+            return dtFuncLocal;
         }
 
         private void CarregaComboCargo(int codigo)
         {
             DataTable dtCargoCombo = null;
-          
+
             int intContador = 0;
             CargoBO objCargoBO = new CargoBO();
             dtCargoCombo = objCargoBO.ObterCargoCombo(codigo);
@@ -168,15 +177,8 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
                 }
             }
 
-            
-        }
 
-        private void dgvFuncionario_SelectionChanged(object sender, EventArgs e)
-        {
-            int linha = 0;
-            linha = dgvFuncionario.CurrentRow.Index;
-            _codFunc = int.Parse(dgvFuncionario.Rows[linha].Cells[0].Value.ToString());
-            CarregaCamposFuncionario(_codFunc);
-        }
+        } 
+        #endregion        
     }
 }
