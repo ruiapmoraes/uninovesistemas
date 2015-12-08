@@ -1,13 +1,20 @@
-﻿-- Comando de update FUNCIONÁRIO
+﻿-- Comando de update aluno
 
-UPDATE FUNCIONARIO 
+UPDATE ALUNO 
 SET 
-		CD_CARGO = {1}
-		,NOME_FUNC = '{2}'
-		,END_FUNC = '{3}'
-		,CEP_FUNC = '{4}'
-		,CIDADE = '{5}'
-		,TEL_RES = '{6}'
-		,TEL_CEL = '{7}'
+	CD_FUNC = {1},
+	NOME_ALU = '{2}',
+	CPF_ALU = '{3}',
+	RG_ALU = '{4}',
+	DT_NASC = '{5}',
+	TEL_RES = '{6}',
+	TEL_CEL = '{7}',
+	END_ALU = '{8}',
+	CEP_ALU = '{9}',
+	CIDADE = '{10}',
+	STATUS_ALU = '{11}',
+	RESTRICAO = '{12}',
+	OBJETIVO = '{13}'
 WHERE
-		CD_FUNC = {0}
+	CD_ALU = {0}
+	

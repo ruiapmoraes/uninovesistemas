@@ -1,4 +1,4 @@
-﻿-- Comando para excluir registros da tabela FUNCIONARIO
+﻿-- Comando para excluir registros da tabela ALUNO
 
-DELETE FROM FUNCIONARIO
-	WHERE CD_FUNC = {0}
+DELETE FROM ALUNO
+	WHERE CD_ALU = {0}
