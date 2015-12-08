@@ -37,6 +37,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         public frmFuncionario(string tpOperacao, int codFunc)
         {
             // TODO: Complete member initialization
+            InitializeComponent();
             this._tpOperacao = tpOperacao;
             this._codFunc = codFunc;
         }
@@ -106,7 +107,7 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             objFuncionarioDTO.TelResFunc = telres;
             objFuncionarioDTO.TelCelFunc = telcel;
 
-            resultado = objFuncionarioBO.AtualizaFuncionario(objFuncionarioDTO.CodigoFunc, objFuncionarioDTO.CodigoFunc, objFuncionarioDTO.NomeFuncionario,
+            resultado = objFuncionarioBO.AtualizaFuncionario(objFuncionarioDTO.CodigoFunc, objFuncionarioDTO.CodigoCargo, objFuncionarioDTO.NomeFuncionario,
                             objFuncionarioDTO.EndFuncionario, objFuncionarioDTO.CidadeFunc, objFuncionarioDTO.CEPFunc, objFuncionarioDTO.TelResFunc, objFuncionarioDTO.TelCelFunc);
 
             if (resultado)
@@ -141,9 +142,46 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             }
         }
 
+        private void CarregaCamposFuncionario(int codigo)
+        {
+            DataTable dtCargoCombo = null;
+            DataTable dtFuncionario = null;
+            int intContador = 0;
+            int linha = 0;
+            CargoBO objCargoBO = new CargoBO();
+            FuncionarioBO objFuncionarioBO = new FuncionarioBO();
+            dtFuncionario = objFuncionarioBO.ObterFuncionario(codigo);
+
+            linha = int.Parse(dtFuncionario.Rows[0][1].ToString());
+            dtCargoCombo = objCargoBO.ObterCargo();
+            //dtCargoCombo.DefaultView.Sort = "Cargo asc";
+
+
+            if (dtCargoCombo.Rows.Count < 0 && dtCargoCombo == null)
+            {
+                intContador = 0;
+                cmbCargo.Items.Clear();
+            }
+            else
+            {
+                cmbCargo.ValueMember = "Código";
+                cmbCargo.DisplayMember = "Cargo";
+                cmbCargo.DataSource = dtCargoCombo;
+
+                txtCodigo.Text = dtFuncionario.Rows[0][0].ToString();
+                txtNome.Text = dtFuncionario.Rows[0][3].ToString();
+                txtEndereco.Text = dtFuncionario.Rows[0][4].ToString();
+                txtCidade.Text = dtFuncionario.Rows[0][5].ToString();
+                txtCEP.Text = dtFuncionario.Rows[0][6].ToString();
+                txtTelRes.Text = dtFuncionario.Rows[0][7].ToString();
+                txtTelCel.Text = dtFuncionario.Rows[0][8].ToString();
+
+            }
+        }
+
         private void frmFuncionario_Load(object sender, EventArgs e)
         {
-            CarregaComboCargo();
+            CarregaCamposFuncionario(_codFunc);
         }
     }
 }

@@ -135,31 +135,48 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
             FuncionarioBO objFuncionarioBO = new FuncionarioBO();
             dtFuncionario = objFuncionarioBO.ObterFuncionario(codigo);
 
-            linha = int.Parse(dtFuncionario.Rows[0][0].ToString());
-            dtCargoCombo = objCargoBO.ObterCargoCombo(linha);
-            dtCargoCombo.DefaultView.Sort = "Cargo asc";
-
-
-            if (dtCargoCombo.Rows.Count < 0 && dtCargoCombo == null)
+            if (dtFuncionario.Rows.Count <= 0 || dtFuncionario == null)
             {
-                intContador = 0;
-                cmbCargo.Items.Clear();
+                return;
             }
             else
             {
-                cmbCargo.ValueMember = "Código";
-                cmbCargo.DisplayMember = "Cargo";
-                cmbCargo.DataSource = dtCargoCombo;
+                linha = int.Parse(dtFuncionario.Rows[0][1].ToString());
+                dtCargoCombo = objCargoBO.ObterCargoCombo(linha);
+                //dtCargoCombo.DefaultView.Sort = "Cargo asc";
 
-                txtCodigoMask.Text = dtFuncionario.Rows[0][0].ToString();
-                txtNome.Text = dtFuncionario.Rows[0][3].ToString();
-                txtEndereco.Text = dtFuncionario.Rows[0][4].ToString();
-                txtCidade.Text = dtFuncionario.Rows[0][5].ToString();
-                txtCEP.Text = dtFuncionario.Rows[0][6].ToString();
-                txtTelRes.Text = dtFuncionario.Rows[0][7].ToString();
-                txtTelCel.Text = dtFuncionario.Rows[0][8].ToString();
 
+                if (dtCargoCombo.Rows.Count < 0 && dtCargoCombo == null)
+                {
+                    intContador = 0;
+                    cmbCargo.Items.Clear();
+                }
+                else
+                {
+                    cmbCargo.ValueMember = "Código";
+                    cmbCargo.DisplayMember = "Cargo";
+                    cmbCargo.DataSource = dtCargoCombo;
+
+                    txtCodigoMask.Text = dtFuncionario.Rows[0][0].ToString();
+                    txtNome.Text = dtFuncionario.Rows[0][3].ToString();
+                    txtEndereco.Text = dtFuncionario.Rows[0][4].ToString();
+                    txtCidade.Text = dtFuncionario.Rows[0][5].ToString();
+                    txtCEP.Text = dtFuncionario.Rows[0][6].ToString();
+                    txtTelRes.Text = dtFuncionario.Rows[0][7].ToString();
+                    txtTelCel.Text = dtFuncionario.Rows[0][8].ToString();
+
+                }
             }
+
+            
+        }
+
+        private void dgvFuncionario_SelectionChanged(object sender, EventArgs e)
+        {
+            int linha = 0;
+            linha = dgvFuncionario.CurrentRow.Index;
+            _codFunc = int.Parse(dgvFuncionario.Rows[linha].Cells[0].Value.ToString());
+            CarregaCamposFuncionario(_codFunc);
         }
     }
 }

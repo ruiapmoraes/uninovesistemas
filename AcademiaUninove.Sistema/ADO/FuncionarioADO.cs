@@ -39,9 +39,24 @@ namespace AcademiaUninove.Sistema.ADO
             return dtFuncionario;
         }
 
-        public bool ExcluiFuncionario(int codFunc)
+        public bool ExcluiFuncionario(int codigo)
         {
-            throw new NotImplementedException();
+            string query = string.Format(AcademiaUninove.Sistema.Queries.Delete.QueriesDelete.qDeleteFuncionario, codigo);
+            conn = ADOBase.ObterConexao();
+
+            bool bRet = false;
+            try
+            {
+                RealizaComandoSQL(query, conn);
+                return true;
+            }
+            catch (Exception)
+            {
+                bRet = false;
+                throw;
+                return bRet;
+            }
+
         }
 
         public bool InsereFuncionario(int codigo, int cargo, string nome, string endereco, string cidade, string cep, string telres, string telcel)
@@ -104,7 +119,7 @@ namespace AcademiaUninove.Sistema.ADO
             catch (Exception)
             {
                 bRet = false;
-                throw;
+                //throw;
                 return bRet;
             }
         }

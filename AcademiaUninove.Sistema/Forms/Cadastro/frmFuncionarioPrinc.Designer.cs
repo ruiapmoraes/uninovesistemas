@@ -66,6 +66,7 @@
             this.dgvFuncionario.Size = new System.Drawing.Size(614, 153);
             this.dgvFuncionario.TabIndex = 7;
             this.dgvFuncionario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellDoubleClick);
+            this.dgvFuncionario.SelectionChanged += new System.EventHandler(this.dgvFuncionario_SelectionChanged);
             // 
             // txtTelCel
             // 
