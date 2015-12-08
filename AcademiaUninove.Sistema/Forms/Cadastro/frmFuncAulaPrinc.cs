@@ -16,5 +16,26 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         {
             InitializeComponent();
         }
+
+        private void tsbNovo_Click(object sender, EventArgs e)
+        {
+            frmFuncAula telaFuncAula = new frmFuncAula();
+            telaFuncAula.ShowDialog();
+        }
+
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbDeletar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

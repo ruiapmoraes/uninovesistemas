@@ -89,5 +89,19 @@ namespace AcademiaUninove.Sistema.Forms
             telaFicha.MdiParent = this;
             telaFicha.Show();
         }
+
+        private void aulaDosInstrutoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFuncAulaPrinc telaFuncAUla = new frmFuncAulaPrinc();
+            telaFuncAUla.MdiParent = this;
+        }
+
+        private void fecharTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form mdiChildForm in MdiChildren)
+            {
+                mdiChildForm.Close();
+            }
+        }
     }
 }

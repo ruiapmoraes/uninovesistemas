@@ -31,20 +31,20 @@
             this.gbAula = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.cmbAula = new System.Windows.Forms.ComboBox();
             this.gbAula.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbAula
             // 
+            this.gbAula.Controls.Add(this.cmbAula);
             this.gbAula.Controls.Add(this.comboBox1);
             this.gbAula.Controls.Add(this.label3);
-            this.gbAula.Controls.Add(this.txtCargo);
             this.gbAula.Controls.Add(this.txtCodigo);
             this.gbAula.Controls.Add(this.label2);
             this.gbAula.Controls.Add(this.label1);
@@ -71,13 +71,6 @@
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Instrutor:";
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.Location = new System.Drawing.Point(110, 114);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(140, 20);
-            this.txtCargo.TabIndex = 3;
             // 
             // txtCodigo
             // 
@@ -122,6 +115,14 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // cmbAula
+            // 
+            this.cmbAula.FormattingEnabled = true;
+            this.cmbAula.Location = new System.Drawing.Point(110, 117);
+            this.cmbAula.Name = "cmbAula";
+            this.cmbAula.Size = new System.Drawing.Size(140, 21);
+            this.cmbAula.TabIndex = 6;
+            // 
             // frmFuncAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,11 +145,11 @@
         private System.Windows.Forms.GroupBox gbAula;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ComboBox cmbAula;
     }
 }
