@@ -36,9 +36,7 @@ namespace AcademiaUninove.Sistema.Forms
 
         private void aulaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAulaPrinc telaAula = new frmAulaPrinc();
-            telaAula.MdiParent = this;
-            telaAula.Show();
+           
         }
 
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,8 +90,9 @@ namespace AcademiaUninove.Sistema.Forms
 
         private void aulaDosInstrutoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFuncAulaPrinc telaFuncAUla = new frmFuncAulaPrinc();
-            telaFuncAUla.MdiParent = this;
+            frmFuncAulaPrinc telaFuncAula = new frmFuncAulaPrinc();
+            telaFuncAula.MdiParent = this;
+            telaFuncAula.Show();
         }
 
         private void fecharTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +101,13 @@ namespace AcademiaUninove.Sistema.Forms
             {
                 mdiChildForm.Close();
             }
+        }
+
+        private void cadastroDeAulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAulaPrinc telaAula = new frmAulaPrinc();
+            telaAula.MdiParent = this;
+            telaAula.Show();
         }
     }
 }

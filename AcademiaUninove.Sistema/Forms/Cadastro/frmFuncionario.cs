@@ -16,8 +16,8 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
     public partial class frmFuncionario : Form
     {
         #region Variáveis globais
-        private string _tpOperacao;
-        private int _codFunc;
+        private string _tpOperacao = string.Empty;
+        private int _codFunc = 0;
         Funcionario objFuncionarioDTO = new Funcionario();
         FuncionarioBO objFuncionarioBO = new FuncionarioBO();
         Validacao objValidacao = new Validacao();
@@ -181,7 +181,23 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
         private void frmFuncionario_Load(object sender, EventArgs e)
         {
-            CarregaCamposFuncionario(_codFunc);
+            VerificarOperacao(_tpOperacao);
+            
+        }
+
+        private void VerificarOperacao(string operacao)
+        {
+            if (operacao.ToUpper() == "EDITAR")
+            {
+                txtCodigo.ReadOnly = true;
+                CarregaCamposFuncionario(_codFunc);
+            }
+            else
+            {
+                txtCodigo.ReadOnly = false;
+                CarregaComboCargo();
+            }
+              
         }
     }
 }

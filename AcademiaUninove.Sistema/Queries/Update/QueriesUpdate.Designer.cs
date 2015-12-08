@@ -103,11 +103,34 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         ///  LEFT OUTER JOIN AULA A
         ///  ON FA.CD_AULA = A.CD_AULA
         ///  WHERE 
-        ///		FA.CD_FUNC_AULA = {0}.
+        ///		FA.CD_FUNC = {0}.
         /// </summary>
         public static string qConsultaFuncAulaEdit {
             get {
                 return ResourceManager.GetString("qConsultaFuncAulaEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
+        ///
+        ///
+        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
+        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
+        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
+        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
+        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
+        ///  FROM FUNC_AULA FA
+        ///  LEFT OUTER JOIN FUNCIONARIO F
+        ///  ON FA.CD_FUNC =F.CD_FUNC
+        ///  LEFT OUTER JOIN AULA A
+        ///  ON FA.CD_AULA = A.CD_AULA
+        ///  WHERE 
+        ///		FA.CD_FUNC_AULA = {0}.
+        /// </summary>
+        public static string qConsultaFuncAulaEdit2 {
+            get {
+                return ResourceManager.GetString("qConsultaFuncAulaEdit2", resourceCulture);
             }
         }
         

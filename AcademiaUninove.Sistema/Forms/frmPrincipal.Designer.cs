@@ -51,6 +51,7 @@
             this.janelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharTodasAsJanelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cadastroDeAulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -149,7 +150,8 @@
             // aulaToolStripMenuItem
             // 
             this.aulaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aulaDosInstrutoresToolStripMenuItem});
+            this.aulaDosInstrutoresToolStripMenuItem,
+            this.cadastroDeAulaToolStripMenuItem});
             this.aulaToolStripMenuItem.Name = "aulaToolStripMenuItem";
             this.aulaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aulaToolStripMenuItem.Text = "Aula";
@@ -235,6 +237,13 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(191, 6);
             // 
+            // cadastroDeAulaToolStripMenuItem
+            // 
+            this.cadastroDeAulaToolStripMenuItem.Name = "cadastroDeAulaToolStripMenuItem";
+            this.cadastroDeAulaToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.cadastroDeAulaToolStripMenuItem.Text = "Cadastro de Aula";
+            this.cadastroDeAulaToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeAulaToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,5 +289,6 @@
         private System.Windows.Forms.ToolStripMenuItem janelasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fecharTodasAsJanelasToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem cadastroDeAulaToolStripMenuItem;
     }
 }

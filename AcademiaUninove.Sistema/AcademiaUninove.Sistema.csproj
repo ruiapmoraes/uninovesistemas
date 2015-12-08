@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADO\CargoADO.cs" />
+    <Compile Include="ADO\FuncAulaADO.cs" />
     <Compile Include="ADO\FuncionarioADO.cs" />
     <Compile Include="ADO\LoginADO.cs" />
     <Compile Include="Classes\Aluno.cs" />
@@ -349,19 +350,25 @@
     <Folder Include="Relatorios\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Queries\Delete\qDeleteFuncAula.sql" />
     <Content Include="Queries\Delete\qDeleteFuncionario.sql" />
     <Content Include="Queries\Delete\qDeleteAula.sql" />
     <Content Include="Queries\Delete\qDeleteCargo.sql" />
+    <Content Include="Queries\Insert\qInsertFuncAula.sql" />
     <Content Include="Queries\Insert\qInsertFuncionario.sql" />
     <Content Include="Queries\Insert\qInsertAula.sql" />
     <Content Include="Queries\Insert\qInsertCargo.sql" />
+    <Content Include="Queries\Read\qConsultaFuncAula.sql" />
     <Content Include="Queries\Read\qConsultaFuncionario.sql" />
     <Content Include="Queries\Read\qConsultaAula.sql" />
     <Content Include="Queries\Read\qConsultaCargo.sql" />
     <Content Include="Queries\Read\qLogin.sql" />
+    <Content Include="Queries\Update\qConsultaFuncAulaEdit2.sql" />
+    <Content Include="Queries\Update\qConsultaFuncAulaEdit.sql" />
     <Content Include="Queries\Update\qConsultaFuncionarioEdit.sql" />
     <Content Include="Queries\Update\qConsultaAulaEdit.sql" />
     <Content Include="Queries\Update\qConsultaCargoEdit.sql" />
+    <Content Include="Queries\Update\qUpdateFuncAula.sql" />
     <Content Include="Queries\Update\qUpdateFuncionario.sql" />
     <Content Include="Queries\Update\qUpdateAula.sql" />
     <Content Include="Queries\Update\qUpdateCargo.sql" />

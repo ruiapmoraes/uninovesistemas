@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.gbAula = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbAula = new System.Windows.Forms.ComboBox();
+            this.cmbInstrutor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cmbAula = new System.Windows.Forms.ComboBox();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.gbAula.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbAula
             // 
-            this.gbAula.Controls.Add(this.cmbAula);
-            this.gbAula.Controls.Add(this.comboBox1);
-            this.gbAula.Controls.Add(this.label3);
             this.gbAula.Controls.Add(this.txtCodigo);
+            this.gbAula.Controls.Add(this.cmbAula);
+            this.gbAula.Controls.Add(this.cmbInstrutor);
+            this.gbAula.Controls.Add(this.label3);
             this.gbAula.Controls.Add(this.label2);
             this.gbAula.Controls.Add(this.label1);
             this.gbAula.Location = new System.Drawing.Point(12, 12);
@@ -55,13 +55,21 @@
             this.gbAula.TabStop = false;
             this.gbAula.Text = "Aulas do Instrutor";
             // 
-            // comboBox1
+            // cmbAula
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cmbAula.FormattingEnabled = true;
+            this.cmbAula.Location = new System.Drawing.Point(110, 117);
+            this.cmbAula.Name = "cmbAula";
+            this.cmbAula.Size = new System.Drawing.Size(140, 21);
+            this.cmbAula.TabIndex = 6;
+            // 
+            // cmbInstrutor
+            // 
+            this.cmbInstrutor.FormattingEnabled = true;
+            this.cmbInstrutor.Location = new System.Drawing.Point(110, 75);
+            this.cmbInstrutor.Name = "cmbInstrutor";
+            this.cmbInstrutor.Size = new System.Drawing.Size(140, 21);
+            this.cmbInstrutor.TabIndex = 5;
             // 
             // label3
             // 
@@ -71,13 +79,6 @@
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Instrutor:";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(110, 41);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(140, 20);
-            this.txtCodigo.TabIndex = 2;
             // 
             // label2
             // 
@@ -105,6 +106,7 @@
             this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -114,14 +116,16 @@
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // cmbAula
+            // txtCodigo
             // 
-            this.cmbAula.FormattingEnabled = true;
-            this.cmbAula.Location = new System.Drawing.Point(110, 117);
-            this.cmbAula.Name = "cmbAula";
-            this.cmbAula.Size = new System.Drawing.Size(140, 21);
-            this.cmbAula.TabIndex = 6;
+            this.txtCodigo.Location = new System.Drawing.Point(111, 41);
+            this.txtCodigo.Mask = "00000";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(75, 20);
+            this.txtCodigo.TabIndex = 7;
+            this.txtCodigo.ValidatingType = typeof(int);
             // 
             // frmFuncAula
             // 
@@ -134,6 +138,7 @@
             this.Name = "frmFuncAula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro das Aulas do Professor";
+            this.Load += new System.EventHandler(this.frmFuncAula_Load);
             this.gbAula.ResumeLayout(false);
             this.gbAula.PerformLayout();
             this.ResumeLayout(false);
@@ -143,13 +148,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbAula;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbInstrutor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cmbAula;
+        private System.Windows.Forms.MaskedTextBox txtCodigo;
     }
 }
