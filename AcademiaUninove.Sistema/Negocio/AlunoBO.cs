@@ -97,5 +97,10 @@ namespace AcademiaUninove.Sistema.Negocio
             dtAluno = objAlunoADO.ConsultarAluno(codigo);
             return dtAluno;
         }
+
+        internal bool ExcluiAluno(int _codAluno)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

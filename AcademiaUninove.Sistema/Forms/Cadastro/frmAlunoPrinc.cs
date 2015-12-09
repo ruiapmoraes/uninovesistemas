@@ -31,8 +31,10 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
+            int linha = 0;
             _tpOperacao = "editar";
-            _codAluno = int.Parse(dgvAluno.Rows[e.RowIndex].Cells[0].Value.ToString());
+            linha = dgvAluno.CurrentRow.Index;
+            _codAluno = int.Parse(dgvAluno.Rows[linha].Cells[0].Value.ToString());
 
             frmAluno telaAluno = new frmAluno(_tpOperacao, _codAluno);
             telaAluno.ShowDialog();
@@ -40,7 +42,38 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
         private void tsbDeletar_Click(object sender, EventArgs e)
         {
+            bool resultado = false;
+            int linha = 0;
+            bool sucesso = false;
 
+
+            linha = dgvAluno.CurrentRow.Index;
+            _codAluno = int.Parse(dgvAluno.Rows[linha].Cells[0].Value.ToString());
+            AlunoBO objAlunoBO = new AlunoBO();
+
+            if (MessageBox.Show("Confirma exclusão?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                resultado = objAlunoBO.ExcluiAluno(_codAluno);
+                if (resultado)
+                {
+                    MessageBox.Show("Exclusão de registro realizada com sucesso!");
+                    //dgvAluno.DataSource = DtAlunoGeral();
+                    dgvAluno.DataSource = DtAlunoGeral(out sucesso);
+
+                    if (!sucesso)
+                    {
+                        linha = 0;
+                    }
+                    else
+                    {
+                        linha = dgvAluno.CurrentRow.Index;
+                        _codAluno = int.Parse(dgvAluno.Rows[linha].Cells[1].Value.ToString());
+                        CarregaCamposAluno(_codAluno);
+                        dgvAluno.Columns[1].Visible = false;
+                    }
+
+                }
+            }
         }
 
         private void tsbFechar_Click(object sender, EventArgs e)
