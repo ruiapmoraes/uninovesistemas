@@ -136,6 +136,12 @@
   <data name="qConsultaFuncionarioEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qconsultafuncionarioedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="qConsultaHoraAulaEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qconsultahoraaulaedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="qConsultaHoraAulaEdit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qconsultahoraaulaedit2.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="qConsultaHorarioEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qconsultahorarioedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -153,6 +159,9 @@
   </data>
   <data name="qUpdateFuncionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qupdatefuncionario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="qUpdateHoraAula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qupdatehoraaula.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="qUpdateHorario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qupdatehorario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

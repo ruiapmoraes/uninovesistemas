@@ -353,18 +353,21 @@
     <Folder Include="Queries\Relatorio\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Queries\Delete\qDeleteHoraAula.sql" />
     <Content Include="Queries\Delete\qDeleteHorario.sql" />
     <Content Include="Queries\Delete\qDeleteFuncAula.sql" />
     <Content Include="Queries\Delete\qDeleteAluno.sql" />
     <Content Include="Queries\Delete\qDeleteFuncionario.sql" />
     <Content Include="Queries\Delete\qDeleteAula.sql" />
     <Content Include="Queries\Delete\qDeleteCargo.sql" />
+    <Content Include="Queries\Insert\qInsertHoraAula.sql" />
     <Content Include="Queries\Insert\qInsertHorario.sql" />
     <Content Include="Queries\Insert\qInsertFuncAula.sql" />
     <Content Include="Queries\Insert\qInsertAluno.sql" />
     <Content Include="Queries\Insert\qInsertFuncionario.sql" />
     <Content Include="Queries\Insert\qInsertAula.sql" />
     <Content Include="Queries\Insert\qInsertCargo.sql" />
+    <Content Include="Queries\Read\qConsultaHoraAula.sql" />
     <Content Include="Queries\Read\qConsultaHorario.sql" />
     <Content Include="Queries\Read\qConsultaFuncAula.sql" />
     <Content Include="Queries\Read\qConsultaAluno.sql" />
@@ -372,6 +375,8 @@
     <Content Include="Queries\Read\qConsultaAula.sql" />
     <Content Include="Queries\Read\qConsultaCargo.sql" />
     <Content Include="Queries\Read\qLogin.sql" />
+    <Content Include="Queries\Update\qConsultaHoraAulaEdit2.sql" />
+    <Content Include="Queries\Update\qConsultaHoraAulaEdit.sql" />
     <Content Include="Queries\Update\qConsultaHorarioEdit.sql" />
     <Content Include="Queries\Update\qConsultaFuncAulaEdit2.sql" />
     <Content Include="Queries\Update\qConsultaFuncAulaEdit.sql" />
@@ -379,6 +384,7 @@
     <Content Include="Queries\Update\qConsultaFuncionarioEdit.sql" />
     <Content Include="Queries\Update\qConsultaAulaEdit.sql" />
     <Content Include="Queries\Update\qConsultaCargoEdit.sql" />
+    <Content Include="Queries\Update\qUpdateHoraAula.sql" />
     <Content Include="Queries\Update\qUpdateHorario.sql" />
     <Content Include="Queries\Update\qUpdateFuncAula.sql" />
     <Content Include="Queries\Update\qUpdateAluno.sql" />

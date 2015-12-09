@@ -159,11 +159,36 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta Cargo
-        ///SELECT CD_CARGO as &apos;Código&apos;, NOME_CARGO as &apos;Cargo&apos;
-        ///FROM CARGO
+        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
         ///
-        ///.
+        ///
+        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
+        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
+        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
+        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
+        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
+        ///  FROM FUNC_AULA FA
+        ///  LEFT OUTER JOIN FUNCIONARIO F
+        ///  ON FA.CD_FUNC =F.CD_FUNC
+        ///  LEFT OUTER JOIN AULA A
+        ///  ON FA.CD_AULA = A.CD_AULA
+        /// .
+        /// </summary>
+        public static string qConsultaHoraAula {
+            get {
+                return ResourceManager.GetString("qConsultaHoraAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta de Horário
+        ///
+        ///SELECT
+        ///	CD_HORARIO &apos;Código&apos;,
+        ///	convert(varchar, DATA_HORARIO, 103) &apos;Data&apos;,
+        ///	CONVERT(VARCHAR, HORA, 8) &apos;HORA&apos;
+        ///
+        ///FROM HORARIO.
         /// </summary>
         public static string qConsultaHorario {
             get {

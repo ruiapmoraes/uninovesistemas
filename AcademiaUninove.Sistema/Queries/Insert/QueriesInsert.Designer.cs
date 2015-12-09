@@ -176,10 +176,29 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Inserir Cargo
-        ///INSERT INTO CARGO
-        ///(CD_CARGO, NOME_CARGO)
-        ///Values ({0}, &apos;{1}&apos;).
+        ///   Looks up a localized string similar to -- Inserção de da aula dos instrutores
+        ///
+        ///INSERT INTO FUNC_AULA(
+        ///	CD_FUNC_AULA,
+        ///	CD_FUNC,
+        ///	CD_AULA) VALUES
+        ///	(
+        ///		{0}
+        ///		,{1}
+        ///		,{2}
+        ///	).
+        /// </summary>
+        public static string qInsertHoraAula {
+            get {
+                return ResourceManager.GetString("qInsertHoraAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Inserir HORARIO
+        ///INSERT INTO HORARIO
+        ///(CD_HORARIO, DATA_HORARIO, HORA)
+        ///Values ({0}, &apos;{1}&apos;, &apos;{2}&apos;).
         /// </summary>
         public static string qInsertHorario {
             get {

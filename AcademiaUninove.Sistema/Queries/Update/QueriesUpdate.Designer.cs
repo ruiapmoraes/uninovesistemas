@@ -91,29 +91,16 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta de alunos para edição
+        ///   Looks up a localized string similar to -- Consulta de Horário para edição
         ///
-        ///-- Consultar dados do Aluno
-        ///SELECT 
-        ///	 A.CD_ALU &apos;Código&apos;
-        ///	 ,A.CD_FUNC &apos;Código Instrutor&apos;
-        ///	 ,F.NOME_FUNC &apos;Nome Instrutor&apos;
-        ///	 ,A.NOME_ALU &apos;Aluno&apos;
-        ///	 ,A.CPF_ALU &apos;CPF&apos;
-        ///	 ,A.RG_ALU &apos;RG&apos;
-        ///	 ,A.DT_NASC &apos;Data Nasc&apos;
-        ///	 ,A.TEL_RES &apos;Tel Residencial&apos;
-        ///	 ,A.TEL_CEL &apos;Tel Celular&apos;
-        ///	 ,A.END_ALU &apos;Endereço&apos;
-        ///	 ,A.CEP_ALU &apos;CEP&apos;
-        ///	 ,A.CIDADE &apos;Cidade&apos;
-        ///	 ,A.STATUS_ALU &apos;Status&apos;
-        ///	 ,A.RESTRICAO &apos;Restrição&apos;
-        ///	 ,A.OBJETIVO &apos;Objetivo&apos;
+        ///SELECT
+        ///	CD_HORARIO &apos;Código&apos;,
+        ///	DATA_HORARIO &apos;Data&apos;,
+        ///	HORA &apos;Hora&apos;
         ///
-        ///FROM ALUNO A
-        ///LEFT OUTER JOIN FUNCIONARIO F
-        ///ON A.CD_F [rest of string was truncated]&quot;;.
+        ///FROM HORARIO
+        ///
+        ///WHERE CD_HORARIO = {0}.
         /// </summary>
         public static string qConsultaAulaEdit {
             get {
@@ -208,13 +195,62 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta Cargo para Edição
-        ///SELECT CD_CARGO as &apos;Código&apos;, NOME_CARGO as &apos;Cargo&apos;
-        ///FROM CARGO
+        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
         ///
-        ///where CD_CARGO = {0}
         ///
-        ///.
+        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
+        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
+        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
+        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
+        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
+        ///  FROM FUNC_AULA FA
+        ///  LEFT OUTER JOIN FUNCIONARIO F
+        ///  ON FA.CD_FUNC =F.CD_FUNC
+        ///  LEFT OUTER JOIN AULA A
+        ///  ON FA.CD_AULA = A.CD_AULA
+        ///  WHERE 
+        ///		FA.CD_FUNC = {0}.
+        /// </summary>
+        public static string qConsultaHoraAulaEdit {
+            get {
+                return ResourceManager.GetString("qConsultaHoraAulaEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
+        ///
+        ///
+        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
+        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
+        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
+        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
+        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
+        ///  FROM FUNC_AULA FA
+        ///  LEFT OUTER JOIN FUNCIONARIO F
+        ///  ON FA.CD_FUNC =F.CD_FUNC
+        ///  LEFT OUTER JOIN AULA A
+        ///  ON FA.CD_AULA = A.CD_AULA
+        ///  WHERE 
+        ///		FA.CD_FUNC = {0}.
+        /// </summary>
+        public static string qConsultaHoraAulaEdit2 {
+            get {
+                return ResourceManager.GetString("qConsultaHoraAulaEdit2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta horario para Edição
+        ///-- Consulta de Horário
+        ///
+        ///SELECT
+        ///	CD_HORARIO &apos;Código&apos;,
+        ///	convert(varchar, DATA_HORARIO, 103) &apos;Data&apos;,
+        ///	CONVERT(VARCHAR, HORA, 8) &apos;HORA&apos;
+        ///
+        ///FROM HORARIO
+        ///    WHERE CD_HORARIO = {0}.
         /// </summary>
         public static string qConsultaHorarioEdit {
             get {
@@ -312,10 +348,30 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Atualizando cargo
+        ///   Looks up a localized string similar to -- Comando de update aula dos instrutores
         ///
-        ///UPDATE CARGO SET NOME_CARGO = &apos;{0}&apos;
-        ///WHERE CD_CARGO = {1}.
+        ///UPDATE FUNC_AULA 
+        ///SET 
+        ///		CD_FUNC = {1}
+        ///		,CD_AULA = {2}	
+        ///WHERE
+        ///		CD_FUNC_AULA = {0}.
+        /// </summary>
+        public static string qUpdateHoraAula {
+            get {
+                return ResourceManager.GetString("qUpdateHoraAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Atualizando HORARIO
+        ///
+        ///UPDATE HORARIO
+        ///SET 	
+        ///	DATA_HORARIO = &apos;{0}&apos;,
+        ///	HORA = &apos;{1}&apos;
+        ///
+        ///WHERE CD_HORARIO = {2}.
         /// </summary>
         public static string qUpdateHorario {
             get {

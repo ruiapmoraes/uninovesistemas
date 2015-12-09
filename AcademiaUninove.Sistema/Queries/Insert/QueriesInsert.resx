@@ -133,6 +133,9 @@
   <data name="qInsertFuncionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qinsertfuncionario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="qInsertHoraAula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qinserthoraaula.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="qInsertHorario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qinserthorario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

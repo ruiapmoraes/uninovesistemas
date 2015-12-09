@@ -120,9 +120,21 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Excluindo o Registro de Cargo
-        ///DELETE FROM CARGO
-        ///WHERE CD_CARGO = {0}.
+        ///   Looks up a localized string similar to -- Comando para excluir registros da tabela FUNC_AULA
+        ///
+        ///DELETE FROM FUNC_AULA
+        ///	WHERE CD_FUNC_AULA = {0}.
+        /// </summary>
+        public static string qDeleteHoraAula {
+            get {
+                return ResourceManager.GetString("qDeleteHoraAula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Excluindo o Registro de HORARIO
+        ///DELETE FROM HORARIO
+        ///WHERE CD_HORARIO = {0}.
         /// </summary>
         public static string qDeleteHorario {
             get {
