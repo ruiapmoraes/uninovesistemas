@@ -127,6 +127,9 @@
   <data name="qConsultaCargo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qConsultaCargo.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="qConsultaFicha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qconsultaficha.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="qConsultaFrequencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qconsultafrequencia.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

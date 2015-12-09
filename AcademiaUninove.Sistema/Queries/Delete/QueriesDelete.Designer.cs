@@ -96,7 +96,22 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Excluir registro das fichas
+        ///
+        ///DELETE FROM FICHA_EXERCICOS
+        ///WHERE CD_FICHA = {0}.
+        /// </summary>
+        public static string qDeleteFicha {
+            get {
+                return ResourceManager.GetString("qDeleteFicha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- eXCLUI O REGISTRO DA FREQUENCIA DO aluno
+        ///
+        ///DELETE FROM FREQUENCIA
+        ///WHERE CD_FREQ = {0}.
         /// </summary>
         public static string qDeleteFrequencia {
             get {

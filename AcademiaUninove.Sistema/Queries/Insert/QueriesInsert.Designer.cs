@@ -128,7 +128,40 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Inserir ficha de exercícios na tabela
+        ///INSERT INTO FICHA_EXERCICIOS(
+        ///		CD_FICHA,
+        ///		CD_ALU,
+        ///		NM_EXERCICIO,
+        ///		REPETICOES,
+        ///		SERIES,
+        ///		TREINO,
+        ///		DATA_INICIO)
+        ///VALUES (
+        ///		{0},
+        ///		{1},
+        ///		&apos;{2}&apos;,
+        ///		&apos;{3}&apos;,
+        ///		&apos;{4}&apos;,
+        ///		&apos;{5}&apos;,
+        ///		&apos;{6}&apos;).
+        /// </summary>
+        public static string qInsertFicha {
+            get {
+                return ResourceManager.GetString("qInsertFicha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Inserção da frequencia do aluno
+        ///INSERT INTO FREQUENCIA(
+        ///	 CD_FREQ,
+        ///	 CD_ALU,
+        ///	 DATA_HORA)
+        ///VALUES(
+        ///	  {0},
+        ///	  {1},
+        ///	  &apos;{2}&apos;).
         /// </summary>
         public static string qInsertFrequencia {
             get {

@@ -124,7 +124,44 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Consulta da Ficha de Exercícios
+        ///
+        ///SELECT 
+        ///	F.CD_FICHA &apos;Código&apos;,
+        ///	F.CD_ALU &apos;Código Aluno&apos;,
+        ///	A.NOME_ALU &apos;Nome Aluno&apos;,
+        ///	F.NM_EXERCICIO &apos;Nome Exercício&apos;,
+        ///	F.REPETICOES &apos;Repetições&apos;,
+        ///	F.SERIES &apos;Séries&apos;,
+        ///	F.TREINO &apos;Treino&apos;,
+        ///	F.DATA_INICIO &apos;Data de Início&apos;
+        ///
+        ///FROM FICHA_EXERCICIOS F
+        ///LEFT OUTER JOIN ALUNO A
+        ///ON F.CD_ALU = A.CD_ALU
+        ///
+        ///WHERE F.CD_FICHA = {0}.
+        /// </summary>
+        public static string qConsultaFichaEdit {
+            get {
+                return ResourceManager.GetString("qConsultaFichaEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta da frequencia do aluno
+        ///
+        ///SELECT
+        ///	F.CD_FREQ &apos;Código&apos;,
+        ///	F.CD_ALU &apos;Código Aluno&apos;,
+        ///	A.NOME_ALU &apos;Nome Aluno&apos;,
+        ///	F.DATA_HORA &apos;Data Hora&apos;
+        ///
+        ///FROM FREQUENCIA F
+        ///LEFT OUTER JOIN ALUNO A
+        ///ON F.CD_ALU = A.CD_ALU
+        ///
+        ///WHERE F.CD_FREQ = {0}.
         /// </summary>
         public static string qConsultaFrequenciaEdit {
             get {
@@ -322,7 +359,33 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Atualizar ficha de exericcios
+        ///
+        ///UPDATE FICHA_EXERCICIOS
+        ///SET
+        ///	   CD_ALU = {1},
+        ///	   NM_EXERCICIO = &apos;{2}&apos;,
+        ///	   REPETICOES = &apos;{3}&apos;,
+        ///	   SERIES = &apos;{4}&apos;,
+        ///	   TREINO = &apos;{5}&apos;,
+        ///	   DATA_INICIO = &apos;{6}&apos;
+        ///WHERE CD_FICHA = {0}.
+        /// </summary>
+        public static string qUpdateFicha {
+            get {
+                return ResourceManager.GetString("qUpdateFicha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Update da frequencia do aluno
+        ///UPDATE FREQUENCIA
+        ///SET
+        ///	F.CD_ALU = {1},
+        ///	F.DATA_HORA = &apos;{2}&apos;
+        ///WHERE 
+        ///	F.CD_FREQ = {0}
+        ///.
         /// </summary>
         public static string qUpdateFrequencia {
             get {

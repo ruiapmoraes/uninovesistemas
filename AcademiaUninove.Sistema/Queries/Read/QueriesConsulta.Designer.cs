@@ -116,7 +116,41 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to -- Consulta da Ficha de Exercícios
+        ///
+        ///SELECT 
+        ///	F.CD_FICHA &apos;Código&apos;,
+        ///	F.CD_ALU &apos;Código Aluno&apos;,
+        ///	A.NOME_ALU &apos;Nome Aluno&apos;,
+        ///	F.NM_EXERCICIO &apos;Nome Exercício&apos;,
+        ///	F.REPETICOES &apos;Repetições&apos;,
+        ///	F.SERIES &apos;Séries&apos;,
+        ///	F.TREINO &apos;Treino&apos;,
+        ///	F.DATA_INICIO &apos;Data de Início&apos;
+        ///
+        ///FROM FICHA_EXERCICIOS F
+        ///LEFT OUTER JOIN ALUNO A
+        ///ON F.CD_ALU = A.CD_ALU.
+        /// </summary>
+        public static string qConsultaFicha {
+            get {
+                return ResourceManager.GetString("qConsultaFicha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta da frequencia do aluno
+        ///
+        ///SELECT
+        ///	F.CD_FREQ &apos;Código&apos;,
+        ///	F.CD_ALU &apos;Código Aluno&apos;,
+        ///	A.NOME_ALU &apos;Nome Aluno&apos;,
+        ///	f.DATA_HORA &apos;Data Hora&apos;
+        ///
+        ///FROM FREQUENCIA F
+        ///LEFT OUTER JOIN ALUNO A
+        ///ON F.CD_ALU = A.CD_ALU
+        ///.
         /// </summary>
         public static string qConsultaFrequencia {
             get {
