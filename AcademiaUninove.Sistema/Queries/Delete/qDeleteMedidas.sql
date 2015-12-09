@@ -1,1 +1,4 @@
-﻿
+﻿-- Excluir registro
+
+DELETE FROM MEDIDAS
+WHERE CD_MEDIDAS = {0}
