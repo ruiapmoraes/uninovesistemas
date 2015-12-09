@@ -35,7 +35,6 @@
             this.txtStatusAluno = new System.Windows.Forms.TextBox();
             this.txtDataNasc = new System.Windows.Forms.MaskedTextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.txtTelCel = new System.Windows.Forms.MaskedTextBox();
             this.txtTelRes = new System.Windows.Forms.MaskedTextBox();
             this.txtRG = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.tsbDeletar = new System.Windows.Forms.ToolStripButton();
             this.tsbFechar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.cmbInstrutor = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -80,6 +80,7 @@
             // 
             this.txtEndereco.Location = new System.Drawing.Point(106, 152);
             this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.ReadOnly = true;
             this.txtEndereco.Size = new System.Drawing.Size(269, 20);
             this.txtEndereco.TabIndex = 27;
             // 
@@ -88,6 +89,7 @@
             this.txtObjetivo.Location = new System.Drawing.Point(108, 230);
             this.txtObjetivo.Multiline = true;
             this.txtObjetivo.Name = "txtObjetivo";
+            this.txtObjetivo.ReadOnly = true;
             this.txtObjetivo.Size = new System.Drawing.Size(267, 39);
             this.txtObjetivo.TabIndex = 26;
             // 
@@ -95,6 +97,7 @@
             // 
             this.txtRestricao.Location = new System.Drawing.Point(275, 200);
             this.txtRestricao.Name = "txtRestricao";
+            this.txtRestricao.ReadOnly = true;
             this.txtRestricao.Size = new System.Drawing.Size(100, 20);
             this.txtRestricao.TabIndex = 25;
             // 
@@ -102,6 +105,7 @@
             // 
             this.txtStatusAluno.Location = new System.Drawing.Point(108, 204);
             this.txtStatusAluno.Name = "txtStatusAluno";
+            this.txtStatusAluno.ReadOnly = true;
             this.txtStatusAluno.Size = new System.Drawing.Size(100, 20);
             this.txtStatusAluno.TabIndex = 24;
             // 
@@ -110,6 +114,7 @@
             this.txtDataNasc.Location = new System.Drawing.Point(275, 123);
             this.txtDataNasc.Mask = "00/00/0000";
             this.txtDataNasc.Name = "txtDataNasc";
+            this.txtDataNasc.ReadOnly = true;
             this.txtDataNasc.Size = new System.Drawing.Size(79, 20);
             this.txtDataNasc.TabIndex = 23;
             this.txtDataNasc.ValidatingType = typeof(System.DateTime);
@@ -118,27 +123,25 @@
             // 
             this.txtCidade.Location = new System.Drawing.Point(275, 178);
             this.txtCidade.Name = "txtCidade";
+            this.txtCidade.ReadOnly = true;
             this.txtCidade.Size = new System.Drawing.Size(100, 20);
             this.txtCidade.TabIndex = 22;
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Location = new System.Drawing.Point(108, 178);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(100, 20);
-            this.txtCEP.TabIndex = 21;
             // 
             // txtTelCel
             // 
             this.txtTelCel.Location = new System.Drawing.Point(275, 100);
+            this.txtTelCel.Mask = "(99) 00000-0000";
             this.txtTelCel.Name = "txtTelCel";
+            this.txtTelCel.ReadOnly = true;
             this.txtTelCel.Size = new System.Drawing.Size(100, 20);
             this.txtTelCel.TabIndex = 20;
             // 
             // txtTelRes
             // 
             this.txtTelRes.Location = new System.Drawing.Point(108, 100);
+            this.txtTelRes.Mask = "(99) 0000-0000";
             this.txtTelRes.Name = "txtTelRes";
+            this.txtTelRes.ReadOnly = true;
             this.txtTelRes.Size = new System.Drawing.Size(100, 20);
             this.txtTelRes.TabIndex = 19;
             // 
@@ -146,6 +149,7 @@
             // 
             this.txtRG.Location = new System.Drawing.Point(275, 73);
             this.txtRG.Name = "txtRG";
+            this.txtRG.ReadOnly = true;
             this.txtRG.Size = new System.Drawing.Size(100, 20);
             this.txtRG.TabIndex = 18;
             // 
@@ -154,6 +158,7 @@
             this.txtCPF.Location = new System.Drawing.Point(108, 73);
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
+            this.txtCPF.ReadOnly = true;
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
             this.txtCPF.TabIndex = 17;
             // 
@@ -161,6 +166,7 @@
             // 
             this.txtAuno.Location = new System.Drawing.Point(108, 47);
             this.txtAuno.Name = "txtAuno";
+            this.txtAuno.ReadOnly = true;
             this.txtAuno.Size = new System.Drawing.Size(267, 20);
             this.txtAuno.TabIndex = 16;
             // 
@@ -212,17 +218,21 @@
             // 
             // dgvAluno
             // 
+            this.dgvAluno.AllowUserToAddRows = false;
             this.dgvAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAluno.Location = new System.Drawing.Point(13, 19);
             this.dgvAluno.Name = "dgvAluno";
             this.dgvAluno.Size = new System.Drawing.Size(645, 96);
             this.dgvAluno.TabIndex = 0;
+            this.dgvAluno.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellDoubleClick);
+            this.dgvAluno.SelectionChanged += new System.EventHandler(this.dgvAluno_SelectionChanged);
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(108, 22);
             this.txtCodigo.Mask = "00000";
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(61, 20);
             this.txtCodigo.TabIndex = 14;
             this.txtCodigo.ValidatingType = typeof(int);
@@ -282,6 +292,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCEP);
             this.groupBox1.Controls.Add(this.cmbInstrutor);
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.txtObjetivo);
@@ -289,7 +300,6 @@
             this.groupBox1.Controls.Add(this.txtStatusAluno);
             this.groupBox1.Controls.Add(this.txtDataNasc);
             this.groupBox1.Controls.Add(this.txtCidade);
-            this.groupBox1.Controls.Add(this.txtCEP);
             this.groupBox1.Controls.Add(this.txtTelCel);
             this.groupBox1.Controls.Add(this.txtTelRes);
             this.groupBox1.Controls.Add(this.txtRG);
@@ -317,8 +327,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações do Aluno";
             // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(106, 181);
+            this.txtCEP.Mask = "00000-999";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.ReadOnly = true;
+            this.txtCEP.Size = new System.Drawing.Size(100, 20);
+            this.txtCEP.TabIndex = 29;
+            // 
             // cmbInstrutor
             // 
+            this.cmbInstrutor.Enabled = false;
             this.cmbInstrutor.FormattingEnabled = true;
             this.cmbInstrutor.Location = new System.Drawing.Point(230, 21);
             this.cmbInstrutor.Name = "cmbInstrutor";
@@ -485,7 +505,6 @@
         private System.Windows.Forms.TextBox txtStatusAluno;
         private System.Windows.Forms.MaskedTextBox txtDataNasc;
         private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.MaskedTextBox txtCEP;
         private System.Windows.Forms.MaskedTextBox txtTelCel;
         private System.Windows.Forms.MaskedTextBox txtTelRes;
         private System.Windows.Forms.TextBox txtRG;
@@ -519,5 +538,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbInstrutor;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
     }
 }

@@ -31,7 +31,11 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
+            _tpOperacao = "editar";
+            _codAluno = int.Parse(dgvAluno.Rows[e.RowIndex].Cells[0].Value.ToString());
 
+            frmAluno telaAluno = new frmAluno(_tpOperacao, _codAluno);
+            telaAluno.ShowDialog();
         }
 
         private void tsbDeletar_Click(object sender, EventArgs e)
@@ -47,25 +51,83 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
         private void frmAlunoPrinc_Load(object sender, EventArgs e)
         {
             int linha = 0;
+            bool sucesso = false;
             //TODO: Além de popular o gridview, é precido popular os campos
 
-            dgvAluno.DataSource = DtAlunoGeral();
-            linha = dgvAluno.CurrentRow.Index;
-            _codAluno = int.Parse(dgvAluno.Rows[linha].Cells[1].Value.ToString());
-            CarregaCamposAluno(_codAluno);
-            dgvAluno.Columns[1].Visible = false;
+            dgvAluno.DataSource = DtAlunoGeral(out sucesso);
+
+            if (!sucesso)
+            {
+                linha = 0;
+            }
+            else
+            {
+                linha = dgvAluno.CurrentRow.Index;
+                _codAluno = int.Parse(dgvAluno.Rows[linha].Cells[1].Value.ToString());
+                CarregaCamposAluno(_codAluno);
+                dgvAluno.Columns[1].Visible = false;
+            }
+
+        
         }
 
-        private void CarregaCamposAluno(int _codAluno)
+        private void CarregaCamposAluno(int codigo)
         {
-            throw new NotImplementedException();
+            DataTable dtInstrutorCombo = null;
+            DataTable dtAluno = null;
+            int intContador = 0;
+            int linha = 0;
+          
+            FuncionarioBO objFuncionarioBO = new FuncionarioBO();
+            AlunoBO objAlunoBO = new AlunoBO();
+            dtAluno = objAlunoBO.ObterAluno(codigo);
+
+            if (dtAluno.Rows.Count <= 0 || dtAluno == null)
+            {
+                return;
+            }
+            else
+            {
+                linha = int.Parse(dtAluno.Rows[0][1].ToString());
+                dtInstrutorCombo = objFuncionarioBO.ObterFuncionario(linha);
+                //dtInstrutorCombo.DefaultView.Sort = "Cargo asc";
+
+
+                if (dtInstrutorCombo.Rows.Count < 0 && dtInstrutorCombo == null)
+                {
+                    intContador = 0;
+                    cmbInstrutor.Items.Clear();
+                }
+                else
+                {
+                    cmbInstrutor.ValueMember = "Código";
+                    cmbInstrutor.DisplayMember = "Nome Funcionário";
+                    cmbInstrutor.DataSource = dtInstrutorCombo;
+
+                    txtCodigo.Text = dtAluno.Rows[0][0].ToString();
+                    txtAuno.Text = dtAluno.Rows[0][3].ToString();                    
+                    txtCPF.Text = dtAluno.Rows[0][4].ToString();
+                    txtRG.Text = dtAluno.Rows[0][5].ToString();
+                    txtDataNasc.Text = dtAluno.Rows[0][6].ToString();
+                    txtTelRes.Text = dtAluno.Rows[0][7].ToString();
+                    txtTelCel.Text = dtAluno.Rows[0][8].ToString();
+                    txtEndereco.Text = dtAluno.Rows[0][9].ToString();
+                    txtCidade.Text = dtAluno.Rows[0][10].ToString();
+                    txtCEP.Text = dtAluno.Rows[0][11].ToString();
+                    txtStatusAluno.Text = dtAluno.Rows[0][12].ToString();
+                    txtRestricao.Text = dtAluno.Rows[0][13].ToString();
+                    txtObjetivo.Text = dtAluno.Rows[0][14].ToString();
+
+                }
+            }
+
         }
 
-        private DataTable DtAlunoGeral()
+        private DataTable DtAlunoGeral(out bool sucesso)
         {
             DataTable dtAlunoLocal = new DataTable();
             AlunoBO objAlunoBO = new AlunoBO();
-            dtAlunoLocal = objAlunoBO.ObterAluno();
+            dtAlunoLocal = objAlunoBO.ObterAluno(out sucesso);
 
             return dtAlunoLocal;
         }
@@ -112,6 +174,22 @@ namespace AcademiaUninove.Sistema.Forms.Cadastro
                 //CarregaComboCargo();
             }
         }
-              
+
+        private void dgvAluno_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _tpOperacao = "editar";
+            _codAluno = int.Parse(dgvAluno.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            frmAluno telaAluno = new frmAluno(_tpOperacao, _codAluno);
+            telaAluno.ShowDialog();
+        }
+
+        private void dgvAluno_SelectionChanged(object sender, EventArgs e)
+        {
+            int linha = 0;
+            linha = dgvAluno.CurrentRow.Index;
+            _codAluno = int.Parse(dgvAluno.Rows[linha].Cells[0].Value.ToString());
+            CarregaCamposAluno(_codAluno);
+        }              
     }
 }

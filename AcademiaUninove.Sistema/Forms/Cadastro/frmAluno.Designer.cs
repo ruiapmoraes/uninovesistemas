@@ -105,14 +105,14 @@
             this.cmbInstrutor.Location = new System.Drawing.Point(230, 21);
             this.cmbInstrutor.Name = "cmbInstrutor";
             this.cmbInstrutor.Size = new System.Drawing.Size(144, 21);
-            this.cmbInstrutor.TabIndex = 28;
+            this.cmbInstrutor.TabIndex = 2;
             // 
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(108, 152);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(266, 20);
-            this.txtEndereco.TabIndex = 27;
+            this.txtEndereco.TabIndex = 9;
             // 
             // txtObjetivo
             // 
@@ -120,21 +120,21 @@
             this.txtObjetivo.Multiline = true;
             this.txtObjetivo.Name = "txtObjetivo";
             this.txtObjetivo.Size = new System.Drawing.Size(267, 39);
-            this.txtObjetivo.TabIndex = 26;
+            this.txtObjetivo.TabIndex = 14;
             // 
             // txtRestricao
             // 
             this.txtRestricao.Location = new System.Drawing.Point(275, 231);
             this.txtRestricao.Name = "txtRestricao";
             this.txtRestricao.Size = new System.Drawing.Size(100, 20);
-            this.txtRestricao.TabIndex = 25;
+            this.txtRestricao.TabIndex = 13;
             // 
             // txtStatusAluno
             // 
             this.txtStatusAluno.Location = new System.Drawing.Point(108, 235);
             this.txtStatusAluno.Name = "txtStatusAluno";
             this.txtStatusAluno.Size = new System.Drawing.Size(100, 20);
-            this.txtStatusAluno.TabIndex = 24;
+            this.txtStatusAluno.TabIndex = 12;
             // 
             // txtDataNasc
             // 
@@ -142,7 +142,7 @@
             this.txtDataNasc.Mask = "00/00/0000";
             this.txtDataNasc.Name = "txtDataNasc";
             this.txtDataNasc.Size = new System.Drawing.Size(79, 20);
-            this.txtDataNasc.TabIndex = 23;
+            this.txtDataNasc.TabIndex = 6;
             this.txtDataNasc.ValidatingType = typeof(System.DateTime);
             // 
             // txtCidade
@@ -150,35 +150,38 @@
             this.txtCidade.Location = new System.Drawing.Point(108, 178);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(130, 20);
-            this.txtCidade.TabIndex = 22;
+            this.txtCidade.TabIndex = 10;
             // 
             // txtCEP
             // 
             this.txtCEP.Location = new System.Drawing.Point(108, 209);
+            this.txtCEP.Mask = "00000-999";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(100, 20);
-            this.txtCEP.TabIndex = 21;
+            this.txtCEP.TabIndex = 11;
             // 
             // txtTelCel
             // 
             this.txtTelCel.Location = new System.Drawing.Point(275, 125);
+            this.txtTelCel.Mask = "(99) 00000-0000";
             this.txtTelCel.Name = "txtTelCel";
             this.txtTelCel.Size = new System.Drawing.Size(100, 20);
-            this.txtTelCel.TabIndex = 20;
+            this.txtTelCel.TabIndex = 8;
             // 
             // txtTelRes
             // 
             this.txtTelRes.Location = new System.Drawing.Point(108, 125);
+            this.txtTelRes.Mask = "(99) 0000-0000";
             this.txtTelRes.Name = "txtTelRes";
             this.txtTelRes.Size = new System.Drawing.Size(100, 20);
-            this.txtTelRes.TabIndex = 19;
+            this.txtTelRes.TabIndex = 7;
             // 
             // txtRG
             // 
             this.txtRG.Location = new System.Drawing.Point(275, 73);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(100, 20);
-            this.txtRG.TabIndex = 18;
+            this.txtRG.TabIndex = 5;
             // 
             // txtCPF
             // 
@@ -186,14 +189,14 @@
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
-            this.txtCPF.TabIndex = 17;
+            this.txtCPF.TabIndex = 4;
             // 
             // txtAuno
             // 
             this.txtAuno.Location = new System.Drawing.Point(108, 47);
             this.txtAuno.Name = "txtAuno";
             this.txtAuno.Size = new System.Drawing.Size(267, 20);
-            this.txtAuno.TabIndex = 16;
+            this.txtAuno.TabIndex = 3;
             // 
             // txtCodigo
             // 
@@ -201,7 +204,7 @@
             this.txtCodigo.Mask = "00000";
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(61, 20);
-            this.txtCodigo.TabIndex = 14;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.ValidatingType = typeof(int);
             // 
             // label14
@@ -335,18 +338,20 @@
             this.btnSalvar.Location = new System.Drawing.Point(242, 338);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(323, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmAluno
             // 

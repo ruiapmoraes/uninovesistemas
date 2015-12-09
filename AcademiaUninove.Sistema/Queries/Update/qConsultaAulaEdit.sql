@@ -1,5 +1,26 @@
-﻿-- Consulta de aulas para edição
+﻿-- Consulta de alunos para edição
 
-SELECT CD_AULA, NOME_AULA 
-	FROM AULA
-WHERE CD_AULA = {0}
+-- Consultar dados do Aluno
+SELECT 
+	 A.CD_ALU 'Código'
+	 ,A.CD_FUNC 'Código Instrutor'
+	 ,F.NOME_FUNC 'Nome Instrutor'
+	 ,A.NOME_ALU 'Aluno'
+	 ,A.CPF_ALU 'CPF'
+	 ,A.RG_ALU 'RG'
+	 ,A.DT_NASC 'Data Nasc'
+	 ,A.TEL_RES 'Tel Residencial'
+	 ,A.TEL_CEL 'Tel Celular'
+	 ,A.END_ALU 'Endereço'
+	 ,A.CEP_ALU 'CEP'
+	 ,A.CIDADE 'Cidade'
+	 ,A.STATUS_ALU 'Status'
+	 ,A.RESTRICAO 'Restrição'
+	 ,A.OBJETIVO 'Objetivo'
+
+FROM ALUNO A
+LEFT OUTER JOIN FUNCIONARIO F
+ON A.CD_FUNC = F.CD_FUNC
+
+WHERE A.CD_ALU = {0}
+
