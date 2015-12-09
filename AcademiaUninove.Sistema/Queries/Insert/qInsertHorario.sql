@@ -1,4 +1,4 @@
-﻿-- Inserir Cargo
-INSERT INTO CARGO
-(CD_CARGO, NOME_CARGO)
-Values ({0}, '{1}')
+﻿-- Inserir HORARIO
+INSERT INTO HORARIO
+(CD_HORARIO, DATA_HORARIO, HORA)
+Values ({0}, '{1}', '{2}')

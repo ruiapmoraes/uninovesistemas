@@ -1,4 +1,8 @@
-﻿-- Consulta Cargo
-SELECT CD_CARGO as 'Código', NOME_CARGO as 'Cargo'
-FROM CARGO
+﻿-- Consulta de Horário
 
+SELECT
+	CD_HORARIO 'Código',
+	DATA_HORARIO 'Data',
+	HORA 'Hora'
+
+FROM HORARIO

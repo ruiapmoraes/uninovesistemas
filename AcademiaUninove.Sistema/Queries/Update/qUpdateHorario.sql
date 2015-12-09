@@ -1,4 +1,8 @@
-﻿-- Atualizando cargo
+﻿-- Atualizando HORARIO
 
-UPDATE CARGO SET NOME_CARGO = '{0}'
-WHERE CD_CARGO = {1}
+UPDATE HORARIO
+SET 	
+	DATA_HORARIO = '{1}',
+	HORA = '[2}'
+
+WHERE CD_HORARIO = {0}

@@ -1,3 +1,3 @@
-﻿-- Excluindo o Registro de Cargo
-DELETE FROM CARGO
-WHERE CD_CARGO = {0}
+﻿-- Excluindo o Registro de HORARIO
+DELETE FROM HORARIO
+WHERE CD_HORARIO = {0}
