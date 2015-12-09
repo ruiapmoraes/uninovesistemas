@@ -49,6 +49,7 @@
     <Compile Include="ADO\CargoADO.cs" />
     <Compile Include="ADO\FuncAulaADO.cs" />
     <Compile Include="ADO\FuncionarioADO.cs" />
+    <Compile Include="ADO\HoraAulaADO.cs" />
     <Compile Include="ADO\HorarioADO.cs" />
     <Compile Include="ADO\LoginADO.cs" />
     <Compile Include="Classes\Aluno.cs" />
