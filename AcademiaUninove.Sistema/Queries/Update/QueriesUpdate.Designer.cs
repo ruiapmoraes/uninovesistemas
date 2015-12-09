@@ -124,6 +124,15 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qConsultaFrequenciaEdit {
+            get {
+                return ResourceManager.GetString("qConsultaFrequenciaEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
         ///
         ///
@@ -195,21 +204,22 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
+        ///   Looks up a localized string similar to -- Consulta de horas aulas
         ///
         ///
-        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
-        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
-        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
-        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
-        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
-        ///  FROM FUNC_AULA FA
-        ///  LEFT OUTER JOIN FUNCIONARIO F
-        ///  ON FA.CD_FUNC =F.CD_FUNC
-        ///  LEFT OUTER JOIN AULA A
-        ///  ON FA.CD_AULA = A.CD_AULA
-        ///  WHERE 
-        ///		FA.CD_FUNC = {0}.
+        ///SELECT 
+        ///	HA.CD_HORA_AULA &apos;Código&apos;,
+        ///	HA.CD_HORARIO &apos;Código Horário&apos;,
+        ///	H.DATA_HORARIO &apos;Horário&apos;,
+        ///	HA.CD_AULA &apos;Código Aula&apos;,
+        ///	A.NOME_AULA &apos;Nome Aula&apos;
+        ///FROM HORA_AULA HA
+        ///LEFT OUTER JOIN HORARIO H
+        ///ON HA.CD_HORARIO = H.CD_HORARIO
+        ///LEFT OUTER JOIN AULA A
+        ///ON HA.CD_AULA = A.CD_AULA
+        ///
+        ///WHERE HA.CD_HORA_AULA  = {0}.
         /// </summary>
         public static string qConsultaHoraAulaEdit {
             get {
@@ -218,21 +228,22 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta de de aulas dos instrutores
+        ///   Looks up a localized string similar to -- Consulta de horas aulas
         ///
         ///
-        ///SELECT FA.CD_FUNC_AULA &apos;Código&apos;
-        ///	  ,FA.CD_FUNC &apos;Código Instrutor&apos;
-        ///	  ,F.NOME_FUNC &apos;Instrutor&apos;
-        ///	  ,FA.CD_AULA &apos;Código Aula&apos;
-        ///	  ,A.NOME_AULA &apos;Mome Aula&apos;
-        ///  FROM FUNC_AULA FA
-        ///  LEFT OUTER JOIN FUNCIONARIO F
-        ///  ON FA.CD_FUNC =F.CD_FUNC
-        ///  LEFT OUTER JOIN AULA A
-        ///  ON FA.CD_AULA = A.CD_AULA
-        ///  WHERE 
-        ///		FA.CD_FUNC = {0}.
+        ///SELECT 
+        ///	HA.CD_HORA_AULA &apos;Código&apos;,
+        ///	HA.CD_HORARIO &apos;Código Horário&apos;,
+        ///	H.DATA_HORARIO &apos;Horário&apos;,
+        ///	HA.CD_AULA &apos;Código Aula&apos;,
+        ///	A.NOME_AULA &apos;Nome Aula&apos;
+        ///FROM HORA_AULA HA
+        ///LEFT OUTER JOIN HORARIO H
+        ///ON HA.CD_HORARIO = H.CD_HORARIO
+        ///LEFT OUTER JOIN AULA A
+        ///ON HA.CD_AULA = A.CD_AULA
+        ///
+        ///WHERE HA.CD_HORA_AULA  = {0}.
         /// </summary>
         public static string qConsultaHoraAulaEdit2 {
             get {
@@ -311,6 +322,15 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qUpdateFrequencia {
+            get {
+                return ResourceManager.GetString("qUpdateFrequencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Comando de update aula dos instrutores
         ///
         ///UPDATE FUNC_AULA 
@@ -350,12 +370,12 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         /// <summary>
         ///   Looks up a localized string similar to -- Comando de update aula dos instrutores
         ///
-        ///UPDATE FUNC_AULA 
+        ///UPDATE HORA_AULA 
         ///SET 
-        ///		CD_FUNC = {1}
+        ///		CD_HORARIO = {1}
         ///		,CD_AULA = {2}	
         ///WHERE
-        ///		CD_FUNC_AULA = {0}.
+        ///		CD_HORA_AULA = {0}.
         /// </summary>
         public static string qUpdateHoraAula {
             get {

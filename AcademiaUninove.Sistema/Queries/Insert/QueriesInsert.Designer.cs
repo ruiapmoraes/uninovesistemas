@@ -128,6 +128,15 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qInsertFrequencia {
+            get {
+                return ResourceManager.GetString("qInsertFrequencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Inserção de da aula dos instrutores
         ///
         ///INSERT INTO FUNC_AULA(
@@ -176,11 +185,11 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Inserção de da aula dos instrutores
+        ///   Looks up a localized string similar to -- Inserção de horas aulas
         ///
-        ///INSERT INTO FUNC_AULA(
-        ///	CD_FUNC_AULA,
-        ///	CD_FUNC,
+        ///INSERT INTO HORA_AULA(
+        ///	CD_HORA_AULA,
+        ///	CD_HORARIO,
         ///	CD_AULA) VALUES
         ///	(
         ///		{0}

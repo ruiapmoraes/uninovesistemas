@@ -96,6 +96,15 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qDeleteFrequencia {
+            get {
+                return ResourceManager.GetString("qDeleteFrequencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Comando para excluir registros da tabela FUNC_AULA
         ///
         ///DELETE FROM FUNC_AULA
@@ -122,8 +131,8 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
         /// <summary>
         ///   Looks up a localized string similar to -- Comando para excluir registros da tabela FUNC_AULA
         ///
-        ///DELETE FROM FUNC_AULA
-        ///	WHERE CD_FUNC_AULA = {0}.
+        ///DELETE FROM HORA_AULA
+        ///	WHERE CD_HORA_AULA = {0}.
         /// </summary>
         public static string qDeleteHoraAula {
             get {
