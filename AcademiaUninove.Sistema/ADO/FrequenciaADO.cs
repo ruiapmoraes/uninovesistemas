@@ -19,6 +19,7 @@ namespace AcademiaUninove.Sistema.ADO
         {
             DataTable dtFrequencia = null;
             string query = AcademiaUninove.Sistema.Queries.Read.QueriesConsulta.qConsultaFrequencia;
+            bool bRet = false;
 
             try
             {
@@ -32,11 +33,12 @@ namespace AcademiaUninove.Sistema.ADO
                 throw;
 
             }
+            return dtFrequencia;
         }
 
         public DataTable ConsultaFrequencia(int codigo)
         {
-
+            bool bRet = false;
             DataTable dtFrequencia = null;
             string query = string.Format( AcademiaUninove.Sistema.Queries.Read.QueriesConsulta.qConsultaFrequencia, codigo);
 
@@ -52,6 +54,7 @@ namespace AcademiaUninove.Sistema.ADO
                 throw;
 
             }
+            return dtFrequencia;
 
         }
 
