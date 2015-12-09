@@ -54,6 +54,7 @@
     <Compile Include="ADO\HoraAulaADO.cs" />
     <Compile Include="ADO\HorarioADO.cs" />
     <Compile Include="ADO\LoginADO.cs" />
+    <Compile Include="ADO\MedidasADO.cs" />
     <Compile Include="Classes\Aluno.cs" />
     <Compile Include="Classes\Aula.cs" />
     <Compile Include="Classes\Cargo.cs" />
