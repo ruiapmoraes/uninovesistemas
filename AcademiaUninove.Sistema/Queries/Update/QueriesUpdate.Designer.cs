@@ -307,6 +307,15 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qConsultaMedidasEdit {
+            get {
+                return ResourceManager.GetString("qConsultaMedidasEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Comando de update aluno
         ///
         ///UPDATE ALUNO 
@@ -459,6 +468,15 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         public static string qUpdateHorario {
             get {
                 return ResourceManager.GetString("qUpdateHorario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qUpdateMedidas {
+            get {
+                return ResourceManager.GetString("qUpdateMedidas", resourceCulture);
             }
         }
     }

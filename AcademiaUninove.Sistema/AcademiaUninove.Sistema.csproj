@@ -365,6 +365,7 @@
     <Content Include="Queries\Delete\qDeleteFuncionario.sql" />
     <Content Include="Queries\Delete\qDeleteAula.sql" />
     <Content Include="Queries\Delete\qDeleteCargo.sql" />
+    <Content Include="Queries\Delete\qDeleteMedidas.sql" />
     <Content Include="Queries\Insert\qInsertFicha.sql" />
     <Content Include="Queries\Insert\qInsertFrequencia.sql" />
     <Content Include="Queries\Insert\qInsertHoraAula.sql" />
@@ -374,6 +375,7 @@
     <Content Include="Queries\Insert\qInsertFuncionario.sql" />
     <Content Include="Queries\Insert\qInsertAula.sql" />
     <Content Include="Queries\Insert\qInsertCargo.sql" />
+    <Content Include="Queries\Insert\qInsertMedidas.sql" />
     <Content Include="Queries\Read\qConsultaFicha.sql" />
     <Content Include="Queries\Read\qConsultaFrequencia.sql" />
     <Content Include="Queries\Read\qConsultaHoraAula.sql" />
@@ -383,6 +385,7 @@
     <Content Include="Queries\Read\qConsultaFuncionario.sql" />
     <Content Include="Queries\Read\qConsultaAula.sql" />
     <Content Include="Queries\Read\qConsultaCargo.sql" />
+    <Content Include="Queries\Read\qConsultaMedidas.sql" />
     <Content Include="Queries\Read\qLogin.sql" />
     <Content Include="Queries\Update\qConsultaFichaEdit.sql" />
     <Content Include="Queries\Update\qConsultaFrequenciaEdit.sql" />
@@ -395,6 +398,7 @@
     <Content Include="Queries\Update\qConsultaFuncionarioEdit.sql" />
     <Content Include="Queries\Update\qConsultaAulaEdit.sql" />
     <Content Include="Queries\Update\qConsultaCargoEdit.sql" />
+    <Content Include="Queries\Update\qConsultaMedidasEdit.sql" />
     <Content Include="Queries\Update\qUpdateFicha.sql" />
     <Content Include="Queries\Update\qUpdateFrequencia.sql" />
     <Content Include="Queries\Update\qUpdateHoraAula.sql" />
@@ -404,6 +408,7 @@
     <Content Include="Queries\Update\qUpdateFuncionario.sql" />
     <Content Include="Queries\Update\qUpdateAula.sql" />
     <Content Include="Queries\Update\qUpdateCargo.sql" />
+    <Content Include="Queries\Update\qUpdateMedidas.sql" />
     <Content Include="Scripts\Criacao_Banco_Academia.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

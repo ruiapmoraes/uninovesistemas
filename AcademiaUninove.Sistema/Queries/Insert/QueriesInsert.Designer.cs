@@ -247,5 +247,14 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
                 return ResourceManager.GetString("qInsertHorario", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qInsertMedidas {
+            get {
+                return ResourceManager.GetString("qInsertMedidas", resourceCulture);
+            }
+        }
     }
 }

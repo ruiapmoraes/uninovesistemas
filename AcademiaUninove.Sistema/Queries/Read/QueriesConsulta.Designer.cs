@@ -241,6 +241,15 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qConsultaMedidas {
+            get {
+                return ResourceManager.GetString("qConsultaMedidas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Consultar usuário e senha
         ///SELECT Usuario, Senha
         ///	From Login

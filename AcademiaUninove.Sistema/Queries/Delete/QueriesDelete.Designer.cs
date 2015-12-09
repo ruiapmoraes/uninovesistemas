@@ -165,5 +165,14 @@ namespace AcademiaUninove.Sistema.Queries.Delete {
                 return ResourceManager.GetString("qDeleteHorario", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string qDeleteMedidas {
+            get {
+                return ResourceManager.GetString("qDeleteMedidas", resourceCulture);
+            }
+        }
     }
 }

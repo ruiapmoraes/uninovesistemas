@@ -151,6 +151,9 @@
   <data name="qConsultaHorarioEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qconsultahorarioedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="qConsultaMedidasEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qconsultamedidasedit.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="qUpdateAluno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qupdatealuno.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -177,5 +180,8 @@
   </data>
   <data name="qUpdateHorario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>qupdatehorario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="qUpdateMedidas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>qupdatemedidas.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>
