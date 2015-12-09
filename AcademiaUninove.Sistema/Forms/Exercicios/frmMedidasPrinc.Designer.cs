@@ -459,9 +459,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Código Aluno";
+            this.label2.Text = "Aluno:";
             // 
             // label1
             // 
@@ -536,7 +536,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Name = "frmMedidasPrinc";
-            this.Text = "frmMedidasPrinc";
+            this.Text = "Relação de Medidas";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

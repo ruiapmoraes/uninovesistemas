@@ -142,7 +142,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHorarioPrinc";
-            this.Text = "frmHorarioPrinc";
+            this.Text = "Lista de Horários";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

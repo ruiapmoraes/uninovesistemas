@@ -172,7 +172,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(98, 53);
+            this.comboBox1.Location = new System.Drawing.Point(80, 49);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(75, 21);
             this.comboBox1.TabIndex = 21;
@@ -414,9 +414,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Código Aluno";
+            this.label2.Text = "Aluno:";
             // 
             // label1
             // 
@@ -436,7 +436,8 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox3);
             this.Name = "frmMedidas";
-            this.Text = "frmMedidas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Medidas";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
