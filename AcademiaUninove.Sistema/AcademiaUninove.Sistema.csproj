@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ADO\AlunoADO.cs" />
     <Compile Include="ADO\CargoADO.cs" />
+    <Compile Include="ADO\FichaExercicioADO.cs" />
     <Compile Include="ADO\FrequenciaADO.cs" />
     <Compile Include="ADO\FuncAulaADO.cs" />
     <Compile Include="ADO\FuncionarioADO.cs" />
