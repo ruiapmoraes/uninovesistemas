@@ -1,8 +1,8 @@
-﻿-- Inserção de da aula dos instrutores
+﻿-- Inserção de horas aulas
 
-INSERT INTO FUNC_AULA(
-	CD_FUNC_AULA,
-	CD_FUNC,
+INSERT INTO HORA_AULA(
+	CD_HORA_AULA,
+	CD_HORARIO,
 	CD_AULA) VALUES
 	(
 		{0}
