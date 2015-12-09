@@ -1,6 +1,10 @@
-﻿-- Consulta Cargo para Edição
-SELECT CD_CARGO as 'Código', NOME_CARGO as 'Cargo'
-FROM CARGO
+﻿-- Consulta horario para Edição
+-- Consulta de Horário
 
-where CD_CARGO = {0}
+SELECT
+	CD_HORARIO 'Código',
+	convert(varchar, DATA_HORARIO, 103) 'Data',
+	CONVERT(VARCHAR, HORA, 8) 'HORA'
 
+FROM HORARIO
+    WHERE CD_HORARIO = {0}

@@ -42,7 +42,6 @@ namespace AcademiaUninove.Sistema.ADO
 
             bool bRet = false;
 
-
             try
             {
                 RealizaComandoSQL(query, conn);

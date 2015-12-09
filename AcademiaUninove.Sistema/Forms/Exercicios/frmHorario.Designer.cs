@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.gbAula = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtDataHorario = new System.Windows.Forms.MaskedTextBox();
+            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.gbAula.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbAula
             // 
-            this.gbAula.Controls.Add(this.maskedTextBox1);
-            this.gbAula.Controls.Add(this.dateTimePicker2);
-            this.gbAula.Controls.Add(this.dateTimePicker1);
+            this.gbAula.Controls.Add(this.txtHora);
+            this.gbAula.Controls.Add(this.txtDataHorario);
+            this.gbAula.Controls.Add(this.txtCodigo);
             this.gbAula.Controls.Add(this.label3);
             this.gbAula.Controls.Add(this.label2);
             this.gbAula.Controls.Add(this.label1);
@@ -55,30 +55,14 @@
             this.gbAula.TabStop = false;
             this.gbAula.Text = "Horário";
             // 
-            // maskedTextBox1
+            // txtCodigo
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(110, 36);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(89, 20);
-            this.maskedTextBox1.TabIndex = 8;
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(110, 106);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(89, 20);
-            this.dateTimePicker2.TabIndex = 7;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(110, 75);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(89, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.txtCodigo.Location = new System.Drawing.Point(110, 36);
+            this.txtCodigo.Mask = "00000";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(89, 20);
+            this.txtCodigo.TabIndex = 8;
+            this.txtCodigo.ValidatingType = typeof(int);
             // 
             // label3
             // 
@@ -115,6 +99,7 @@
             this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -124,6 +109,25 @@
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtDataHorario
+            // 
+            this.txtDataHorario.Location = new System.Drawing.Point(110, 78);
+            this.txtDataHorario.Mask = "00/00/0000";
+            this.txtDataHorario.Name = "txtDataHorario";
+            this.txtDataHorario.Size = new System.Drawing.Size(100, 20);
+            this.txtDataHorario.TabIndex = 9;
+            this.txtDataHorario.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtHora
+            // 
+            this.txtHora.Location = new System.Drawing.Point(110, 114);
+            this.txtHora.Mask = "00:00";
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(100, 20);
+            this.txtHora.TabIndex = 10;
+            this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
             // frmHorario
             // 
@@ -134,7 +138,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "frmHorario";
-            this.Text = "frmHorario";
+            this.Text = "Cadastro de Horario";
             this.gbAula.ResumeLayout(false);
             this.gbAula.PerformLayout();
             this.ResumeLayout(false);
@@ -144,13 +148,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbAula;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MaskedTextBox txtCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MaskedTextBox txtHora;
+        private System.Windows.Forms.MaskedTextBox txtDataHorario;
     }
 }

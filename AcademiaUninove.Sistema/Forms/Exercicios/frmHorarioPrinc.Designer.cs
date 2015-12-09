@@ -35,13 +35,10 @@
             this.tsbDeletar = new System.Windows.Forms.ToolStripButton();
             this.tsbFechar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvCargo = new System.Windows.Forms.DataGridView();
-            this.CdHorario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataHorario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvHorario = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -65,6 +62,7 @@
             this.tsbNovo.Name = "tsbNovo";
             this.tsbNovo.Size = new System.Drawing.Size(23, 22);
             this.tsbNovo.Text = "Novo";
+            this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
             // 
             // tsbEditar
             // 
@@ -74,6 +72,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbDeletar
             // 
@@ -83,6 +82,7 @@
             this.tsbDeletar.Name = "tsbDeletar";
             this.tsbDeletar.Size = new System.Drawing.Size(23, 22);
             this.tsbDeletar.Text = "Deletar";
+            this.tsbDeletar.Click += new System.EventHandler(this.tsbDeletar_Click);
             // 
             // tsbFechar
             // 
@@ -92,10 +92,11 @@
             this.tsbFechar.Name = "tsbFechar";
             this.tsbFechar.Size = new System.Drawing.Size(23, 22);
             this.tsbFechar.Text = "Fechar";
+            this.tsbFechar.Click += new System.EventHandler(this.tsbFechar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvCargo);
+            this.groupBox1.Controls.Add(this.dgvHorario);
             this.groupBox1.Location = new System.Drawing.Point(0, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(357, 228);
@@ -103,36 +104,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de Horários";
             // 
-            // dgvCargo
+            // dgvHorario
             // 
-            this.dgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CdHorario,
-            this.DataHorario,
-            this.Hora});
-            this.dgvCargo.Location = new System.Drawing.Point(7, 20);
-            this.dgvCargo.Name = "dgvCargo";
-            this.dgvCargo.ReadOnly = true;
-            this.dgvCargo.Size = new System.Drawing.Size(381, 202);
-            this.dgvCargo.TabIndex = 0;
-            // 
-            // CdHorario
-            // 
-            this.CdHorario.HeaderText = "Código";
-            this.CdHorario.Name = "CdHorario";
-            this.CdHorario.ReadOnly = true;
-            // 
-            // DataHorario
-            // 
-            this.DataHorario.HeaderText = "Data";
-            this.DataHorario.Name = "DataHorario";
-            this.DataHorario.ReadOnly = true;
-            // 
-            // Hora
-            // 
-            this.Hora.HeaderText = "Hora";
-            this.Hora.Name = "Hora";
-            this.Hora.ReadOnly = true;
+            this.dgvHorario.AllowUserToAddRows = false;
+            this.dgvHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorario.Location = new System.Drawing.Point(7, 20);
+            this.dgvHorario.Name = "dgvHorario";
+            this.dgvHorario.ReadOnly = true;
+            this.dgvHorario.Size = new System.Drawing.Size(381, 202);
+            this.dgvHorario.TabIndex = 0;
+            this.dgvHorario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorario_CellDoubleClick);
             // 
             // frmHorarioPrinc
             // 
@@ -142,11 +123,13 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHorarioPrinc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Horários";
+            this.Load += new System.EventHandler(this.frmHorarioPrinc_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,9 +143,6 @@
         private System.Windows.Forms.ToolStripButton tsbDeletar;
         private System.Windows.Forms.ToolStripButton tsbFechar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CdHorario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataHorario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
+        private System.Windows.Forms.DataGridView dgvHorario;
     }
 }

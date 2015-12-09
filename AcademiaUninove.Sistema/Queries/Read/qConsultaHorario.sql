@@ -2,7 +2,7 @@
 
 SELECT
 	CD_HORARIO 'Código',
-	DATA_HORARIO 'Data',
-	HORA 'Hora'
+	convert(varchar, DATA_HORARIO, 103) 'Data',
+	CONVERT(VARCHAR, HORA, 8) 'HORA'
 
 FROM HORARIO

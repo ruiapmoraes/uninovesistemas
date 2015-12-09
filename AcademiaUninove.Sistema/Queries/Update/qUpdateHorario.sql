@@ -2,7 +2,7 @@
 
 UPDATE HORARIO
 SET 	
-	DATA_HORARIO = '{1}',
-	HORA = '[2}'
+	DATA_HORARIO = '{0}',
+	HORA = '{1}'
 
-WHERE CD_HORARIO = {0}
+WHERE CD_HORARIO = {2}
