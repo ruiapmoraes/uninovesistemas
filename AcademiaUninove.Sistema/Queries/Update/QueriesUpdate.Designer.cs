@@ -61,23 +61,28 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta de funcionários para edição
+        ///   Looks up a localized string similar to -- Consultar dados do Aluno
+        ///SELECT 
+        ///	 A.CD_ALU &apos;Código&apos;
+        ///	 ,A.CD_FUNC &apos;Código Instrutor&apos;
+        ///	 ,F.NOME_FUNC &apos;Nome Instrutor&apos;
+        ///	 ,A.NOME_ALU &apos;Aluno&apos;
+        ///	 ,A.CPF_ALU &apos;CPF&apos;
+        ///	 ,A.RG_ALU &apos;RG&apos;
+        ///	 ,A.DT_NASC &apos;Data Nasc&apos;
+        ///	 ,A.TEL_RES &apos;Tel Residencial&apos;
+        ///	 ,A.TEL_CEL &apos;Tel Celular&apos;
+        ///	 ,A.END_ALU &apos;Endereço&apos;
+        ///	 ,A.CIDADE &apos;Cidade&apos;
+        ///	 ,A.STATUS_ALU &apos;Status&apos;
+        ///	 ,A.RESTRICAO &apos;Restrição&apos;
+        ///	 ,A.OBJETIVO &apos;Objetivo&apos;
         ///
-        ////****** Script for SelectTopNRows command from SSMS  ******/
-        ///SELECT F.CD_FUNC &apos;Código&apos;
-        ///      ,F.CD_CARGO &apos;Código Cargo&apos;
-        ///	  ,C.NOME_CARGO &apos;Cargo&apos;
-        ///      ,F.NOME_FUNC &apos;Nome Funcionário&apos;
-        ///      ,F.END_FUNC &apos;Endereço&apos;
-        ///      ,F.CEP_FUNC &apos;CEP&apos;
-        ///      ,F.CIDADE &apos;Cidade&apos;
-        ///      ,F.TEL_RES &apos;Tel. Residencial&apos;
-        ///      ,F.TEL_CEL &apos;Tel. Celular&apos;
-        ///  FROM FUNCIONARIO F
-        ///  LEFT OUTER JOIN CARGO C
-        ///  ON F.CD_CARGO = C.CD_CARGO
-        ///  WHERE 
-        ///		F.CD_FUNC = {0}.
+        ///FROM ALUNO A
+        ///LEFT OUTER JOIN FUNCIONARIO F
+        ///ON A.CD_FUNC = F.CD_FUNC
+        ///
+        ///WHERE A.CD_ALU = {0}.
         /// </summary>
         public static string qConsultaAlunoEdit {
             get {
@@ -86,11 +91,29 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Consulta de aulas para edição
+        ///   Looks up a localized string similar to -- Consulta de alunos para edição
         ///
-        ///SELECT CD_AULA, NOME_AULA 
-        ///	FROM AULA
-        ///WHERE CD_AULA = {0}.
+        ///-- Consultar dados do Aluno
+        ///SELECT 
+        ///	 A.CD_ALU &apos;Código&apos;
+        ///	 ,A.CD_FUNC &apos;Código Instrutor&apos;
+        ///	 ,F.NOME_FUNC &apos;Nome Instrutor&apos;
+        ///	 ,A.NOME_ALU &apos;Aluno&apos;
+        ///	 ,A.CPF_ALU &apos;CPF&apos;
+        ///	 ,A.RG_ALU &apos;RG&apos;
+        ///	 ,A.DT_NASC &apos;Data Nasc&apos;
+        ///	 ,A.TEL_RES &apos;Tel Residencial&apos;
+        ///	 ,A.TEL_CEL &apos;Tel Celular&apos;
+        ///	 ,A.END_ALU &apos;Endereço&apos;
+        ///	 ,A.CEP_ALU &apos;CEP&apos;
+        ///	 ,A.CIDADE &apos;Cidade&apos;
+        ///	 ,A.STATUS_ALU &apos;Status&apos;
+        ///	 ,A.RESTRICAO &apos;Restrição&apos;
+        ///	 ,A.OBJETIVO &apos;Objetivo&apos;
+        ///
+        ///FROM ALUNO A
+        ///LEFT OUTER JOIN FUNCIONARIO F
+        ///ON A.CD_F [rest of string was truncated]&quot;;.
         /// </summary>
         public static string qConsultaAulaEdit {
             get {
@@ -185,19 +208,41 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Comando de update FUNCIONÁRIO
+        ///   Looks up a localized string similar to -- Consulta Cargo para Edição
+        ///SELECT CD_CARGO as &apos;Código&apos;, NOME_CARGO as &apos;Cargo&apos;
+        ///FROM CARGO
         ///
-        ///UPDATE FUNCIONARIO 
+        ///where CD_CARGO = {0}
+        ///
+        ///.
+        /// </summary>
+        public static string qConsultaHorarioEdit {
+            get {
+                return ResourceManager.GetString("qConsultaHorarioEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Comando de update aluno
+        ///
+        ///UPDATE ALUNO 
         ///SET 
-        ///		CD_CARGO = {1}
-        ///		,NOME_FUNC = &apos;{2}&apos;
-        ///		,END_FUNC = &apos;{3}&apos;
-        ///		,CEP_FUNC = &apos;{4}&apos;
-        ///		,CIDADE = &apos;{5}&apos;
-        ///		,TEL_RES = &apos;{6}&apos;
-        ///		,TEL_CEL = &apos;{7}&apos;
+        ///	CD_FUNC = {1},
+        ///	NOME_ALU = &apos;{2}&apos;,
+        ///	CPF_ALU = &apos;{3}&apos;,
+        ///	RG_ALU = &apos;{4}&apos;,
+        ///	DT_NASC = &apos;{5}&apos;,
+        ///	TEL_RES = &apos;{6}&apos;,
+        ///	TEL_CEL = &apos;{7}&apos;,
+        ///	END_ALU = &apos;{8}&apos;,
+        ///	CEP_ALU = &apos;{9}&apos;,
+        ///	CIDADE = &apos;{10}&apos;,
+        ///	STATUS_ALU = &apos;{11}&apos;,
+        ///	RESTRICAO = &apos;{12}&apos;,
+        ///	OBJETIVO = &apos;{13}&apos;
         ///WHERE
-        ///		CD_FUNC = {0}.
+        ///	CD_ALU = {0}
+        ///	.
         /// </summary>
         public static string qUpdateAluno {
             get {
@@ -263,6 +308,18 @@ namespace AcademiaUninove.Sistema.Queries.Update {
         public static string qUpdateFuncionario {
             get {
                 return ResourceManager.GetString("qUpdateFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Atualizando cargo
+        ///
+        ///UPDATE CARGO SET NOME_CARGO = &apos;{0}&apos;
+        ///WHERE CD_CARGO = {1}.
+        /// </summary>
+        public static string qUpdateHorario {
+            get {
+                return ResourceManager.GetString("qUpdateHorario", resourceCulture);
             }
         }
     }

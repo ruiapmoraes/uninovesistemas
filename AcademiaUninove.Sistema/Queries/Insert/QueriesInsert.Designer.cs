@@ -61,27 +61,41 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Inserção de FUNCIONÁRIOS
+        ///   Looks up a localized string similar to -- Inserção de Alunos
         ///
-        ///INSERT INTO FUNCIONARIO (
-        ///	CD_FUNC,
-        ///	CD_CARGO,
-        ///	NOME_FUNC,
-        ///	END_FUNC,
-        ///	CEP_FUNC,
-        ///	CIDADE,
-        ///	TEL_RES,
-        ///	TEL_CEL) VALUES
-        ///	(
-        ///		{0}
-        ///		,{1}
-        ///		,&apos;{2}&apos;
-        ///		,&apos;{3}&apos;
-        ///		,&apos;{4}&apos;
-        ///		,&apos;{5}&apos;
-        ///		,&apos;{6}&apos;
-        ///		,&apos;{7}&apos;
-        ///	).
+        ///
+        ///INSERT INTO ALUNO (
+        ///		CD_ALU,
+        ///		CD_FUNC,
+        ///		NOME_ALU,
+        ///		CPF_ALU,
+        ///		RG_ALU,
+        ///		DT_NASC,
+        ///		TEL_RES,
+        ///		TEL_CEL,
+        ///		END_ALU,
+        ///		CEP_ALU,
+        ///		CIDADE,
+        ///		STATUS_ALU,
+        ///		RESTRICAO,
+        ///		OBJETIVO
+        ///		)
+        ///VALUES (
+        ///		{0},
+        ///		{1},
+        ///		&apos;{2}&apos;,
+        ///		&apos;{3}&apos;,
+        ///		&apos;{4}&apos;,
+        ///		&apos;{5}&apos;,
+        ///		&apos;{6}&apos;,
+        ///		&apos;{7}&apos;,
+        ///		&apos;{8}&apos;,
+        ///		&apos;{9}&apos;,
+        ///		&apos;{10}&apos;,
+        ///		&apos;{11}&apos;,
+        ///		&apos;{12}&apos;,
+        ///		&apos;{13}&apos;
+        ///		).
         /// </summary>
         public static string qInsertAluno {
             get {
@@ -158,6 +172,18 @@ namespace AcademiaUninove.Sistema.Queries.Insert {
         public static string qInsertFuncionario {
             get {
                 return ResourceManager.GetString("qInsertFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Inserir Cargo
+        ///INSERT INTO CARGO
+        ///(CD_CARGO, NOME_CARGO)
+        ///Values ({0}, &apos;{1}&apos;).
+        /// </summary>
+        public static string qInsertHorario {
+            get {
+                return ResourceManager.GetString("qInsertHorario", resourceCulture);
             }
         }
     }

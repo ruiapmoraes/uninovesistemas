@@ -61,19 +61,29 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /****** Script for SelectTopNRows command from SSMS  ******/
-        ///SELECT F.CD_FUNC &apos;Código&apos;
-        ///      ,F.CD_CARGO &apos;Código Cargo&apos;
-        ///	  ,C.NOME_CARGO &apos;Cargo&apos;
-        ///      ,F.NOME_FUNC &apos;Nome Funcionário&apos;
-        ///      ,F.END_FUNC &apos;Endereço&apos;
-        ///      ,F.CEP_FUNC &apos;CEP&apos;
-        ///      ,F.CIDADE &apos;Cidade&apos;
-        ///      ,F.TEL_RES &apos;Tel. Residencial&apos;
-        ///      ,F.TEL_CEL &apos;Tel. Celular&apos;
-        ///  FROM FUNCIONARIO F
-        ///  LEFT OUTER JOIN CARGO C
-        ///  ON F.CD_CARGO = C.CD_CARGO.
+        ///   Looks up a localized string similar to -- Consultar dados do Aluno
+        ///SELECT 
+        ///	 A.CD_ALU &apos;Código&apos;
+        ///	 ,A.CD_FUNC &apos;Código Instrutor&apos;
+        ///	 ,F.NOME_FUNC &apos;Nome Instrutor&apos;
+        ///	 ,A.NOME_ALU &apos;Aluno&apos;
+        ///	 ,A.CPF_ALU &apos;CPF&apos;
+        ///	 ,A.RG_ALU &apos;RG&apos;
+        ///	 ,A.DT_NASC &apos;Data Nasc&apos;
+        ///	 ,A.TEL_RES &apos;Tel Residencial&apos;
+        ///	 ,A.TEL_CEL &apos;Tel Celular&apos;
+        ///	 ,A.END_ALU &apos;Endereço&apos;
+        ///	 ,A.CEP_ALU &apos;CEP&apos;
+        ///	 ,A.CIDADE &apos;Cidade&apos;
+        ///	 ,A.STATUS_ALU &apos;Status&apos;
+        ///	 ,A.RESTRICAO &apos;Restrição&apos;
+        ///	 ,A.OBJETIVO &apos;Objetivo&apos;
+        ///
+        ///FROM ALUNO A
+        ///LEFT OUTER JOIN FUNCIONARIO F
+        ///ON A.CD_FUNC = F.CD_FUNC
+        ///
+        ///.
         /// </summary>
         public static string qConsultaAluno {
             get {
@@ -145,6 +155,19 @@ namespace AcademiaUninove.Sistema.Queries.Read {
         public static string qConsultaFuncionario {
             get {
                 return ResourceManager.GetString("qConsultaFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Consulta Cargo
+        ///SELECT CD_CARGO as &apos;Código&apos;, NOME_CARGO as &apos;Cargo&apos;
+        ///FROM CARGO
+        ///
+        ///.
+        /// </summary>
+        public static string qConsultaHorario {
+            get {
+                return ResourceManager.GetString("qConsultaHorario", resourceCulture);
             }
         }
         
