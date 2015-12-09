@@ -107,5 +107,26 @@ namespace AcademiaUninove.Sistema.ADO
             //TODO ajustar o retorno do método
             return dtHorario;
         }
+
+        public bool ExcluiHorario(int codigo)
+        {
+            string query = string.Format(AcademiaUninove.Sistema.Queries.Delete.QueriesDelete.qDeleteHorario, codigo);
+            conn = ADOBase.ObterConexao();
+
+            bool bRet = false;
+
+
+            try
+            {
+                RealizaComandoSQL(query, conn);
+                return true;
+            }
+            catch (Exception)
+            {
+                bRet = false;
+                throw;
+                return bRet;
+            }
+        }
     }
 }

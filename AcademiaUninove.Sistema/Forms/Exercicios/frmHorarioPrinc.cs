@@ -33,11 +33,35 @@ namespace AcademiaUninove.Sistema.Forms.Exercicios
         private void tsbEditar_Click(object sender, EventArgs e)
         {
 
+            int linha = 0;
+            _tpOperacao = "editar";
+            linha = dgvHorario.CurrentRow.Index;
+            _codHorario = int.Parse(dgvHorario.Rows[linha].Cells[0].Value.ToString());
+
+
+            frmHorario telaHorario = new frmHorario(_tpOperacao, _codHorario);
+            telaHorario.ShowDialog();
         }
 
         private void tsbDeletar_Click(object sender, EventArgs e)
         {
+            bool resultado = false;
+            int linha = 0;
 
+
+            linha = dgvHorario.CurrentRow.Index;
+            _codHorario = int.Parse(dgvHorario.Rows[linha].Cells[0].Value.ToString());
+            HorarioBO objHorarioBO = new HorarioBO();
+
+            if (MessageBox.Show("Confirma exclusão?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                resultado = objHorarioBO.ExcluiHorario(_codHorario);
+                if (resultado)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    dgvHorario.DataSource = DtHorarioGeral();
+                }
+            }
         }
 
         private void tsbFechar_Click(object sender, EventArgs e)

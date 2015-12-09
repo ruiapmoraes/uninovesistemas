@@ -8,5 +8,9 @@ namespace AcademiaUninove.Sistema.Negocio
 {
     class HoraAulaBO
     {
+        internal bool ExcluiHorario(int _codHorario)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

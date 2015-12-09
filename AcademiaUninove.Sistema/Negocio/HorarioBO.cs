@@ -44,5 +44,12 @@ namespace AcademiaUninove.Sistema.Negocio
             dtHorario = objHorarioADO.ConsultaHorario(codigo);
             return dtHorario;
         }
+
+        public bool ExcluiHorario(int codigo)
+        {
+            bool bRet = false;
+            bRet = objHorarioADO.ExcluiHorario(codigo);
+            return bRet;
+        }
     }
 }
