@@ -69,9 +69,9 @@ namespace AcademiaUninove.Sistema.Forms
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmAulaPrinc telaAula = new frmAulaPrinc();
-            telaAula.MdiParent = this;
-            telaAula.Show();
+            frmHoraAulaPrinc telaHoraAula = new frmHoraAulaPrinc();
+            telaHoraAula.MdiParent = this;
+            telaHoraAula.Show();
         }
 
         private void frequênciaToolStripMenuItem_Click(object sender, EventArgs e)

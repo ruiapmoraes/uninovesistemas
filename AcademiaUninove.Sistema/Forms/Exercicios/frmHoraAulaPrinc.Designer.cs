@@ -36,11 +36,8 @@
             this.tsbFechar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCargo = new System.Windows.Forms.DataGridView();
-            this.CdHorario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CdHorarioAula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CdAula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbAula = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).BeginInit();
@@ -67,6 +64,7 @@
             this.tsbNovo.Name = "tsbNovo";
             this.tsbNovo.Size = new System.Drawing.Size(23, 22);
             this.tsbNovo.Text = "Novo";
+            this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
             // 
             // tsbEditar
             // 
@@ -76,6 +74,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbDeletar
             // 
@@ -85,6 +84,7 @@
             this.tsbDeletar.Name = "tsbDeletar";
             this.tsbDeletar.Size = new System.Drawing.Size(23, 22);
             this.tsbDeletar.Text = "Deletar";
+            this.tsbDeletar.Click += new System.EventHandler(this.tsbDeletar_Click);
             // 
             // tsbFechar
             // 
@@ -94,6 +94,7 @@
             this.tsbFechar.Name = "tsbFechar";
             this.tsbFechar.Size = new System.Drawing.Size(23, 22);
             this.tsbFechar.Text = "Fechar";
+            this.tsbFechar.Click += new System.EventHandler(this.tsbFechar_Click);
             // 
             // groupBox1
             // 
@@ -107,34 +108,13 @@
             // 
             // dgvCargo
             // 
+            this.dgvCargo.AllowUserToAddRows = false;
             this.dgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CdHorario,
-            this.CdHorarioAula,
-            this.CdAula});
             this.dgvCargo.Location = new System.Drawing.Point(7, 20);
             this.dgvCargo.Name = "dgvCargo";
             this.dgvCargo.ReadOnly = true;
             this.dgvCargo.Size = new System.Drawing.Size(344, 202);
             this.dgvCargo.TabIndex = 0;
-            // 
-            // CdHorario
-            // 
-            this.CdHorario.HeaderText = "Código";
-            this.CdHorario.Name = "CdHorario";
-            this.CdHorario.ReadOnly = true;
-            // 
-            // CdHorarioAula
-            // 
-            this.CdHorarioAula.HeaderText = "Horário";
-            this.CdHorarioAula.Name = "CdHorarioAula";
-            this.CdHorarioAula.ReadOnly = true;
-            // 
-            // CdAula
-            // 
-            this.CdAula.HeaderText = "Aula";
-            this.CdAula.Name = "CdAula";
-            this.CdAula.ReadOnly = true;
             // 
             // label1
             // 
@@ -145,13 +125,13 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Aula:";
             // 
-            // comboBox1
+            // cmbAula
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(87, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 15;
+            this.cmbAula.FormattingEnabled = true;
+            this.cmbAula.Location = new System.Drawing.Point(87, 40);
+            this.cmbAula.Name = "cmbAula";
+            this.cmbAula.Size = new System.Drawing.Size(121, 21);
+            this.cmbAula.TabIndex = 15;
             // 
             // frmHoraAulaPrinc
             // 
@@ -161,9 +141,11 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbAula);
             this.Name = "frmHoraAulaPrinc";
-            this.Text = "frmHoraAulaPrinc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro da Hora da Aula";
+            this.Load += new System.EventHandler(this.frmHoraAulaPrinc_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -182,10 +164,7 @@
         private System.Windows.Forms.ToolStripButton tsbFechar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CdHorario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CdHorarioAula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CdAula;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbAula;
     }
 }
