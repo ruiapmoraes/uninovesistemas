@@ -35,12 +35,12 @@
             this.tsbDeletar = new System.Windows.Forms.ToolStripButton();
             this.tsbFechar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvCargo = new System.Windows.Forms.DataGridView();
+            this.dgvHoraAula = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbAula = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoraAula)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -98,7 +98,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvCargo);
+            this.groupBox1.Controls.Add(this.dgvHoraAula);
             this.groupBox1.Location = new System.Drawing.Point(8, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(357, 228);
@@ -106,15 +106,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de Horários";
             // 
-            // dgvCargo
+            // dgvHoraAula
             // 
-            this.dgvCargo.AllowUserToAddRows = false;
-            this.dgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCargo.Location = new System.Drawing.Point(7, 20);
-            this.dgvCargo.Name = "dgvCargo";
-            this.dgvCargo.ReadOnly = true;
-            this.dgvCargo.Size = new System.Drawing.Size(344, 202);
-            this.dgvCargo.TabIndex = 0;
+            this.dgvHoraAula.AllowUserToAddRows = false;
+            this.dgvHoraAula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoraAula.Location = new System.Drawing.Point(7, 20);
+            this.dgvHoraAula.Name = "dgvHoraAula";
+            this.dgvHoraAula.ReadOnly = true;
+            this.dgvHoraAula.Size = new System.Drawing.Size(344, 202);
+            this.dgvHoraAula.TabIndex = 0;
+            this.dgvHoraAula.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoraAula_CellDoubleClick);
             // 
             // label1
             // 
@@ -132,6 +133,7 @@
             this.cmbAula.Name = "cmbAula";
             this.cmbAula.Size = new System.Drawing.Size(121, 21);
             this.cmbAula.TabIndex = 15;
+            this.cmbAula.SelectedIndexChanged += new System.EventHandler(this.cmbAula_SelectedIndexChanged);
             // 
             // frmHoraAulaPrinc
             // 
@@ -149,7 +151,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoraAula)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +165,7 @@
         private System.Windows.Forms.ToolStripButton tsbDeletar;
         private System.Windows.Forms.ToolStripButton tsbFechar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvCargo;
+        private System.Windows.Forms.DataGridView dgvHoraAula;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbAula;
     }

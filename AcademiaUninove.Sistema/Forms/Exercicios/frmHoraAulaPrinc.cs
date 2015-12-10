@@ -30,12 +30,38 @@ namespace AcademiaUninove.Sistema.Forms.Exercicios
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
+            int linha = 0;
+            _tpOperacao = "editar";
 
+            linha = dgvHoraAula.CurrentRow.Index;
+            _codHoraAula = int.Parse(dgvHoraAula.Rows[linha].Cells[0].Value.ToString());
+
+            frmHoraAula telaHoraAula = new frmHoraAula(_tpOperacao, _codHoraAula);
+            telaHoraAula.ShowDialog();
         }
 
         private void tsbDeletar_Click(object sender, EventArgs e)
         {
+            bool resultado = false;
+            int linha = 0;
 
+
+            linha = dgvHoraAula.CurrentRow.Index;
+            _codHoraAula = int.Parse(dgvHoraAula.Rows[linha].Cells[0].Value.ToString());
+            HoraAulaBO objHoraAula = new HoraAulaBO();
+
+            if (MessageBox.Show("Confirma exclusão?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                resultado = objHoraAula.ExcluiHoraAula(_codHoraAula);
+                if (resultado)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    //dgvFuncAula.DataSource = DtFuncAula();
+                    dgvHoraAula.DataSource = DadosHoraAula(int.Parse(cmbAula.SelectedValue.ToString()));
+                    dgvHoraAula.Columns[1].Visible = false;
+                    dgvHoraAula.Columns[3].Visible = false;
+                }
+            }
         }
 
         private void tsbFechar_Click(object sender, EventArgs e)
@@ -89,6 +115,40 @@ namespace AcademiaUninove.Sistema.Forms.Exercicios
                 cmbAula.DataSource = dtAulaCombo;
             }
 
+        }
+
+        public DataTable DadosHoraAula()
+        {
+            DataTable dtHoraAula = new DataTable();
+            HoraAulaBO objHoraAula = new HoraAulaBO();
+            dtHoraAula = objHoraAula.ObterHoraAula();
+
+            return dtHoraAula;
+        }
+
+        public DataTable DadosHoraAula(int codigo)
+        {
+            DataTable dtHoraAula = new DataTable();
+            HoraAulaBO objHoraAula = new HoraAulaBO();
+            dtHoraAula = objHoraAula.ObterHoraAula(codigo);
+
+            return dtHoraAula;
+        }
+
+        private void cmbAula_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvHoraAula.DataSource = DadosHoraAula(int.Parse(cmbAula.SelectedValue.ToString()));
+            //TODO: Ver quais campos se deve ocultar
+
+        }
+
+        private void dgvHoraAula_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _tpOperacao = "editar";
+            _codHoraAula = int.Parse(dgvHoraAula.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            frmHoraAula telaHoraAula = new frmHoraAula(_tpOperacao, _codHoraAula);
+            telaHoraAula.ShowDialog();
         }
     }
 }
