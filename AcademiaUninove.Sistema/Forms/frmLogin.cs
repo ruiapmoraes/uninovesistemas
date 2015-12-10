@@ -74,6 +74,13 @@ namespace AcademiaUninove.Sistema.Forms
                     this.Close();
 
                 }
+                else
+                {
+                    MessageBox.Show("Usuário não encontrado", "Academia Uninove",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtUsuario.Clear();
+                    txtSenha.Clear();
+                    txtUsuario.Focus();
+                }
             }
         }
 
