@@ -109,5 +109,16 @@ namespace AcademiaUninove.Sistema.Forms
             telaAula.MdiParent = this;
             telaAula.Show();
         }
+
+        private void CarregaTelaLogin()
+        {
+            frmLogin telaLogin = new frmLogin();
+            telaLogin.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            CarregaTelaLogin();
+        }
     }
 }
