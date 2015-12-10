@@ -28,11 +28,12 @@ namespace AcademiaUninove.Sistema.ADO
             }
             catch (Exception)
             {
-                bRet = null;
+                bRet = false;
                 dtMedidas = null;
                 
                 throw;
             }
+            return dtMedidas;
         }
 
         public DataTable ConsultaMedida(int codigo)
@@ -49,11 +50,12 @@ namespace AcademiaUninove.Sistema.ADO
             }
             catch (Exception)
             {
-                bRet = null;
+                bRet = false;
                 dtMedidas = null;
 
                 throw;
             }
+            return dtMedidas;
         }
 
         public bool InsereMedida(int codigo,
@@ -172,11 +174,11 @@ namespace AcademiaUninove.Sistema.ADO
 
         }
 
-        public bool ExcluiMedidaMedida(int codigo)
+        public bool ExcluiMedida(int codigo)
         {
             bool bRet = false;
 
-            string query = string.Format(AcademiaUninove.Sistema.Queries.Delete.QueriesDelete.qDeleteMedidas,codigo)
+            string query = string.Format(AcademiaUninove.Sistema.Queries.Delete.QueriesDelete.qDeleteMedidas, codigo);
             try
             {
                 conn = ObterConexao();
