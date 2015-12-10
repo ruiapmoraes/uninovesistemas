@@ -16,7 +16,10 @@ namespace AcademiaUninove.Sistema.ADO
         ADOBase objConexao = new ADOBase();
         #endregion
 
-
+        /// <summary>
+        /// Busca Ficha do Aluno
+        /// </summary>
+        /// <returns>Retorna os dados</returns>
         public DataTable ConsultarFicha()
         {
             
@@ -36,6 +39,11 @@ namespace AcademiaUninove.Sistema.ADO
             return dtFicha;
         }
 
+        /// <summary>
+        /// Buscar ficha do aluno até do código da ficha
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns>Retirna os dados</returns>
         public DataTable ConsultarFicha(int codigo)
         {
             DataTable dtFicha = null;
@@ -55,6 +63,17 @@ namespace AcademiaUninove.Sistema.ADO
 
         }
 
+        /// <summary>
+        /// Insere a ficha de exercício
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <param name="codigoAluno"></param>
+        /// <param name="nomeExercicio"></param>
+        /// <param name="repeticoes"></param>
+        /// <param name="series"></param>
+        /// <param name="treino"></param>
+        /// <param name="dataInicio"></param>
+        /// <returns></returns>
         public bool InsereFichaExercicio(int codigo,
                                            int codigoAluno,
                                            string nomeExercicio,

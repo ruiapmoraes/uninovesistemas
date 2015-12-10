@@ -45,6 +45,9 @@ namespace AcademiaUninove.Sistema.Forms
                 return true;
         }
 
+        /// <summary>
+        /// Buscar Login
+        /// </summary>
         private void VerificaLogin()
         {
             if (CamposPreechidos(txtUsuario.Text) && CamposPreechidos(txtSenha.Text))

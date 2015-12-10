@@ -216,6 +216,7 @@
     <Compile Include="Forms\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\ADOBase.cs" />
     <Compile Include="Helpers\Validacao.cs" />
     <Compile Include="Negocio\AlunoBO.cs" />
