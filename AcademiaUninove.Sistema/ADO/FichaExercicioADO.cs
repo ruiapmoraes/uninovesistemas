@@ -107,6 +107,17 @@ namespace AcademiaUninove.Sistema.ADO
 
         }
 
+        /// <summary>
+        /// Atualiza a ficha de exercício
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <param name="codigoAluno"></param>
+        /// <param name="nomeExercicio"></param>
+        /// <param name="repeticoes"></param>
+        /// <param name="series"></param>
+        /// <param name="treino"></param>
+        /// <param name="dataInicio"></param>
+        /// <returns>Retorna o resultado do comando de atualização</returns>
         public bool AtualizaFichaExercicio(int codigo,
                                            int codigoAluno,
                                            string nomeExercicio,
@@ -138,6 +149,12 @@ namespace AcademiaUninove.Sistema.ADO
             }
         }
 
+
+        /// <summary>
+        /// Exclui ficha de exercício
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns>Retorna o resultado do comando de exclusão do registro</returns>
         public bool ExcluiFichaExercicio(int codigo)
         {
             string query = string.Format(AcademiaUninove.Sistema.Queries.Delete.QueriesDelete.qDeleteFicha,
